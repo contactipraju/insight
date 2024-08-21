@@ -5,7 +5,7 @@ import LogoLink from "./logo-link";
 export default function Navbar() {
 	return (
 		<div className="relative">
-			<header className="absolute inset-x-0 z-20 py-4 sm:fixed sm:h-24 sm:bg-white/[85%] sm:py-6 sm:backdrop-blur">
+			<header className="absolute inset-x-0 z-20 py-4 sm:fixed sm:h-24 sm:bg-black text-white sm:py-6 sm:backdrop-blur">
 				<div className="mx-auto flex h-full max-w-5xl items-center justify-between px-6 lg:px-8">
 					<LogoLink />
 
@@ -18,7 +18,7 @@ export default function Navbar() {
 
 						<div className="links">
 							{/* <Link href="/keystatic" className="rounded-full px-5 py-2.5 font-medium hidden gap-10 sm:inline"> Admin </Link> */}
-							<Link href="#" className="rounded-full bg-black px-5 py-2.5 font-medium text-white hover:bg-gray-900 whitespace-nowrap"> Call: +61 432 908 730 </Link>
+							<Link href="#" className="rounded-full bg-black px-5 py-2.5 font-medium text-white hover:bg-gray-900 whitespace-nowrap"> <span>&#9742;</span>: +61 432 908 730 </Link>
 						</div>
 					</nav>
 				</div>

@@ -12,7 +12,7 @@ export default function LogoLink() {
 				<Image
 					src={logoImage}
 					alt=""
-					className="max-w-[80%] md:block"
+					className="max-w-[70%] md:block"
 				/>
 			</div>
 		</Link>
