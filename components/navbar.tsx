@@ -11,14 +11,14 @@ export default function Navbar() {
 
 					<nav className="flex items-center justify-between sm:ml-16 sm:w-full">
 						<div className="hidden gap-10 sm:flex">
-							<a className="font-medium" href="#features"> Process </a>
-							<a className="font-medium" href="#reviews"> Reviews </a>
-							<a className="font-medium" href="#projects"> Portfolio </a>
+							<a className="font-medium" href="/#features"> Process </a>
+							<a className="font-medium" href="/#reviews"> Reviews </a>
+							<a className="font-medium" href="/#projects"> Portfolio </a>
 						</div>
 
 						<div className="links">
 							{/* <Link href="/keystatic" className="rounded-full px-5 py-2.5 font-medium hidden gap-10 sm:inline"> Admin </Link> */}
-							<Link href="#" className="rounded-full bg-black px-5 py-2.5 font-medium text-white hover:bg-gray-900 whitespace-nowrap"> <span>&#9742;</span>: +61 432 908 730 </Link>
+							<Link href="/contactus" className="rounded-full bg-black px-5 py-2.5 font-medium text-white hover:bg-gray-900 whitespace-nowrap"> Contact us </Link>
 						</div>
 					</nav>
 				</div>
