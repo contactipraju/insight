@@ -1,12 +1,19 @@
 import './Projects.scss';
 
 import { useState, useEffect } from "react";
-import { register } from 'swiper/element/bundle';
+
+import { Swiper, SwiperSlide} from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 import { IProjectData } from "./Projects.interfaces";
 import { getProjectsLocal } from "./Projects.service";
-
-register();
 
 const Projects = (props: any) => {
 	const [projects, setProjects] = useState([]);
@@ -20,14 +27,26 @@ const Projects = (props: any) => {
 
 	return (
 		<div id="projects">
-			<swiper-container
-				slides-per-view="1"
-				navigation="true"
-				pagination="true"
-				autoplay="true"
+			<Swiper
+				modules={[Autoplay, Pagination, Navigation]}
+				slidesPerView={1}
+				navigation
+				pagination={true}
+				loop={true}
+				autoplay={true}
+				breakpoints={{
+					800: {
+					  slidesPerView: 2,
+					  spaceBetween: 40,
+					},
+					1400: {
+					  slidesPerView: 3,
+					  spaceBetween: 50,
+					},
+				  }}
 			>
 				{projects!.length > 0 ? projects!.map((project: IProjectData) => (
-					<swiper-slide key={project.id}>
+					<SwiperSlide key={project.id}>
 						<div className="project">
 							<div className="details">
 								<div className='title'>
@@ -79,9 +98,9 @@ const Projects = (props: any) => {
 								</div>
 							</div>
 						</div>
-					</swiper-slide>
+					</SwiperSlide>
 				)) : <div>{"No projects available"}</div> }
-			</swiper-container>
+			</Swiper>
 		</div>
 	)
 }
