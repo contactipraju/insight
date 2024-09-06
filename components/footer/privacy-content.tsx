@@ -1,4 +1,4 @@
-import { brandName, brandFullname, companyName, companyFullname } from "../constants/globals";
+import { brandName, brandFullname, companyName, companyFullname } from "../../constants/globals";
 import './privacy-content.css';
 
 export default function PrivacyContent({}: any) {

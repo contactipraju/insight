@@ -1,7 +1,7 @@
 // Keystatic
 import { createReader } from "@keystatic/core/reader";
 import keystaticConfig from "../keystatic.config";
-import Smallfooter from "../components/smallfooter";
+import Smallfooter from "../components/footer/smallfooter";
 
 // Page section components
 import Head from "../components/head";

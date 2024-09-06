@@ -5,7 +5,7 @@ import keystaticConfig from "../keystatic.config";
 // Page section components
 import Head from "../components/head";
 import Navbar from "../components/navbar";
-import PrivacyContent from "../components/privacy-content";
+import PrivacyContent from "../components/footer/privacy-content";
 
 export default function Privacy({ testimonials, landingPage }: any) {
 	return (
