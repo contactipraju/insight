@@ -6,7 +6,7 @@ import keystaticConfig from "../keystatic.config";
 import Head from "../components/head";
 // import BackgroundBlobs from "../components/background-blobs";
 import Features from "../components/features";
-import Footer, { FooterProps } from "../components/footer";
+import Footer, { FooterProps } from "../components/footer/footer";
 import Hero, { HeroProps } from "../components/hero";
 import Navbar from "../components/navbar";
 import Testimonials, { TestimonialProps } from "../components/testimonials";
