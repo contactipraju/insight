@@ -1,7 +1,5 @@
-import SocialMediaLinks from "./social-media-links";
-import JoinNewsLetter from "./join-news-letter";
-import CopyrightDetails from "./copyright-details";
 import FooterContent from "./footer-content";
+import FooterBottom from "./footer-bottom";
 
 export type FooterProps = {
 	footerHeadline: string;
@@ -22,11 +20,7 @@ export default function Footer({
 					<FooterContent data={{footerHeadline, footerText}} />
 				</div>
 
-				<div className="flex flex-col items-center justify-center gap-1 md:flex-row md:gap-4">
-					<CopyrightDetails />
-					<SocialMediaLinks/>
-					<JoinNewsLetter/>
-				</div>
+				<FooterBottom />
 			</div>
 		</footer>
 	);
