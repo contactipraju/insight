@@ -26,7 +26,7 @@ const Projects = (props: any) => {
 	}, []);
 
 	return (
-		<div id="projects">
+		<div id="projects" className='pt-16 sm:pt-32'>
 			<Swiper
 				modules={[Autoplay, Pagination, Navigation]}
 				slidesPerView={1}

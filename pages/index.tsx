@@ -34,8 +34,8 @@ export default function Index({ testimonials, landingPage }: HomepageProps) {
             }}
           />
           <Features />
-          <Testimonials testimonials={testimonials} />
 		  <Projects />
+          <Testimonials testimonials={testimonials} />
         </main>
         <Footer
           data={{
