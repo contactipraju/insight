@@ -1,7 +1,7 @@
 
 export default function JoinNewsLetter({}: any) {
 	return (
-		<form action="" className="grid gap-6 items-stretch mt-2 sm:grid-cols-2 mx-2" id="MailingListForm" x-data="{isSubmitting: false}">
+		<form action="" className="grid gap-2 items-stretch mt-2 sm:grid-cols-2 mx-2" id="MailingListForm" x-data="{isSubmitting: false}">
 			<div className="items-center">
 				<label className="sr-only">Email</label>
 				<input className="h-full bg-stone-100 input-field rounded p-3" id="email" name="email" placeholder="Your email" required type="email" />

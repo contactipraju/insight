@@ -1,13 +1,10 @@
-// Keystatic
-import { createReader } from "@keystatic/core/reader";
-import keystaticConfig from "../keystatic.config";
-
 // Page section components
 import Head from "../components/head";
 import Navbar from "../components/navbar";
 import PrivacyContent from "../components/footer/privacy-content";
+import FooterBottom from "../components/footer/footer-bottom";
 
-export default function Privacy({ testimonials, landingPage }: any) {
+export default function Privacy({}: any) {
 	return (
 		<>
 			<Head />
@@ -16,6 +13,7 @@ export default function Privacy({ testimonials, landingPage }: any) {
 				<main className="relative z-10 bg-gray-100"></main>
 				<PrivacyContent/>
 			</div>
+			<FooterBottom/>
 		</>
 	);
 }
