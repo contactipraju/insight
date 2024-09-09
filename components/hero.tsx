@@ -36,7 +36,7 @@ export default function Hero({
           className="mx-auto w-[85%] max-w-[80%] md:hidden"
         />
         <div>
-          <h1 className="mt-0 text-4xl font-bold sm:text-5xl md:mt-20 md:text-6xl lg:text-6xl whitespace-pre-line">
+          <h1 className="mt-2 text-3xl font-bold sm:text-4xl md:mt-12 md:text-5xl lg:text-5xl whitespace-pre-line">
             {heroHeadline}
           </h1>
           <p className="mt-6 sm:mt-10 sm:text-base sm:leading-8 whitespace-pre-line">

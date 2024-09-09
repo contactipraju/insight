@@ -34,7 +34,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="isolate md:py-32">
+    <section id="features" className="isolate py-4 sm:py-8">
       <div className="mx-auto grid max-w-5xl items-center gap-y-6 px-6 md:grid-cols-2 lg:px-8">
         <div className="hidden md:block">
           <Image
@@ -45,7 +45,7 @@ export default function Features() {
             className="rounded-2xl"
           />
         </div>
-        <div className="md:hidden">
+        {/* <div className="md:hidden">
           <Image
             src={featuresImageCropped}
             width={900}
@@ -53,17 +53,17 @@ export default function Features() {
             alt=""
             className="rounded-2xl"
           />
-        </div>
+        </div> */}
         <Accordion.Root
           type="single"
           defaultValue="1"
-          className="space-y-4 md:space-y-8"
+          className="space-y-2 md:space-y-4"
         >
           {features.map((feature) => (
             <Accordion.Item
               key={feature.id}
               value={feature.id.toString()}
-              className="relative rounded-2xl p-10 backdrop-blur-sm data-[state=open]:bg-white/60 data-[state=closed]:bg-white/30"
+              className="relative rounded-2xl p-6 backdrop-blur-sm data-[state=open]:bg-white/60 data-[state=closed]:bg-white/30"
             >
               <Accordion.Header className="text-2xl font-bold leading-7">
                 <span dangerouslySetInnerHTML={{ __html: feature.title }} />

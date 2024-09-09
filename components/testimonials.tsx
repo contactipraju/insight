@@ -32,9 +32,9 @@ export default function Testimonials({ testimonials }: ComponentProps) {
   ];
 
   return (
-    <section id="reviews" className="isolate pt-16 sm:pt-32">
+    <section id="reviews" className="isolate py-4 sm:py-8">
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
-        <div className="rounded-3xl bg-black/90 px-6 py-8 sm:py-16 sm:px-8">
+        {/* <div className="rounded-3xl bg-black/90 px-6 py-8 sm:py-16 sm:px-8">
           <figure className="mx-auto grid max-w-2xl items-center gap-8">
             <blockquote className="text-center text-2xl text-white sm:text-3xl sm:leading-10">
               {featuredTestimonial.testimonial}
@@ -57,13 +57,13 @@ export default function Testimonials({ testimonials }: ComponentProps) {
             </figcaption>
           </figure>
         </div>
-
-        <h2 className="mt-16 max-w-2xl text-3xl font-bold sm:mt-24 sm:text-5xl md:mt-40">
-          Our users have many reasons to choose InvestorPro.
+ */}
+        <h2 className="mt-2 max-w-xl text-2xl font-bold sm:mt-2 sm:text-4xl md:mt-4">
+          Our users have many reasons to choose us.
         </h2>
-        <p className="mt-6 text-xl sm:mt-8">Here are a few..</p>
+        <p className="mt-4 text-xl sm:mt-6">Here are a few..</p>
 
-        <div className="mt-12">
+        <div className="mt-4">
           <ul className="columns-xs space-y-4">
             {otherTestimonials.map((testimonial: any) => (
               <li key={testimonial.slug} className="break-inside-avoid">
