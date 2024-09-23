@@ -58,7 +58,7 @@ export default function Testimonials({ testimonials }: ComponentProps) {
           </figure>
         </div>
  */}
-        <h2 className="mt-2 max-w-xl text-2xl font-bold sm:mt-2 sm:text-4xl md:mt-4">
+        <h2 className="mt-2 text-2xl font-bold sm:mt-2 sm:text-4xl md:mt-4">
           Our users have many reasons to choose us.
         </h2>
         <p className="mt-4 text-xl sm:mt-6">Here are a few..</p>
