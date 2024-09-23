@@ -3,9 +3,9 @@ import { useRouter } from "next/router";
 import NextHead from "next/head";
 
 const meta = {
-  title: "InvestorPro Buyer's Agency",
+  title: "InvestorPro Buyer's Agency in Australia | Expert Property Buying Services",
   description:
-    "Landing page for InvestorPro Buyer's Agency",
+    "Top Buyer's Agency in Australia offering expert property buying services. Find the best Buyer's Agent for your next home or investment.",
   imagePath: "/images/seo-image.png",
 };
 
