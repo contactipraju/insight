@@ -5,7 +5,7 @@ import LogoLink from "./logo-link";
 export default function Navbar() {
 	return (
 		<div className="relative">
-			<header className="absolute inset-x-0 z-20 py-4 sm:fixed sm:h-24 sm:bg-black text-white sm:py-6 sm:backdrop-blur">
+			<header className="absolute inset-x-0 z-20 py-2 sm:fixed sm:h-24 bg-black text-white sm:py-2 sm:backdrop-blur">
 				<div className="mx-auto flex h-full max-w-5xl items-center justify-between px-6 lg:px-8">
 					<LogoLink />
 
