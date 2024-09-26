@@ -30,7 +30,7 @@ export default function SocialMediaLinks({}: any) {
 				</svg>
 			</a>
 
-			<a className="shrink-0 rounded-lg p-1 hover:bg-slate-3 active:bg-slate-5 transition-colors w-12" href="https://www.youtube.com/@ipBuyersAgency" target="_blank">
+			<a className="shrink-0 rounded-lg p-1 hover:bg-slate-3 active:bg-slate-5 transition-colors w-12" href="https://www.youtube.com/@InvestorProBA" target="_blank">
 				<span className="sr-only">YouTube</span>
 				<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="34" height="34" viewBox="0 0 24 24">
 					<path d="M21,5c0,0-3-1-9-1S3,5,3,5s-1,3-1,7s1,7,1,7s3,1,9,1s9-1,9-1s1-3,1-7S21,5,21,5z M10,15.464V8.536L16,12L10,15.464z"></path>
