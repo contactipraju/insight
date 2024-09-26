@@ -6,8 +6,8 @@ export default function FooterBottom({}: any) {
 	return (
 		<div className="flex flex-col items-center justify-center gap-1 md:flex-row md:gap-4">
 			<SocialMediaLinks/>
+			{/* <JoinNewsLetter/> */}
 			<CopyrightDetails/>
-			<JoinNewsLetter/>
 		</div>
 	);
 }

@@ -36,6 +36,12 @@ export default function ContactForm({}: any) {
 				component: componentTypes.TEXTAREA,
 				name: 'message',
 				label: 'Message'
+			},
+			{
+				component: componentTypes.CHECKBOX,
+				name: 'newsletters',
+				label: 'I want to receive newsletter',
+				checked: true
 			}
 		]
 	};
