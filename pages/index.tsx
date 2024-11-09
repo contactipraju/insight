@@ -2,50 +2,43 @@
 import { createReader } from "@keystatic/core/reader";
 import keystaticConfig from "../keystatic.config";
 
-// Page section components
-import Head from "../components/head";
 // import BackgroundBlobs from "../components/background-blobs";
 import Features from "../components/features";
 import Footer, { FooterProps } from "../components/footer/footer";
 import Hero, { HeroProps } from "../components/hero";
-import Navbar from "../components/navbar";
+import DefaultHeaderAndBody from "../components/defaultHeaderAndBody";
 import Testimonials, { TestimonialProps } from "../components/testimonials";
 import Projects from "../components/projects/Projects";
 
 type HomepageProps = {
-  testimonials: TestimonialProps[];
-  landingPage: HeroProps & FooterProps;
+	testimonials: TestimonialProps[];
+	landingPage: HeroProps & FooterProps;
 };
 
-// ----------
-
 export default function Index({ testimonials, landingPage }: HomepageProps) {
-  return (
-    <>
-      <Head />
-      <div className="relative w-full">
-        <Navbar />
-        <main className="relative z-10 bg-gray-200">
-          {/* <BackgroundBlobs /> */}
-          <Hero
-            data={{
-              heroHeadline: landingPage.heroHeadline,
-              heroIntroText: landingPage.heroIntroText,
-            }}
-          />
-          <Features />
-		  <Projects />
-          <Testimonials testimonials={testimonials} />
-        </main>
-        <Footer
-          data={{
-            footerHeadline: landingPage.footerHeadline,
-            footerText: landingPage.footerText,
-          }}
-        />
-      </div>
-    </>
-  );
+	return (
+		<>
+			<DefaultHeaderAndBody>
+				{/* <BackgroundBlobs /> */}
+				<Hero
+				data={{
+					heroHeadline: landingPage.heroHeadline,
+					heroIntroText: landingPage.heroIntroText,
+				}}
+				/>
+				<Features />
+				<Projects />
+				<Testimonials testimonials={testimonials} />
+			</DefaultHeaderAndBody>
+
+			<Footer
+				data={{
+					footerHeadline: landingPage.footerHeadline,
+					footerText: landingPage.footerText,
+				}}
+			/>
+	    </>
+	);
 }
 
 // Data from Keystatic
