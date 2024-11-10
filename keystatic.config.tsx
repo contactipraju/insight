@@ -44,7 +44,7 @@ export default config({
         author: fields.slug({ name: { label: "Author" } }),
         testimonial: fields.text({ label: "Testimonial", multiline: true }),
         featured: fields.checkbox({ label: "Featured testimonial" }),
-        twitterHandle: fields.text({ label: "Twitter handle" }),
+        googleProfile: fields.text({ label: "Google profile" }),
         avatar: fields.image({
           label: "Avatar",
           directory: "public/images/testimonials",
