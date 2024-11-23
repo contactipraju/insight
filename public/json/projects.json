@@ -10,7 +10,7 @@
 			"financials": {
 				"purchase_cost": "720,000",
 				"current_value": "1,300,000",
-				"current_weekly_rent": "880"
+				"weekly_rent": "880"
 			},
 			"features": ["Great community", "Close to Shopping", "Close to Public Transport"],
 			"success": ["Appreciation", "Positive gearing"]
@@ -39,7 +39,7 @@
 			"financials": {
 				"purchase_cost": "370,000",
 				"current_value": "670,000",
-				"current_weekly_rent": "540"
+				"weekly_rent": "540"
 			},
 			"features": ["40 min to Melbourne CBD", "Great views"],
 			"success": ["Positive gearing"]
@@ -84,7 +84,7 @@
 			"financials": {
 				"purchase_cost": "295,000",
 				"current_value": "420,000",
-				"current_weekly_rent": "440"
+				"weekly_rent": "440"
 			},
 			"features": ["Early buy in a developing area", "Close to Public Transport"],
 			"success": ["Almost zero deposit"]
@@ -99,7 +99,7 @@
 			"financials": {
 				"purchase_cost": "1,290,000",
 				"estimated_sale_price": "1,800,000",
-				"current_weekly_rent": "500"
+				"weekly_rent": "500"
 			},
 			"features": ["sought-after location", "High-density zoned", "Town-houses potential", "Close to a regional town centre"],
 			"success": ["DA in-progress for multiple Town-houses"]
@@ -111,11 +111,11 @@
 			"location": "Sydney North-west",
 			"address": "66 Hancock Dr, NSW",
 			"images": ["images/portfolio/18.png"],
+			"purchased_in": "March, 2022",
 			"financials": {
-				"purchased_in": "March, 2022",
 				"purchase_cost": "2,650,000",
 				"current_value": "3,000,000",
-				"current_weekly_rent": "500"
+				"weekly_rent": "500"
 			},
 			"features": ["Walking distance to Reputed High-School", "Sought-after Suburb"],
 			"success": ["Secured property lower than the market rate"]
@@ -127,11 +127,11 @@
 			"location": "Perth, WA",
 			"address": "Perth, WA",
 			"images": ["images/portfolio/19.png"],
+			"purchased_in": "March, 2022",
 			"financials": {
-				"purchased_in": "March, 2022",
 				"purchase_cost": "500,000",
 				"gross_realization": "132,355",
-				"current_weekly_rent": "500"
+				"weekly_rent": "500"
 			},
 			"features": ["High rental yield (4.5%)", "Covers P & I and all expenses", "Depreciation benefit"],
 			"success": ["DA approved for Subdivision"]
