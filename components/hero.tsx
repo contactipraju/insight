@@ -37,7 +37,7 @@ export default function Hero({
 				/>
 
 				<div>
-					<h1 className="mt-2 text-3xl font-bold sm:text-4xl md:mt-4 md:text-5xl lg:text-5xl whitespace-pre-line">
+					<h1 className="mt-2 text-3xl font-bold sm:text-3xl md:mt-4 md:text-4xl lg:text-4xl whitespace-pre-line">
 						{heroHeadline}
 					</h1>
 

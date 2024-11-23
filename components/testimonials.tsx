@@ -24,7 +24,7 @@ export default function Testimonials({ testimonials }: ComponentProps) {
         <h2 className="mt-2 text-2xl font-bold sm:mt-2 sm:text-4xl md:mt-4">
           Our users have many reasons to choose us.
         </h2>
-        <p className="mt-4 text-xl sm:mt-6">Here are a few..</p>
+        <h3 className="mt-4 text-xl sm:mt-6">Here are a few..</h3>
 
         <div className="mt-4">
           <ul className="columns-xs space-y-4">
