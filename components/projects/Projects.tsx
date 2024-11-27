@@ -20,9 +20,8 @@ const Projects = (props: any) => {
 	const [projects, setProjects] = useState([]);
 
 	useEffect(() => {
-		getProjectsLocal().then((resp) => {
-			console.log('Projects Loaded: ', resp);
-			setProjects(resp.data);
+		getProjectsLocal().then((data) => {
+			setProjects(data);
 		});
 	}, []);
 

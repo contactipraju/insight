@@ -2,6 +2,7 @@
 	"data": [
 		{
 			"id": 11,
+			"hide_in_site": true,
 			"type": "First Home",
 			"name": "A dream home for a First-timer",
 			"location": "Sydney South-west",
@@ -16,36 +17,8 @@
 			"success": ["Appreciation", "Positive gearing"]
 		},
 		{
-			"id": 12,
-			"type": "First Home",
-			"name": "In the most advantaged suburb",
-			"location": "Sydney west-northwest",
-			"address": "17 Shipley St, The Ponds",
-			"images": ["images/portfolio/12.png"],
-			"financials": {
-				"purchase_cost": "920,000",
-				"current_value": "1,600,000"
-			},
-			"features": ["Great Suburb", "Most family-friendly location"],
-			"success": ["Very Happy Customer"]
-		},
-		{
-			"id": 13,
-			"type": "Investment",
-			"name": "Property with great views",
-			"location": "Victoria",
-			"address": "47 McLachlan St, Victoria",
-			"images": ["images/portfolio/13.png"],
-			"financials": {
-				"purchase_cost": "370,000",
-				"current_value": "670,000",
-				"weekly_rent": "540"
-			},
-			"features": ["40 min to Melbourne CBD", "Great views"],
-			"success": ["Positive gearing"]
-		},
-		{
 			"id": 14,
+			"hide_in_site": true,
 			"type": "Quick-buck Investment",
 			"name": "Buy-hold-Sell in an year",
 			"location": "Victoria",
@@ -59,53 +32,8 @@
 			"success": []
 		},
 		{
-			"id": 15,
-			"type": "Development Opportunity",
-			"name": "DA Approved and Sold",
-			"location": "Victoria",
-			"address": "7-9 Powlett St, Maddingley, Victoria",
-			"images": ["images/portfolio/15.png"],
-			"financials": {
-				"purchase_cost": "720,000",
-				"holding_costs": "50,000",
-				"development_costs": "30,000",
-				"sold_price": "1,450,000"
-			},
-			"features": [],
-			"success": ["DA approved for 7 Additional Townhouses"]
-		},
-		{
-			"id": 16,
-			"type": "Small Investment",
-			"name": "Positive Gearing from day one",
-			"location": "Sydney Inner-west",
-			"address": "Schofields",
-			"images": ["images/portfolio/16.png"],
-			"financials": {
-				"purchase_cost": "295,000",
-				"current_value": "420,000",
-				"weekly_rent": "440"
-			},
-			"features": ["Early buy in a developing area", "Close to Public Transport"],
-			"success": ["Almost zero deposit"]
-		},
-		{
-			"id": 17,
-			"type": "Development Opportunity",
-			"name": "DA in-progress for Townhouses",
-			"location": "Victoria",
-			"address": "6 Candeloro St, Victoria",
-			"images": ["images/portfolio/17.png"],
-			"financials": {
-				"purchase_cost": "1,290,000",
-				"estimated_sale_price": "1,800,000",
-				"weekly_rent": "500"
-			},
-			"features": ["sought-after location", "High-density zoned", "Town-houses potential", "Close to a regional town centre"],
-			"success": ["DA in-progress for multiple Town-houses"]
-		},
-		{
 			"id": 18,
+			"hide_in_site": true,
 			"type": "Dream Home",
 			"name": "A Resort-style Property",
 			"location": "Sydney North-west",
@@ -121,7 +49,41 @@
 			"success": ["Secured property lower than the market rate"]
 		},
 		{
+			"id": 15,
+			"hide_in_site": false,
+			"type": "Development Opportunity",
+			"name": "DA Approved and Sold",
+			"location": "Victoria",
+			"address": "7-9 Powlett St, Maddingley, Victoria",
+			"images": ["images/portfolio/15.png"],
+			"financials": {
+				"purchase_cost": "720,000",
+				"holding_costs": "50,000",
+				"development_costs": "30,000",
+				"sold_price": "1,450,000"
+			},
+			"features": [],
+			"success": ["DA approved for 7 Additional Townhouses"]
+		},
+		{
+			"id": 17,
+			"hide_in_site": false,
+			"type": "Development Opportunity",
+			"name": "DA Approved for 6 additional Townhouses",
+			"location": "Victoria",
+			"address": "6 Candeloro St, Victoria",
+			"images": ["images/portfolio/17.png"],
+			"financials": {
+				"purchase_cost": "1,290,000",
+				"estimated_sale_price": "1,800,000",
+				"weekly_rent": "500"
+			},
+			"features": ["sought-after location", "High-density zoned", "Close to a regional town centre"],
+			"success": ["Project Managaed the whole process"]
+		},
+		{
 			"id": 19,
+			"hide_in_site": false,
 			"type": "Multi-option development site",
 			"name": "Subdivide & sell the land",
 			"location": "Perth, WA",
@@ -135,6 +97,53 @@
 			},
 			"features": ["High rental yield (4.5%)", "Covers P & I and all expenses", "Depreciation benefit"],
 			"success": ["DA approved for Subdivision"]
+		},
+		{
+			"id": 13,
+			"hide_in_site": false,
+			"type": "Investment",
+			"name": "Property with great views",
+			"location": "Victoria",
+			"address": "47 McLachlan St, Victoria",
+			"images": ["images/portfolio/13.png"],
+			"financials": {
+				"purchase_cost": "370,000",
+				"current_value": "670,000",
+				"weekly_rent": "540"
+			},
+			"features": ["40 min to Melbourne CBD", "Great views"],
+			"success": ["Positive gearing"]
+		},
+		{
+			"id": 16,
+			"hide_in_site": false,
+			"type": "Small Investment",
+			"name": "Positive Gearing from day one",
+			"location": "Sydney Inner-west",
+			"address": "Schofields",
+			"images": ["images/portfolio/16.png"],
+			"financials": {
+				"purchase_cost": "295,000",
+				"current_value": "420,000",
+				"weekly_rent": "440"
+			},
+			"features": ["Early buy in a developing area", "Close to Public Transport"],
+			"success": ["Almost zero deposit"]
+		},
+		{
+			"id": 12,
+			"hide_in_site": false,
+			"type": "First Home",
+			"name": "In the most advantaged suburb",
+			"location": "Sydney west-northwest",
+			"address": "17 Shipley St, The Ponds",
+			"images": ["images/portfolio/12.png"],
+			"financials": {
+				"purchase_cost": "920,000",
+				"current_value": "1,600,000"
+			},
+			"features": ["Great Suburb", "Most family-friendly location"],
+			"success": ["Very Happy Customer"]
 		}
 	]
 }

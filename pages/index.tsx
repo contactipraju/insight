@@ -21,10 +21,10 @@ export default function Index({ testimonials, landingPage }: HomepageProps) {
 			<DefaultHeaderAndBody>
 				{/* <BackgroundBlobs /> */}
 				<Hero
-				data={{
-					heroHeadline: landingPage.heroHeadline,
-					heroIntroText: landingPage.heroIntroText,
-				}}
+					data={{
+						heroHeadline: landingPage.heroHeadline,
+						heroIntroText: landingPage.heroIntroText,
+					}}
 				/>
 				<Features />
 				<Projects />
