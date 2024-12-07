@@ -31,24 +31,26 @@ const Stats = (props: any) => {
 		const worth_bought = data.reduce(function (acc: any, obj: IProjectData) { return acc + obj.financials['purchase_cost']; }, 0);
 		const worth_current = data.reduce(function (acc: any, obj: IProjectData) { return acc + obj.financials['current_value']; }, 0);
 		const value_added = worth_current - worth_bought;
+		const percent_growth_annual = 26.5;
 
 		stats.push({title: 'Happy families (and growing..)', value: data.length});
 		stats.push({title: 'Worth of properties bought', value: formatCurrencyShort(worth_bought), tool: worth_bought});
 		stats.push({title: 'Total value added', value: formatCurrencyShort(value_added), tool: value_added});
+		stats.push({title: 'Avg. annual growth', value: formatCurrencyShort(percent_growth_annual) + '%'});
 
 		setStats(stats);
 	}
 
 	return (
-		<div id="stats" className='hidden md:block fixed top-32 right-1 w-50 flex flex-col p-1 gap-y-4 items-center justify-between border-2 border-[#f79727]'>
+		<div id="stats" className='hidden md:block fixed top-32 right-1 w-50 flex flex-col p-1 gap-y-4 items-center justify-between border border-[#f79727]'>
 			{stats!.length > 0 ? stats!.map((stat: any, i: number) => (
 				<div className="text-center p-2 m-2 bg-[#ffffff]" key={i}>
 					<div className="font-bold text-3xl text-[#f79727] py-2">
 						{stat.value}
 					</div>
-					<h2 className="w-32 ml-auto mr-auto font-bold text-l max-w-2xl py-2">
+					<div className="w-32 ml-auto mr-auto font-medium text-l max-w-2xl py-2">
 						{stat.title}
-					</h2>
+					</div>
 				</div>
 			)) : <div></div> }
 		</div>
