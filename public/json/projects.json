@@ -9,9 +9,9 @@
 			"address": "6 Speargrass St, Denham Court NSW",
 			"images": ["images/portfolio/11.png"],
 			"financials": {
-				"purchase_cost": "720,000",
-				"current_value": "1,300,000",
-				"weekly_rent": "880"
+				"purchase_cost": 720000,
+				"current_value": 1200000,
+				"weekly_rent": 880
 			},
 			"features": ["Great community", "Close to Shopping", "Close to Public Transport"],
 			"success": ["Appreciation", "Positive gearing"]
@@ -25,8 +25,9 @@
 			"address": "Melton South",
 			"images": ["images/portfolio/14.png"],
 			"financials": {
-				"purchase_cost": "130,000",
-				"sold_price": "230,000"
+				"purchase_cost": 130000,
+				"current_value": 250000,
+				"sold_price": 230000
 			},
 			"features": ["30 min to Melbourne CBD"],
 			"success": []
@@ -41,9 +42,9 @@
 			"images": ["images/portfolio/18.png"],
 			"purchased_in": "March, 2022",
 			"financials": {
-				"purchase_cost": "2,650,000",
-				"current_value": "3,000,000",
-				"weekly_rent": "500"
+				"purchase_cost": 2650000,
+				"current_value": 3000000,
+				"weekly_rent": 500
 			},
 			"features": ["Walking distance to Reputed High-School", "Sought-after Suburb"],
 			"success": ["Secured property lower than the market rate"]
@@ -57,10 +58,11 @@
 			"address": "7-9 Powlett St, Maddingley, Victoria",
 			"images": ["images/portfolio/15.png"],
 			"financials": {
-				"purchase_cost": "720,000",
-				"holding_costs": "50,000",
-				"development_costs": "30,000",
-				"sold_price": "1,450,000"
+				"purchase_cost": 720000,
+				"current_value": 1300000,
+				"holding_costs": 50000,
+				"development_costs": 30000,
+				"sold_price": 1450000
 			},
 			"features": [],
 			"success": ["DA approved for 7 Additional Townhouses"]
@@ -74,9 +76,10 @@
 			"address": "6 Candeloro St, Victoria",
 			"images": ["images/portfolio/17.png"],
 			"financials": {
-				"purchase_cost": "1,290,000",
-				"estimated_sale_price": "1,800,000",
-				"weekly_rent": "500"
+				"purchase_cost": 1200000,
+				"current_value": 1800000,
+				"estimated_sale_price": 1800000,
+				"weekly_rent": 500
 			},
 			"features": ["sought-after location", "High-density zoned", "Close to a regional town centre"],
 			"success": ["Project Managaed the whole process"]
@@ -91,9 +94,10 @@
 			"images": ["images/portfolio/19.png"],
 			"purchased_in": "March, 2022",
 			"financials": {
-				"purchase_cost": "500,000",
-				"gross_realization": "132,355",
-				"weekly_rent": "500"
+				"purchase_cost": 500000,
+				"current_value": 950000,
+				"gross_realization": 932355,
+				"weekly_rent": 500
 			},
 			"features": ["High rental yield (4.5%)", "Covers P & I and all expenses", "Depreciation benefit"],
 			"success": ["DA approved for Subdivision"]
@@ -107,9 +111,9 @@
 			"address": "47 McLachlan St, Victoria",
 			"images": ["images/portfolio/13.png"],
 			"financials": {
-				"purchase_cost": "370,000",
-				"current_value": "670,000",
-				"weekly_rent": "540"
+				"purchase_cost": 370000,
+				"current_value": 700000,
+				"weekly_rent": 540
 			},
 			"features": ["40 min to Melbourne CBD", "Great views"],
 			"success": ["Positive gearing"]
@@ -123,9 +127,9 @@
 			"address": "Schofields",
 			"images": ["images/portfolio/16.png"],
 			"financials": {
-				"purchase_cost": "295,000",
-				"current_value": "420,000",
-				"weekly_rent": "440"
+				"purchase_cost": 295000,
+				"current_value": 450000,
+				"weekly_rent": 520
 			},
 			"features": ["Early buy in a developing area", "Close to Public Transport"],
 			"success": ["Almost zero deposit"]
@@ -139,8 +143,8 @@
 			"address": "17 Shipley St, The Ponds",
 			"images": ["images/portfolio/12.png"],
 			"financials": {
-				"purchase_cost": "920,000",
-				"current_value": "1,600,000"
+				"purchase_cost": 920000,
+				"current_value": 1600000
 			},
 			"features": ["Great Suburb", "Most family-friendly location"],
 			"success": ["Very Happy Customer"]
