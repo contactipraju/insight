@@ -16,9 +16,9 @@ export default function Navbar() {
 							<a className="font-medium" href="/#reviews"> Reviews </a>
 						</div>
 
-						<div className="links hidden sm:flex">
+						<div className="links hidden sm:flex ml-8">
 							{/* <Link href="/keystatic" className="rounded-full px-5 py-2.5 font-medium hidden gap-10 sm:inline"> Admin </Link> */}
-							<Link href="/contactus" className="rounded-full bg-black px-5 py-2.5 font-medium text-white hover:bg-gray-900 whitespace-nowrap"> Contact us </Link>
+							<Link href="/contactus" className="rounded-full bg-black px-5 py-2.5 font-medium text-white bg-gray-900 hover:bg-gray-700 whitespace-nowrap"> Contact us </Link>
 						</div>
 					</nav>
 				</div>
