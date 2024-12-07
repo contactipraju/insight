@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import NextHead from "next/head";
-import { GoogleAnalytics } from '@next/third-parties/google'
 
 const meta = {
 	title: "InvestorPro Buyer's Agency in Australia | Expert Property Buying Services",
@@ -19,8 +18,6 @@ export default function Head() {
 
 	return (
 	    <NextHead>
-			<GoogleAnalytics gaId="G-T0XZY5BLB0" />
-
 			<title>{meta.title}</title>
 			<meta name="description" content={meta.description} />
 			<meta name="robots" content="index,follow" />
