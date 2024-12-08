@@ -57,50 +57,51 @@
 			"location": "Victoria",
 			"address": "7-9 Powlett St, Maddingley, Victoria",
 			"images": ["images/portfolio/15.png"],
+			"purchase_date": "2019/07/01",
+			"sold_date":"2022/03/01",
 			"financials": {
 				"purchase_cost": 720000,
-				"current_value": 1300000,
-				"holding_costs": 50000,
-				"development_costs": 30000,
+				"holding_costs": 190080,
 				"sold_price": 1450000
 			},
-			"features": [],
-			"success": ["DA approved for 7 Additional Townhouses"]
+			"features": ["Retain existing house and additional 7 townhouses","Close to transport","Low vacancy rate","Low holding costs","Gross realisation of 55% in 2.8 years"],
+			"success": ["DA approved for 7 Additional Townhouses","Capital growth"]
 		},
 		{
 			"id": 17,
 			"hide_in_site": false,
 			"type": "Development Opportunity",
-			"name": "DA Approved for 6 additional Townhouses",
+			"name": "DA Approved for 6+1 Townhouses",
 			"location": "Victoria",
 			"address": "6 Candeloro St, Victoria",
 			"images": ["images/portfolio/17.png"],
+			"purchase_date": "2022/03/24",
+			"valued_date": "2024/12/06",
 			"financials": {
 				"purchase_cost": 1200000,
-				"current_value": 1800000,
-				"estimated_sale_price": 1800000,
-				"weekly_rent": 500
+				"holding_costs": 230000,
+				"current_value": 1700000
 			},
-			"features": ["sought-after location", "High-density zoned", "Close to a regional town centre"],
-			"success": ["Project Managaed the whole process"]
+			"features": ["Sought-after location", "High-density zoned", "Close to town centre","Low vacancy rate","Retain existing house and additional 6 townhouses"],
+			"success": ["DA approved for 6 additional Townhouses"]
 		},
 		{
 			"id": 19,
 			"hide_in_site": false,
 			"type": "Multi-option development site",
-			"name": "Subdivide & sell the land",
-			"location": "Perth, WA",
+			"name": "DA approved for Subdivision" ,
+			"location": "1 Day place, WA",
 			"address": "Perth, WA",
 			"images": ["images/portfolio/19.png"],
-			"purchased_in": "March, 2022",
+			"purchase_date": "2022/11/02",
+			"sold_date":"2024/07/12",
 			"financials": {
-				"purchase_cost": 500000,
-				"current_value": 950000,
-				"gross_realization": 932355,
-				"weekly_rent": 500
+				"purchase_cost": 582200,
+				"holding_costs": 45000,
+				"sold_price": 880000
 			},
-			"features": ["High rental yield (4.5%)", "Covers P & I and all expenses", "Depreciation benefit"],
-			"success": ["DA approved for Subdivision"]
+			"features": ["Sought after suburb","High rental yield (4.5%)", "Low vacancy rate", "Close to transport","Multiple development options"],
+			"success": ["DA approved for Subdivision","Capital growth"]
 		},
 		{
 			"id": 13,
@@ -110,13 +111,15 @@
 			"location": "Victoria",
 			"address": "47 McLachlan St, Victoria",
 			"images": ["images/portfolio/13.png"],
+			"purchase_date": "2016/11/02",
+			"valued_date":"2018/10/12",
 			"financials": {
 				"purchase_cost": 370000,
-				"current_value": 700000,
+				"current_value": 660000,
 				"weekly_rent": 540
 			},
-			"features": ["40 min to Melbourne CBD", "Great views"],
-			"success": ["Positive gearing"]
+			"features": ["Brand new house", "Great views","Close to town centre","Low vacancy rate", "High rental yield (6.3%)"],
+			"success": ["Capital growth","Positive gearing"]
 		},
 		{
 			"id": 16,
@@ -124,15 +127,17 @@
 			"type": "Small Investment",
 			"name": "Positive Gearing from day one",
 			"location": "Sydney Inner-west",
-			"address": "Schofields",
+			"address": "G05/91B Grima st, Schofields",
 			"images": ["images/portfolio/16.png"],
+			"purchase_date": "2021/02/25",
+			"valued_date":"2022/02/25",
 			"financials": {
-				"purchase_cost": 295000,
+				"purchase_cost": 300000,
 				"current_value": 450000,
-				"weekly_rent": 520
+				"weekly_rent": 400
 			},
-			"features": ["Early buy in a developing area", "Close to Public Transport"],
-			"success": ["Almost zero deposit"]
+			"features": ["Almost zero deposit","Developing area", "Close to Public Transport","Low vacancy rate", "High rental yield (7%)"],
+			"success": ["Capital growth","Positive gearing"]
 		},
 		{
 			"id": 12,
@@ -142,12 +147,138 @@
 			"location": "Sydney west-northwest",
 			"address": "17 Shipley St, The Ponds",
 			"images": ["images/portfolio/12.png"],
+			"purchase_date": "2020/03/21",
+			"valued_date":"2022/03/25",
 			"financials": {
-				"purchase_cost": 920000,
-				"current_value": 1600000
+				"purchase_cost": 1140000,
+				"current_value": 1650000
 			},
-			"features": ["Great Suburb", "Most family-friendly location"],
+			"features": ["Sought after suburb and schools","Seller market","High buyers competition","Due diligence done before the first open home","Negotiated and closed deal on first open home"],
 			"success": ["Very Happy Customer"]
+		},
+		{
+			"id": 20,
+			"hide_in_site": false,
+			"type": "First Home",
+			"name": "In the most advantaged suburb",
+			"location": "Sydney",
+			"address": "85 Railway St, Wenttworthville",
+			"images": ["images/portfolio/12.png"],
+			"purchase_date": "2023/07/23",
+			"valued_date":"2024/12/06",
+			"financials": {
+				"purchase_cost": 1625000,
+				"current_value": 1750000
+			},
+			"features": ["Secured property before auction","Seller market","64 prospective buyers","7 Contract holders","Negotiated to 90-day settlement time below the client's budget"],
+			"success": ["Very Happy Customer"]
+		},
+		{
+			"id": 21,
+			"hide_in_site": false,
+			"type": "First Home",
+			"name": "In the most advantaged suburb",
+			"location": "Sydney hills council",
+			"address": "11 Casuarina Drive, Cherrybrook",
+			"images": ["images/portfolio/12.png"],
+			"purchase_date": "2024/02/16",
+			"valued_date":"2024/12/06",
+			"financials": {
+				"purchase_cost": 2125000,
+				"current_value": 2400000
+			},
+			"features": ["Sought after suburb and schools","Competitive market","Due diligence and finalisation of the deal done in 2 days","Negotiated below the client's budget"],
+			"success": ["Very Happy Customer"]
+		},
+		{
+			"id": 21,
+			"hide_in_site": false,
+			"type": "Investment",
+			"name": "Investor's delight on SMSF",
+			"location": "Victoria",
+			"address": "18 Carson St, Shepparton",
+			"images": ["images/portfolio/12.png"],
+			"purchase_date": "2024/04/26",
+			"valued_date":"2024/12/06",
+			"financials": {
+				"purchase_cost": 446000,
+				"current_value": 500000,
+				"weekly_rent": 450
+			},
+			"features": ["Capital growth area","Low vacancy rate of 0.41%","Rental Yield of 5.2%","Property found in less than 2 weeks","Very close proximity to all amenities"],
+			"success": ["Capital growth","High yield"]
+		},
+		{
+			"id": 22,
+			"hide_in_site": false,
+			"type": "Investment",
+			"name": "Investor's delight",
+			"location": "Victoria",
+			"address": "6 Clayton court, Shepparton",
+			"images": ["images/portfolio/12.png"],
+			"purchase_date": "2024/03/10",
+			"valued_date":"2024/12/06",
+			"financials": {
+				"purchase_cost": 399000,
+				"current_value": 500000,
+				"weekly_rent": 480
+			},
+			"features": ["First-time investor with a tight budget","Land size of 1005m2","Low vacancy rate","Rental Yield of 6.25%","Capital growth area"],
+			"success": ["Granny potential","High yield"]
+		},
+		{
+			"id": 23,
+			"hide_in_site": false,
+			"type": "Investment",
+			"name": "Investor's delight",
+			"location": "Victoria",
+			"address": "10 John, Shepparton",
+			"images": ["images/portfolio/12.png"],
+			"purchase_date": "2024/10/25",
+			"valued_date":"2024/12/06",
+			"financials": {
+				"purchase_cost": 450000,
+				"current_value": 460000,
+				"weekly_rent": 450
+			},
+			"features": ["Capital growth area","Land size of 903m2","Low vacancy rate","Rental Yield of 5%"],
+			"success": ["Capital growth"]
+		},
+		{
+			"id": 24,
+			"hide_in_site": false,
+			"type": "Investment",
+			"name": "Investor's delight",
+			"location": "Victoria",
+			"address": "2 McCubbin Drive, Shepparton",
+			"images": ["images/portfolio/12.png"],
+			"purchase_date": "2024/10/23",
+			"valued_date":"2024/12/06",
+			"financials": {
+				"purchase_cost": 437000,
+				"current_value": 460000,
+				"weekly_rent": 475
+			},
+			"features": ["Capital growth area","Cornet lot","Low vacancy rate","Rental Yield of 5.65%"],
+			"success": ["Granny potential","Capital growth"]
+		},
+		{
+			"id": 24,
+			"hide_in_site": false,
+			"type": "Investment",
+			"name": "Investor's delight on SMSF",
+			"location": "Queensland",
+			"address": "717 Kent St, Maryborough",
+			"images": ["images/portfolio/12.png"],
+			"purchase_date": "2024/12/06",
+			"valued_date":"2024/12/06",
+			"financials": {
+				"purchase_cost": 536000,
+				"current_value": 549000,
+				"weekly_rent": 600
+			},
+			"features": ["Capital growth area","Low stock on market","Low vacancy rate of 1.07%","High demand","Rental Yield of 5.82%"],
+			"success": ["Granny potential","Capital growth"]
 		}
 	]
 }

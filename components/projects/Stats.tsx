@@ -25,18 +25,53 @@ const Stats = (props: any) => {
 		});
 	}, []);
 
+	function monthDiff(d1: Date, d2: Date) {
+		if (!d1 || !d2)
+			return 0;
+
+		var months;
+		months = (d2.getFullYear() - d1.getFullYear()) * 12;
+		months -= d1.getMonth();
+		months += d2.getMonth();
+		return months <= 0 ? 0 : months;
+	}
+
 	const prepareStats = (data: IProjectData[]) => {
 		let stats: any = [];
 
-		const worth_bought = data.reduce(function (acc: any, obj: IProjectData) { return acc + obj.financials['purchase_cost']; }, 0);
-		const worth_current = data.reduce(function (acc: any, obj: IProjectData) { return acc + obj.financials['current_value']; }, 0);
-		const value_added = worth_current - worth_bought;
-		const percent_growth_annual = 26.5;
+		let total_purchase = 0;
+		let total_value_added = 0;
+		let total_percent_growth = 0;
+
+		for (let i=0; i<data.length; i++) {
+			let dat = data[i];
+			let fin = data[i]['financials'];
+
+			total_purchase += fin['purchase_cost'];
+			let total_cost = fin['purchase_cost'];
+			total_cost += fin['holding_costs']?fin['holding_costs']:0;
+
+			let appreciation = 0;
+			let months;
+			if (fin['sold_price'] && dat['sold_date']) {
+				appreciation = fin['sold_price'] - total_cost;
+				months = monthDiff(new Date(dat['purchase_date']), new Date(dat['sold_date']));
+			} else if (fin['current_value'] && dat['valued_date']) {
+				appreciation = fin['current_value'] - total_cost;
+				months = monthDiff(new Date(dat['purchase_date']), new Date(dat['valued_date']));
+			} else {
+				months = 12;
+			}
+
+			total_value_added += appreciation;
+			let percent_growth = (total_cost + appreciation) / (total_cost / 100) - 100;
+			total_percent_growth += percent_growth;
+		}
 
 		stats.push({title: 'Happy families (and growing..)', value: data.length});
-		stats.push({title: 'Worth of properties bought', value: formatCurrencyShort(worth_bought), tool: worth_bought});
-		stats.push({title: 'Total value added', value: formatCurrencyShort(value_added), tool: value_added});
-		stats.push({title: 'Avg. annual growth', value: formatCurrencyShort(percent_growth_annual) + '%'});
+		stats.push({title: 'Worth of properties bought', value: formatCurrencyShort(total_purchase), tool: total_purchase});
+		stats.push({title: 'Total value added', value: formatCurrencyShort(total_value_added), tool: total_value_added});
+		stats.push({title: 'Avg. annual growth %', value: (total_percent_growth/data.length).toFixed(2) + '%'});
 
 		setStats(stats);
 	}

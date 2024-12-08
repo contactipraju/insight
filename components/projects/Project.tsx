@@ -42,8 +42,9 @@ const Project = ({project}) => {
 
 					<div className="features">
 						<ul>
-							{project.features.map(item => {
-								return <li key={item}>{item}</li>;
+							{project.features.map((item, index) => {
+								if (index <3)
+									return <li key={item}>{item}</li>;
 							})}
 						</ul>
 					</div>
