@@ -191,7 +191,7 @@
 			"success": ["Very Happy Customer"]
 		},
 		{
-			"id": 21,
+			"id": 22,
 			"hide_in_site": false,
 			"type": "Investment",
 			"name": "Investor's delight on SMSF",
@@ -209,7 +209,7 @@
 			"success": ["Capital growth","High yield"]
 		},
 		{
-			"id": 22,
+			"id": 23,
 			"hide_in_site": false,
 			"type": "Investment",
 			"name": "Investor's delight",
@@ -227,7 +227,7 @@
 			"success": ["Granny potential","High yield"]
 		},
 		{
-			"id": 23,
+			"id": 24,
 			"hide_in_site": false,
 			"type": "Investment",
 			"name": "Investor's delight",
@@ -245,7 +245,7 @@
 			"success": ["Capital growth"]
 		},
 		{
-			"id": 24,
+			"id": 25,
 			"hide_in_site": false,
 			"type": "Investment",
 			"name": "Investor's delight",
@@ -263,7 +263,7 @@
 			"success": ["Granny potential","Capital growth"]
 		},
 		{
-			"id": 24,
+			"id": 26,
 			"hide_in_site": false,
 			"type": "Investment",
 			"name": "Investor's delight on SMSF",
