@@ -1,7 +1,7 @@
 import DefaultHeaderAndBody from "../../components/defaultHeaderAndBody";
 import FooterBottom from "../../components/footer/footer-bottom";
 
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
  
 export default function Slug() {
 	const router = useRouter();

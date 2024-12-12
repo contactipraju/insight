@@ -24,7 +24,7 @@ const Projects = (props: any) => {
 
 				<div className="projects flex flex-wrap justify-around">
 					{projects!.length > 0 ? projects!.map((project: IProjectData) => (
-							<Link href={`/project/${encodeURIComponent(project.id)}`}>
+							<Link key={project.id} href={`/project/${encodeURIComponent(project.id)}`}>
 								<Project project={project} />
 							</Link>
 						)) : <div>{"No projects available"}</div> }
