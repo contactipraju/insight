@@ -88,6 +88,11 @@ const Stats = (props: any) => {
 					</div>
 				</div>
 			)) : <div></div> }
+
+			{/* This won't work by default, as it's inside relative element */}
+			{/* <div className="links hidden sm:flex ml-8">
+				<a href="/performance" className="rounded-full px-5 py-2.5 font-small text-white bg-gray-700 hover:bg-gray-700 whitespace-nowrap"> Performance </a>
+			</div> */}
 		</div>
 	)
 }

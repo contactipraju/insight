@@ -5,8 +5,7 @@ export default function Contactus({}: any) {
 	return (
 		<>
 			<DefaultHeaderAndBody>
-				<div className="deals">
-				</div>
+				<div className="content pt-20"></div>
 			</DefaultHeaderAndBody>
 
 			<DefaultFooter />

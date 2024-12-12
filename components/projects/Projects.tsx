@@ -51,7 +51,7 @@ const Projects = (props: any) => {
 				>
 					{projects!.length > 0 ? projects!.map((project: IProjectData) => (
 						<SwiperSlide key={project.id}>
-							<Link href={`/deals/${encodeURIComponent(project.id)}`}>
+							<Link href={`/projects/${encodeURIComponent(project.id)}`}>
 								<Project project={project} />
 							</Link>
 						</SwiperSlide>

@@ -7,7 +7,7 @@ export default function Privacy({}: any) {
 	return (
 		<>
 			<DefaultHeaderAndBody>
-				<div className="deals">
+				<div className="content">
 					<PrivacyContent/>
 				</div>
 			</DefaultHeaderAndBody>
