@@ -9,11 +9,13 @@ import FooterBottom from "../components/footer/footer-bottom";
 import { MultiSelect } from "../components/filters/Selects";
 import { BasicSelect } from "../components/filters/Selects";
 
-import BasicStacking from '../components/widgets/Chart';
+import BasicStacking from '../components/widgets/Charts';
 import ProjectsTiled from "../components/projects/ProjectsTiled";
 
 import { IProjectData } from '../components/projects/Projects.interfaces';
 import { getProjectsLocal } from "../components/projects/Projects.service";
+
+import Aggregates from '../components/widgets/Aggregates';
 
 export interface entry {
 	label: string;
@@ -115,6 +117,8 @@ export default function Performance({}: any) {
 						{ projects.length && <div className="chart grow">
 							<BasicStacking projects={projects}/>
 						</div>}
+
+						{ projects.length && <Aggregates projects={projects}/> }
 					</div>}
 
 					{projects.length && <ProjectsTiled />}
