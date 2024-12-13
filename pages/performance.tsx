@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
@@ -8,7 +9,11 @@ import FooterBottom from "../components/footer/footer-bottom";
 import { MultiSelect } from "../components/filters/Selects";
 import { BasicSelect } from "../components/filters/Selects";
 
+import BasicStacking from '../components/widgets/Chart';
 import ProjectsTiled from "../components/projects/ProjectsTiled";
+
+import { IProjectData } from '../components/projects/Projects.interfaces';
+import { getProjectsLocal } from "../components/projects/Projects.service";
 
 export interface entry {
 	label: string;
@@ -53,6 +58,23 @@ function fetchFilterData() {
 export default function Performance({}: any) {
 	const router = useRouter();
 
+	// Since it takes few milliseconds to load router values...
+	const [loading, setLoading] = useState(true);
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setLoading(false);
+		}, 1000);
+		return () => clearTimeout(timer);
+	}, []);
+
+	const [projects, setProjects] = useState<IProjectData[]>([]);
+
+	useEffect(() => {
+		getProjectsLocal().then((data) => {
+			setProjects(data);
+		});
+	}, []);
+
 	const [filters, setFilters] = React.useState<any>({});
 
 	// Default Options: Should we grab these from actual data??
@@ -72,10 +94,10 @@ export default function Performance({}: any) {
 	}
 
 	useEffect(() => {
-		if (router.query.region) {
+		if (router.query) {
 			prepareFilters();
 		}
-	}, [router]);
+	}, [router.query]);
 
 	// On any filter change:
 
@@ -83,18 +105,19 @@ export default function Performance({}: any) {
 		<>
 			<DefaultHeaderAndBody>
 				<div className="content pt-24">
-					<div className="inputs">
+					{ !loading && <div className="inputs flex flex-row">
 						<div className="filters">
 							{filters['region'] && <MultiSelect props={filters['region']}/>}
 							{filters['ptype'] && <MultiSelect props={filters['ptype']}/>}
 							{filters['metric'] && <BasicSelect props={filters['metric']}/>}
 						</div>
 
-						<div className="chart">
-						</div>
-					</div>
+						{ projects.length && <div className="chart grow">
+							<BasicStacking projects={projects}/>
+						</div>}
+					</div>}
 
-					<ProjectsTiled />
+					{projects.length && <ProjectsTiled />}
 				</div>
 			</DefaultHeaderAndBody>
 

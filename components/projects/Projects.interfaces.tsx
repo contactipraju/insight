@@ -7,6 +7,8 @@ export interface IProjectFinancial {
 	development_costs?: number;
 	estimated_sale_price?: number;
 	gross_realization?: number;
+	appreciation: number;
+	percent_appreciated: number;
 }
 
 export interface IProjectData {

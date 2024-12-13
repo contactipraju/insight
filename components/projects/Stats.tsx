@@ -25,17 +25,6 @@ const Stats = (props: any) => {
 		});
 	}, []);
 
-	function monthDiff(d1: Date, d2: Date) {
-		if (!d1 || !d2)
-			return 0;
-
-		var months;
-		months = (d2.getFullYear() - d1.getFullYear()) * 12;
-		months -= d1.getMonth();
-		months += d2.getMonth();
-		return months <= 0 ? 0 : months;
-	}
-
 	const prepareStats = (data: IProjectData[]) => {
 		let stats: any = [];
 
@@ -51,20 +40,8 @@ const Stats = (props: any) => {
 			let total_cost = fin['purchase_cost'];
 			total_cost += fin['holding_costs']?fin['holding_costs']:0;
 
-			let appreciation = 0;
-			let months;
-			if (fin['sold_price'] && dat['sold_date']) {
-				appreciation = fin['sold_price'] - total_cost;
-				months = monthDiff(new Date(dat['purchase_date']), new Date(dat['sold_date']));
-			} else if (fin['current_value'] && dat['valued_date']) {
-				appreciation = fin['current_value'] - total_cost;
-				months = monthDiff(new Date(dat['purchase_date']), new Date(dat['valued_date']));
-			} else {
-				months = 12;
-			}
-
-			total_value_added += appreciation;
-			let percent_growth = (total_cost + appreciation) / (total_cost / 100) - 100;
+			total_value_added += data[i].financials['appreciation'];
+			let percent_growth = (total_cost + data[i].financials['appreciation']) / (total_cost / 100) - 100;
 			total_percent_growth += percent_growth;
 		}
 
