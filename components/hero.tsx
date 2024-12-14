@@ -19,14 +19,10 @@ export default function Hero({
 		{/* Blob 2 */}
 
 			<div className="relative z-10 mx-auto grid max-w-6xl py-16 px-6 sm:py-24 md:grid-cols-2 md:pt-28 md:pb-8 lg:px-8">
-				<div className="absolute bottom-0 -right-24">
-					<div className="h-[300px] w-[400px] bg-[radial-gradient(50%_50%_at_50%_50%,#cfbcdc_0%,rgba(207,188,220,0.66)_24.48%,rgba(239,238,243,0)_100%)] opacity-60 mix-blend-color-burn [animation-delay:2s]"></div>
-				</div>
-
 				<Image
 					src={heroImage}
 					alt=""
-					className="absolute right-0 bottom-0 hidden max-w-[60%] md:block"
+					className="absolute right-0 bottom-0 hidden max-w-[60%] md:block mr-24"
 				/>
 
 				{/* Mobile image */}
