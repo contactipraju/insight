@@ -6,7 +6,7 @@ export default function Navbar() {
 	return (
 		<div className="relative">
 			<header className="absolute inset-x-0 z-20 sm:fixed sm:h-20 bg-black text-white py-5 sm:py-8 sm:backdrop-blur">
-				<div className="mx-auto flex h-full max-w-5xl items-center justify-between px-6 lg:px-8">
+				<div className="mx-auto flex h-full max-w-6xl items-center justify-between px-6 lg:px-8">
 					<LogoLink />
 
 					<nav className="flex items-center justify-between sm:ml-16 sm:w-full">
@@ -14,7 +14,7 @@ export default function Navbar() {
 							<a className="font-medium" href="/#features"> Process </a>
 							<a className="font-medium" href="/#projects"> Portfolio </a>
 							<a className="font-medium" href="/#reviews"> Reviews </a>
-							{/* <a className="font-medium" href="/FAQ"> FAQ </a> */}
+							<a className="font-medium" href="/FAQ"> FAQ </a>
 						</div>
 
 						<div className="links hidden sm:flex ml-8">

@@ -35,7 +35,7 @@ const features = [
 export default function Features() {
   return (
     <section id="features" className="isolate py-4 sm:py-8">
-      <div className="mx-auto grid max-w-5xl items-center gap-y-6 px-6 md:grid-cols-2 lg:px-8">
+      <div className="mx-auto grid max-w-6xl items-center gap-y-6 px-6 md:grid-cols-2 lg:px-8">
         <div className="hidden md:block">
           <Image
             src={featuresImage}

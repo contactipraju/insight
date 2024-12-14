@@ -45,16 +45,16 @@ const Stats = (props: any) => {
 			total_percent_growth += percent_growth;
 		}
 
-		stats.push({title: 'Happy families (and growing..)', value: data.length});
+		// stats.push({title: 'Happy families (and growing..)', value: data.length});
 		stats.push({title: 'Worth of properties bought', value: formatCurrencyShort(total_purchase), tool: total_purchase});
 		stats.push({title: 'Total value added', value: formatCurrencyShort(total_value_added), tool: total_value_added});
-		stats.push({title: 'Avg. annual growth %', value: (total_percent_growth/data.length).toFixed(2) + '%'});
+		stats.push({title: 'Avg. annual growth', value: (total_percent_growth/data.length).toFixed(2) + '%'});
 
 		setStats(stats);
 	}
 
 	return (
-		<div id="stats" className='hidden md:block fixed top-32 right-1 w-50 flex flex-col p-1 gap-y-4 items-center justify-between border border-[#f79727]'>
+		<div id="stats" className='hidden md:block fixed top-32 right-1 w-50 flex flex-col gap-y-4 items-center justify-between border border-[#f79727]'>
 			{stats!.length > 0 ? stats!.map((stat: any, i: number) => (
 				<div className="text-center p-2 m-2 bg-[#ffffff]" key={i}>
 					<div className="font-bold text-3xl text-[#f79727] py-2">

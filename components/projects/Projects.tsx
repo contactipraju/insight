@@ -17,18 +17,18 @@ import { getProjectsLocal } from "./Projects.service";
 import Project from "./Project";
 
 const Projects = (props: any) => {
-	const [projects, setProjects] = useState([]);
+	const [projects, setProjects] = useState<IProjectData[]>([]);
 
 	useEffect(() => {
-		getProjectsLocal().then((data) => {
+		getProjectsLocal().then((data: IProjectData[]) => {
 			setProjects(data);
 		});
 	}, []);
 
 	return (
 		<section id="projects" className='isolate py-4 sm:py-8'>
-			<div className="mx-auto md:px-6 lg:px-8">
-				<h2 className="my-2 max-w-2xl text-2xl font-bold sm:my-2 sm:text-4xl md:my-4 mx-8 lg:ml-28">
+			<div className="mx-auto max-w-6xl md:px-6 lg:px-8">
+				<h2 className="my-2 max-w-2xl text-2xl font-bold sm:my-2 sm:text-4xl md:my-4 mx-8">
 					Projects
 				</h2>
 				<Swiper
