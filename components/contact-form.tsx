@@ -2,6 +2,7 @@ import FormRenderer from '@data-driven-forms/react-form-renderer/form-renderer';
 import componentTypes from '@data-driven-forms/react-form-renderer/component-types';
 import FormTemplate from '@data-driven-forms/mui-component-mapper/form-template';
 import { componentMapper } from '@data-driven-forms/mui-component-mapper';
+import { fetchToken, saveAsLead } from './../services/zoho.service';
 
 export default function ContactForm({}: any) {
 	const schema = {
@@ -46,13 +47,25 @@ export default function ContactForm({}: any) {
 		]
 	};
 
+	const dataReady = (values: any) => {
+		console.log("contact-form - dataReady: ", values);
+
+		fetchToken().then((response) => {
+			console.log("Success", response);
+		});
+
+		// saveAsLead(values).then((data) => {
+		// 	console.log("Success");
+		// });
+	};
+
 	return (
 		<>
 			<FormRenderer
 				schema={schema}
 				componentMapper={componentMapper}
 				FormTemplate={FormTemplate}
-				onSubmit={console.log}
+				onSubmit={(values) => dataReady(values)}
 			/>
 		</>
 	);
