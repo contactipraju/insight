@@ -15,7 +15,6 @@ import ProjectsTiled from "../components/projects/ProjectsTiled";
 import { IProjectData } from '../components/projects/Projects.interfaces';
 import { getProjectsLocal } from "../components/projects/Projects.service";
 
-import Aggregates from '../components/widgets/Aggregates';
 import Stats from "../components/projects/Stats";
 
 export interface entry {
@@ -107,9 +106,7 @@ export default function Performance({}: any) {
 	return (
 		<>
 			<DefaultHeaderAndBody>
-				<Stats projects={projects}></Stats>
-
-				<div className="content pt-24">
+				<div className="content p-8">
 					{ !loading && <div className="inputs flex flex-row">
 						<div className="filters">
 							{filters['region'] && <MultiSelect props={filters['region']}/>}
@@ -121,7 +118,7 @@ export default function Performance({}: any) {
 							<BasicStacking projects={projects}/>
 						</div>}
 
-						{ projects.length && <Aggregates projects={projects}/> }
+						{ projects.length && <Stats projects={projects}/> }
 					</div>}
 
 					{projects.length && <ProjectsTiled />}

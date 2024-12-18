@@ -15,7 +15,7 @@ export default function Stats ({projects}: StatsProps): any  {
 	}, []);
 
 	return (
-		<div id="stats" className='hidden md:block fixed top-80 left-1 w-50 flex flex-col gap-y-4 items-center justify-between border border-[#f79727]'>
+		<div id="stats" className='hidden md:block w-50 flex flex-col gap-y-4 items-center justify-between border border-[#f79727]'>
 			{stats!.length > 0 ? stats!.map((stat: any, i: number) => (
 				<div className="text-center p-2 m-2 bg-[#ffffff]" key={i}>
 					<div className="font-bold text-3xl text-[#f79727] py-2">
