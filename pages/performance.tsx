@@ -63,10 +63,12 @@ export default function Performance({}: any) {
 	}, []);
 
 	const [projects, setProjects] = useState<IProjectData[]>([]);
+	const [filtered, setFiltered] = useState<IProjectData[]>([]);
 
 	useEffect(() => {
 		getProjectsLocal().then((data) => {
 			setProjects(data);
+			filterProperties(data);
 		});
 	}, []);
 
@@ -95,6 +97,11 @@ export default function Performance({}: any) {
 	}, [router.query]);
 
 	// On any filter change:
+	const filterProperties = (data: IProjectData[]) => {
+		const result = data.filter((project: IProjectData) => project['ptype'] === 'INVESTMENT');
+
+		setFiltered(result);
+	}
 
 	return (
 		<>
@@ -108,13 +115,13 @@ export default function Performance({}: any) {
 						</div>
 
 						{ projects.length && <div className="chart grow">
-							<BasicStacking projects={projects}/>
+							<BasicStacking projects={filtered}/>
 						</div>}
 
-						{ projects.length && <Stats projects={projects}/> }
+						{ projects.length && <Stats projects={filtered}/> }
 					</div>}
 
-					{projects.length && <ProjectsTiledView projects={projects}/>}
+					{projects.length && <ProjectsTiledView projects={filtered}/>}
 				</div>
 			</DefaultHeaderAndBody>
 

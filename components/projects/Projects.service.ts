@@ -47,7 +47,7 @@ export function prepareStats(data: IProjectData[]) {
 	let total_value_added = 0;
 	let total_percent_growth = 0;
 
-	for (let i=0; i<3; i++) {
+	for (let i=0; i<data.length; i++) {
 		let dat = data[i];
 		let fin = data[i]['financials'];
 
