@@ -9,7 +9,6 @@ import Hero, { HeroProps } from "../components/hero";
 import DefaultHeaderAndBody from "../components/defaultHeaderAndBody";
 import Testimonials, { TestimonialProps } from "../components/testimonials";
 import Projects from "../components/projects/Projects";
-import Stats from "../components/projects/Stats";
 
 type HomepageProps = {
 	testimonials: TestimonialProps[];
@@ -21,7 +20,6 @@ export default function Index({ testimonials, landingPage }: HomepageProps) {
 		<>
 			<DefaultHeaderAndBody>
 				{/* <BackgroundBlobs /> */}
-				<Stats></Stats>
 				<Hero
 					data={{
 						heroHeadline: landingPage.heroHeadline,

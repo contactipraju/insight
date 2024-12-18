@@ -1,60 +1,21 @@
 import { useState, useEffect } from "react";
 
 import { IProjectData } from "./Projects.interfaces";
-import { getProjectsLocal } from "./Projects.service";
+import { getProjectsLocal, prepareStats } from "./Projects.service";
 
-const formatCurrencyLong = (curr: any) => {
-	return '$' + Number(curr.toFixed(0)).toLocaleString();
+export type StatsProps = {
+	projects: IProjectData[];
 };
 
-const formatCurrencyShort = (curr: any) => {
-	return Intl.NumberFormat('en-US', {
-		notation: "compact",
-		maximumFractionDigits: 1
-	  }).format(curr);
-};
-
-const Stats = (props: any) => {
-	const [projects, setProjects] = useState<IProjectData[]>([]);
+export default function Stats ({projects}: StatsProps): any  {
 	const [stats, setStats] = useState([]);
 
 	useEffect(() => {
-		getProjectsLocal().then((data: IProjectData[]) => {
-			setProjects(data);
-			prepareStats(data);
-		});
+		setStats(prepareStats(projects));
 	}, []);
 
-	const prepareStats = (data: IProjectData[]) => {
-		let stats: any = [];
-
-		let total_purchase = 0;
-		let total_value_added = 0;
-		let total_percent_growth = 0;
-
-		for (let i=0; i<data.length; i++) {
-			let dat = data[i];
-			let fin = data[i]['financials'];
-
-			total_purchase += fin['purchase_cost'];
-			let total_cost = fin['purchase_cost'];
-			total_cost += fin['holding_costs']?fin['holding_costs']:0;
-
-			total_value_added += data[i].financials['appreciation'];
-			let percent_growth = (total_cost + data[i].financials['appreciation']) / (total_cost / 100) - 100;
-			total_percent_growth += percent_growth;
-		}
-
-		// stats.push({title: 'Happy families (and growing..)', value: data.length});
-		stats.push({title: 'Worth of properties bought', value: formatCurrencyShort(total_purchase), tool: total_purchase});
-		stats.push({title: 'Total value added', value: formatCurrencyShort(total_value_added), tool: total_value_added});
-		stats.push({title: 'Avg. annual growth', value: (total_percent_growth/data.length).toFixed(2) + '%'});
-
-		setStats(stats);
-	}
-
 	return (
-		<div id="stats" className='hidden md:block fixed top-32 right-1 w-50 flex flex-col gap-y-4 items-center justify-between border border-[#f79727]'>
+		<div id="stats" className='hidden md:block fixed top-80 left-1 w-50 flex flex-col gap-y-4 items-center justify-between border border-[#f79727]'>
 			{stats!.length > 0 ? stats!.map((stat: any, i: number) => (
 				<div className="text-center p-2 m-2 bg-[#ffffff]" key={i}>
 					<div className="font-bold text-3xl text-[#f79727] py-2">
@@ -73,5 +34,3 @@ const Stats = (props: any) => {
 		</div>
 	)
 }
-
-export default Stats;

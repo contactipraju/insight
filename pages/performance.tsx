@@ -16,6 +16,7 @@ import { IProjectData } from '../components/projects/Projects.interfaces';
 import { getProjectsLocal } from "../components/projects/Projects.service";
 
 import Aggregates from '../components/widgets/Aggregates';
+import Stats from "../components/projects/Stats";
 
 export interface entry {
 	label: string;
@@ -106,6 +107,8 @@ export default function Performance({}: any) {
 	return (
 		<>
 			<DefaultHeaderAndBody>
+				<Stats projects={projects}></Stats>
+
 				<div className="content pt-24">
 					{ !loading && <div className="inputs flex flex-row">
 						<div className="filters">
