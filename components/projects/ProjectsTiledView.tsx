@@ -1,19 +1,14 @@
-import { useState, useEffect } from "react";
 import Link from "next/link";
 
 import { IProjectData } from "./Projects.interfaces";
-import { getProjectsLocal } from "./Projects.service";
 
 import Project from "./Project";
 
-const Projects = (props: any) => {
-	const [projects, setProjects] = useState<IProjectData[]>([]);
+export type TiledViewProps = {
+	projects: IProjectData[];
+};
 
-	useEffect(() => {
-		getProjectsLocal().then((data) => {
-			setProjects(data);
-		});
-	}, []);
+const ProjectsTiledView = ({ projects }: TiledViewProps) => {
 
 	return (
 		<section id="projects" className='isolate py-4 sm:py-8'>
@@ -34,4 +29,4 @@ const Projects = (props: any) => {
 	)
 }
 
-export default Projects;
+export default ProjectsTiledView;

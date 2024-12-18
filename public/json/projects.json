@@ -3,7 +3,7 @@
 		{
 			"id": 11,
 			"hide_in_site": true,
-			"type": "First Home",
+			"ptype": "OWNER_OCCUPIER",
 			"name": "A dream home for a First-timer",
 			"location": "Sydney South-west",
 			"address": "6 Speargrass St, Denham Court NSW",
@@ -19,7 +19,7 @@
 		{
 			"id": 14,
 			"hide_in_site": true,
-			"type": "Quick-buck Investment",
+			"ptype": "INVESTMENT",
 			"name": "Buy-hold-Sell in an year",
 			"location": "Victoria",
 			"address": "Melton South",
@@ -35,7 +35,7 @@
 		{
 			"id": 18,
 			"hide_in_site": true,
-			"type": "Dream Home",
+			"ptype": "OWNER_OCCUPIER",
 			"name": "A Resort-style Property",
 			"location": "Sydney North-west",
 			"address": "66 Hancock Dr, NSW",
@@ -52,7 +52,7 @@
 		{
 			"id": 15,
 			"hide_in_site": false,
-			"type": "Development Opportunity",
+			"ptype": "INVESTMENT",
 			"name": "DA Approved and Sold",
 			"location": "Victoria",
 			"address": "7-9 Powlett St, Maddingley, Victoria",
@@ -70,7 +70,7 @@
 		{
 			"id": 17,
 			"hide_in_site": false,
-			"type": "Development Opportunity",
+			"ptype": "INVESTMENT",
 			"name": "DA Approved for 6+1 Townhouses",
 			"location": "Victoria",
 			"address": "6 Candeloro St, Victoria",
@@ -88,7 +88,7 @@
 		{
 			"id": 19,
 			"hide_in_site": false,
-			"type": "Multi-option development site",
+			"ptype": "INVESTMENT",
 			"name": "DA approved for Subdivision" ,
 			"location": "1 Day place, WA",
 			"address": "Perth, WA",
@@ -106,7 +106,7 @@
 		{
 			"id": 13,
 			"hide_in_site": false,
-			"type": "Investment",
+			"ptype": "INVESTMENT",
 			"name": "Property with great views",
 			"location": "Victoria",
 			"address": "47 McLachlan St, Victoria",
@@ -124,7 +124,7 @@
 		{
 			"id": 16,
 			"hide_in_site": false,
-			"type": "Small Investment",
+			"ptype": "INVESTMENT",
 			"name": "Positive Gearing from day one",
 			"location": "Sydney Inner-west",
 			"address": "G05/91B Grima st, Schofields",
@@ -142,7 +142,7 @@
 		{
 			"id": 12,
 			"hide_in_site": false,
-			"type": "First Home",
+			"ptype": "OWNER_OCCUPIER",
 			"name": "In the most advantaged suburb",
 			"location": "Sydney west-northwest",
 			"address": "17 Shipley St, The Ponds",
@@ -159,7 +159,7 @@
 		{
 			"id": 20,
 			"hide_in_site": false,
-			"type": "First Home",
+			"ptype": "OWNER_OCCUPIER",
 			"name": "In the most advantaged suburb",
 			"location": "Sydney",
 			"address": "85 Railway St, Wenttworthville",
@@ -176,7 +176,7 @@
 		{
 			"id": 21,
 			"hide_in_site": false,
-			"type": "First Home",
+			"ptype": "OWNER_OCCUPIER",
 			"name": "In the most advantaged suburb",
 			"location": "Sydney hills council",
 			"address": "11 Casuarina Drive, Cherrybrook",
@@ -193,7 +193,7 @@
 		{
 			"id": 22,
 			"hide_in_site": false,
-			"type": "Investment",
+			"ptype": "INVESTMENT",
 			"name": "Investor's delight on SMSF",
 			"location": "Victoria",
 			"address": "18 Carson St, Shepparton",
@@ -211,7 +211,7 @@
 		{
 			"id": 23,
 			"hide_in_site": false,
-			"type": "Investment",
+			"ptype": "INVESTMENT",
 			"name": "Investor's delight",
 			"location": "Victoria",
 			"address": "6 Clayton court, Shepparton",
@@ -229,7 +229,7 @@
 		{
 			"id": 24,
 			"hide_in_site": false,
-			"type": "Investment",
+			"ptype": "INVESTMENT",
 			"name": "Investor's delight",
 			"location": "Victoria",
 			"address": "10 John, Shepparton",
@@ -247,7 +247,7 @@
 		{
 			"id": 25,
 			"hide_in_site": false,
-			"type": "Investment",
+			"ptype": "INVESTMENT",
 			"name": "Investor's delight",
 			"location": "Victoria",
 			"address": "2 McCubbin Drive, Shepparton",
@@ -265,7 +265,7 @@
 		{
 			"id": 26,
 			"hide_in_site": false,
-			"type": "Investment",
+			"ptype": "INVESTMENT",
 			"name": "Investor's delight on SMSF",
 			"location": "Queensland",
 			"address": "717 Kent St, Maryborough",

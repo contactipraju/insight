@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { IProjectData } from "./Projects.interfaces";
-import { getProjectsLocal, prepareStats } from "./Projects.service";
+import { prepareStats } from "./Projects.service";
 
 export type StatsProps = {
 	projects: IProjectData[];
@@ -12,7 +12,7 @@ export default function Stats ({projects}: StatsProps): any  {
 
 	useEffect(() => {
 		setStats(prepareStats(projects));
-	}, []);
+	}, [projects]);
 
 	return (
 		<div id="stats" className='hidden md:block w-50 flex flex-col gap-y-4 items-center justify-between border border-[#f79727]'>

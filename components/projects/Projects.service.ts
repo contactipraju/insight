@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { IProjectData } from './Projects.interfaces';
-import Projects from './ProjectsTiled';
 
 export async function getProjectsLocal() {
 	const resp = await axios.get('json/projects.json');

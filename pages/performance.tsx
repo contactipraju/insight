@@ -10,7 +10,7 @@ import { MultiSelect } from "../components/filters/Selects";
 import { BasicSelect } from "../components/filters/Selects";
 
 import BasicStacking from '../components/widgets/Charts';
-import ProjectsTiled from "../components/projects/ProjectsTiled";
+import ProjectsTiledView from "../components/projects/ProjectsTiledView";
 
 import { IProjectData } from '../components/projects/Projects.interfaces';
 import { getProjectsLocal } from "../components/projects/Projects.service";
@@ -37,15 +37,8 @@ function fetchFilterData() {
 	];
 
 	const ptypes: entry[] = [
-		{ label: 'All', value: 'ALL', all: true },
-		{ label: 'Freestanding', value: 'FREESTANDING' },
-		{ label: 'Granny Potential', value: 'GRANNYPOTENTIAL' },
-		{ label: 'Subdivision', value: 'SUBDIZVISION' },
-		{ label: 'Townhouse', value: 'TOWNHOUSE' },
-		{ label: 'Renovation', value: 'RENOVATION' },
-		{ label: 'Townhouse Potential', value: 'TOWNHOUSEPOTENTIAL' },
-		{ label: 'Unit', value: 'UNIT' },
-		{ label: 'Knock-down Rebuild', value: 'KDR' },
+		{ label: 'Owner Occupier', value: 'OWNER_OCCUPIER' },
+		{ label: 'Investment', value: 'INVESTMENT' }
 	];
 
 	const metrics: entry[] = [
@@ -90,7 +83,7 @@ export default function Performance({}: any) {
 	const prepareFilters = () => {
 		setFilters({
 			region: { title: 'Region',        entries: regions, preset: stripParam(router.query.region, ['AUSTRALIA']) },
-			ptype:  { title: 'Property type', entries: ptypes,  preset: stripParam(router.query.ptype, ['ALL']) },
+			ptype:  { title: 'Property type', entries: ptypes,  preset: stripParam(router.query.ptype, ['INVESTMENT']) },
 			metric: { title: 'Metric',        entries: metrics, preset: stripParam(router.query.metric, 'ONE_YEAR_APPRECIATION') },
 		});
 	}
@@ -121,7 +114,7 @@ export default function Performance({}: any) {
 						{ projects.length && <Stats projects={projects}/> }
 					</div>}
 
-					{projects.length && <ProjectsTiled />}
+					{projects.length && <ProjectsTiledView projects={projects}/>}
 				</div>
 			</DefaultHeaderAndBody>
 

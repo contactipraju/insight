@@ -13,7 +13,7 @@ export interface IProjectFinancial {
 
 export interface IProjectData {
 	id: number;
-	type: string;
+	ptype: string;
 	name: string;
 	location?: string;
 	address?: string;
