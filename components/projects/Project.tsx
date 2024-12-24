@@ -1,4 +1,5 @@
 import './Project.scss';
+import { formatCurrencyShort } from './Projects.service';
 
 const Project = ({project}) => {
 
@@ -30,12 +31,22 @@ const Project = ({project}) => {
 							</thead> */}
 							<tbody>
 							{
-								Object.keys(project.financials).map((key: any, i: any) => (
-									<tr key={i}>
-										<td className="text">{key.replace(/_/g,' ')}</td>
-										<td className="amount">${project.financials[key]}</td>
-									</tr>
-								))}
+								Object.keys(project.financials).map((key: any, i: any) => {
+									if (key === 'appreciation') {
+										return <tr key={i}>
+											<td className="text">{key.replace(/_/g,' ')}</td>
+											<td className="amount">{formatCurrencyShort(project.financials[key])} ({(project.financials['percent_appreciated']).toFixed(2) + '%'})</td>
+										</tr>
+									} else if(key === 'percent_appreciated' || key === 'weekly_rent') {
+										return null;
+									} else {
+										return <tr key={i}>
+											<td className="text">{key.replace(/_/g,' ')}</td>
+											<td className="amount">{formatCurrencyShort(project.financials[key])}</td>
+										</tr>
+									}
+								}
+							)}
 							</tbody>
 						</table>
 					</div>

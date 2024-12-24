@@ -99,7 +99,7 @@ const formatCurrencyLong = (curr: any) => {
 	return '$' + Number(curr.toFixed(0)).toLocaleString();
 };
 
-const formatCurrencyShort = (curr: any) => {
+export function formatCurrencyShort(curr: any): string {
 	return Intl.NumberFormat('en-US', {
 		notation: "compact",
 		maximumFractionDigits: 1
