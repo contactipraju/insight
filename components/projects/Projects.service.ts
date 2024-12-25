@@ -3,7 +3,7 @@ import { IProjectData } from './Projects.interfaces';
 
 export async function getProjectsLocal() {
 	const resp = await axios.get('json/projects.json');
-	const result = resp.data.data.filter((project: IProjectData) => !project['hide_in_site']);
+	const result = resp.data.data.filter((project: IProjectData) => project['show_in_site']);
 
 	return processProjects(result);
 }
@@ -104,4 +104,43 @@ export function formatCurrencyShort(curr: any): string {
 		notation: "compact",
 		maximumFractionDigits: 1
 	  }).format(curr);
+};
+
+export interface entry {
+	label: string;
+	value: string;
+	all?: boolean;
+};
+
+// Todo: We should grab these from actual data
+export function fetchFilterData() {
+	const regions: entry[] = [
+		// { label: 'Australia', value: 'AUSTRALIA', all: true },
+		{ label: 'NSW', value: 'NSW' },
+		{ label: 'VIC', value: 'VIC' },
+		{ label: 'QLD', value: 'QLD' },
+		{ label: 'WA', value: 'WA' },
+		{ label: 'SA', value: 'SA' },
+		{ label: 'NT', value: 'NT' },
+		{ label: 'ACT', value: 'ACT' },
+		{ label: 'TAS', value: 'TAS' }
+	];
+
+	const ptypes: entry[] = [
+		{ label: 'Owner Occupier', value: 'OWNER_OCCUPIER' },
+		{ label: 'Investment', value: 'INVESTMENT' },
+		{ label: 'Development', value: 'DEVELOPMENT' }
+	];
+
+	const metrics: entry[] = [
+		{ label: '1 year appreciation', value: 'ONE_YEAR_APPRECIATION' },
+		{ label: 'Cash-on-cash', value: 'CASH_ON_CASH' },
+		{ label: 'Yield', value: 'YIELD' }
+	];
+
+	return { regions, ptypes, metrics };
+}
+
+export function fetchUniqueProperties(projects: IProjectData[], property: string) {
+	return [...new Set(projects.map(project => project[property]))];
 };

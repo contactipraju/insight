@@ -13,9 +13,9 @@ export interface IProjectFinancial {
 
 export interface IProjectData {
 	id: number;
-	ptype: string;
 	name: string;
-	location: string;
+	ptype: string;
+	region: string;
 	address?: string;
 	images?: string[];
 	purchase_date: string | number | Date;
@@ -24,5 +24,5 @@ export interface IProjectData {
 	financials: IProjectFinancial;
 	features: string[];
 	success: string[];
-	hide_in_site: boolean;
+	show_in_site: boolean;
 }
