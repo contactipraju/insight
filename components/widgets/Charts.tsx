@@ -48,11 +48,12 @@ export default function BasicStacking({ projects }:BasicStackingProps) {
 	useEffect(() => {
 		prepChartData();
 		setLoading(false);
-	}, []);
+	}, [projects]);
 
 	return (
 		<>
 			{ !loading && <BarChart
+				sx={{padding:'15px'}}
 				height={400}
 				series={[
 					{ ...purchase, stack: 'total' },

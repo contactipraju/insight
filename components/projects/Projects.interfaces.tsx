@@ -15,7 +15,7 @@ export interface IProjectData {
 	id: number;
 	ptype: string;
 	name: string;
-	location?: string;
+	location: string;
 	address?: string;
 	images?: string[];
 	purchase_date: string | number | Date;

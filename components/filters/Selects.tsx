@@ -20,8 +20,6 @@ const MenuProps = {
 };
 
 export function MultiSelect({props}: any) {
-	console.log('props: ', props);
-
 	const [val, setVal] = React.useState<string[]>(props.preset);
 	const handleChange = (event: SelectChangeEvent<typeof val>) => {
 		const {
@@ -32,6 +30,7 @@ export function MultiSelect({props}: any) {
 			// On autofill we get a stringified value.
 			typeof value === 'string' ? value.split(',') : value,
 		);
+		props.handleChange(event);
 	};
 
 	return (
@@ -66,6 +65,7 @@ export function BasicSelect({props}: any) {
 
 	const handleChange = (event: SelectChangeEvent) => {
 		setVal(event.target.value as string);
+		props.handleChange(event);
 	};
 
 	return (

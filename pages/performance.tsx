@@ -25,7 +25,7 @@ export interface entry {
 
 function fetchFilterData() {
 	const regions: entry[] = [
-		{ label: 'Australia', value: 'AUSTRALIA', all: true },
+		// { label: 'Australia', value: 'AUSTRALIA', all: true },
 		{ label: 'NSW', value: 'NSW' },
 		{ label: 'VIC', value: 'VIC' },
 		{ label: 'QLD', value: 'QLD' },
@@ -38,7 +38,8 @@ function fetchFilterData() {
 
 	const ptypes: entry[] = [
 		{ label: 'Owner Occupier', value: 'OWNER_OCCUPIER' },
-		{ label: 'Investment', value: 'INVESTMENT' }
+		{ label: 'Investment', value: 'INVESTMENT' },
+		{ label: 'Development', value: 'DEVELOPMENT' }
 	];
 
 	const metrics: entry[] = [
@@ -51,25 +52,31 @@ function fetchFilterData() {
 }
 
 export default function Performance({}: any) {
+	const [projects, setProjects] = useState<IProjectData[]>([]);
+	const [filtered, setFiltered] = useState<IProjectData[]>([]);
+
+	const [selectedRegion, setSelectedRegion] = useState<string[]>([]);
+	const [selectedPtype,  setSelectedPtype] = useState<string[]>([]);
+	const [selectedMetric, setSelectedMetric] = useState('');
+
+	useEffect(() => {
+		getProjectsLocal().then((data) => {
+			console.log('PROJECTS loaded');
+			setProjects(data);
+			filterProperties(data);
+		});
+	}, []);
+
 	const router = useRouter();
 
 	// Since it takes few milliseconds to load router values...
 	const [loading, setLoading] = useState(true);
 	useEffect(() => {
 		const timer = setTimeout(() => {
+			console.log('LOADING ready');
 			setLoading(false);
-		}, 1000);
+		}, 2000);
 		return () => clearTimeout(timer);
-	}, []);
-
-	const [projects, setProjects] = useState<IProjectData[]>([]);
-	const [filtered, setFiltered] = useState<IProjectData[]>([]);
-
-	useEffect(() => {
-		getProjectsLocal().then((data) => {
-			setProjects(data);
-			filterProperties(data);
-		});
 	}, []);
 
 	const [filters, setFilters] = React.useState<any>({});
@@ -81,48 +88,64 @@ export default function Performance({}: any) {
 		return key ? (key as string).split(',') : def;
 	};
 
-	// Read Params (or Defaults): Filters (Region, Type, Metric), Sort field, View mode
-	const prepareFilters = () => {
-		setFilters({
-			region: { title: 'Region',        entries: regions, preset: stripParam(router.query.region, ['AUSTRALIA']) },
-			ptype:  { title: 'Property type', entries: ptypes,  preset: stripParam(router.query.ptype, ['INVESTMENT']) },
-			metric: { title: 'Metric',        entries: metrics, preset: stripParam(router.query.metric, 'ONE_YEAR_APPRECIATION') },
-		});
-	}
-
 	useEffect(() => {
 		if (router.query) {
-			prepareFilters();
+			console.log('router.query ready');
+
+			// Read Params (or Defaults): Filters (Region, Type, Metric), Sort field, View mode
+			let initialRegion = stripParam(router.query.region, ['NSW', 'VIC', 'QLD', 'WA', 'SA', 'NT', 'ACT', 'TAS']);
+			let initialPtype  = stripParam(router.query.ptype,  ['OWNER_OCCUPIER', 'INVESTMENT', 'DEVELOPMENT']);
+			let initialMetric = stripParam(router.query.metric, 'ONE_YEAR_APPRECIATION');
+
+			setSelectedRegion(initialRegion);
+			setSelectedPtype(initialPtype);
+			setSelectedMetric(initialMetric);
+
+			setFilters({
+				region: { title: 'Region',        entries: regions, handleChange: (e: any) => setSelectedRegion(e.target.value), preset: initialRegion },
+				ptype:  { title: 'Property type', entries: ptypes,  handleChange: (e: any) => setSelectedPtype(e.target.value),  preset: initialPtype },
+				metric: { title: 'Metric',        entries: metrics, handleChange: (e: any) => setSelectedMetric(e.target.value), preset: initialMetric }
+			});
 		}
 	}, [router.query]);
 
+	useEffect(() => {
+		filterProperties(projects);
+	}, [selectedRegion, selectedPtype, selectedMetric]);
+
 	// On any filter change:
 	const filterProperties = (data: IProjectData[]) => {
-		const result = data.filter((project: IProjectData) => project['ptype'] === 'INVESTMENT');
+		// console.log('filtering for: ', selectedRegion, selectedPtype, selectedMetric);
 
-		setFiltered(result);
-	}
+		if (data!.length) {
+			const result: IProjectData[] = data.filter((project: IProjectData) => {
+				return selectedRegion.includes(project['location']) && selectedPtype.includes(project['ptype']);
+			});
+	
+			setFiltered(result);
+		}
+	};
 
 	return (
 		<>
 			<DefaultHeaderAndBody>
-				<div className="content p-8">
+				{<div className="content p-8">
 					{ !loading && <div className="inputs flex flex-row">
 						<div className="filters">
-							{filters['region'] && <MultiSelect props={filters['region']}/>}
-							{filters['ptype'] && <MultiSelect props={filters['ptype']}/>}
-							{filters['metric'] && <BasicSelect props={filters['metric']}/>}
+							{filters['region'] && <MultiSelect props={filters['region']} />}
+							{filters['ptype']  && <MultiSelect props={filters['ptype']}  />}
+							{filters['metric'] && <BasicSelect props={filters['metric']} />}
 						</div>
 
-						{ projects.length && <div className="chart grow">
+						{ filtered.length && <div className="chart grow mx-6">
 							<BasicStacking projects={filtered}/>
 						</div>}
 
-						{ projects.length && <Stats projects={filtered}/> }
+						{ filtered.length && <Stats projects={filtered}/> }
 					</div>}
 
-					{projects.length && <ProjectsTiledView projects={filtered}/>}
-				</div>
+					{!loading && filtered.length && <ProjectsTiledView projects={filtered}/>}
+				</div>}
 			</DefaultHeaderAndBody>
 
 			<FooterBottom />
