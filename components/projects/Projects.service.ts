@@ -100,7 +100,7 @@ const formatCurrencyLong = (curr: any) => {
 };
 
 export function formatCurrencyShort(curr: any): string {
-	return Intl.NumberFormat('en-US', {
+	return '$' + Intl.NumberFormat('en-US', {
 		notation: "compact",
 		maximumFractionDigits: 1
 	  }).format(curr);

@@ -87,15 +87,15 @@ export default function Performance({}: any) {
 	return (
 		<>
 			<DefaultHeaderAndBody>
-				{<div className="content p-8">
-					{ projects.length && <div className="inputs flex flex-row">
+				{<div className="content px-2 md:px-8 py-8 md:py-8">
+					{ projects.length && <div className="inputs flex-col flex md:flex-row">
 						<div className="filters">
 							{filters['region'] && <MultiSelect props={filters['region']} />}
 							{filters['ptype']  && <MultiSelect props={filters['ptype']}  />}
 							{/* {filters['metric'] && <BasicSelect props={filters['metric']} />} */}
 						</div>
 
-						{ filtered.length && <div className="chart grow mx-6">
+						{ filtered.length && <div className="chart grow">
 							<BasicStacking projects={filtered}/>
 						</div>}
 

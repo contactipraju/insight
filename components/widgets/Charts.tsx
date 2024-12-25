@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { isMobile } from 'react-device-detect';
 
 import { BarChart } from '@mui/x-charts/BarChart';
 import { IProjectData } from '../projects/Projects.interfaces';
+import { formatCurrencyShort } from '../projects/Projects.service';
 
 export type BasicStackingProps = {
 	projects: IProjectData[];
@@ -22,15 +24,15 @@ export default function BasicStacking({ projects }:BasicStackingProps) {
 
 	const prepChartData = () => {
 		const purchase: series = {
-			label: 'Purchase cost',
+			label: 'Purchase',
 			data: []
 		};
 		const holding: series = {
-			label: 'Holding costs',
+			label: 'Holding',
 			data: []
 		};
 		const appreciation: series = {
-			label: 'Value addition',
+			label: 'Appreciation',
 			data: []
 		};
 
@@ -53,13 +55,24 @@ export default function BasicStacking({ projects }:BasicStackingProps) {
 	return (
 		<>
 			{ !loading && <BarChart
-				sx={{padding:'15px'}}
+				sx={{ "& .MuiChartsLegend-series tspan": { fontSize: "0.8em" }, padding:'5px' }}
+				yAxis={[
+					{
+						scaleType: 'linear',
+						valueFormatter: (value, context) => formatCurrencyShort(value)
+					}
+				]}
 				height={400}
 				series={[
-					{ ...purchase, stack: 'total' },
-					{ ...holding, stack: 'total' },
-					{ ...appreciation, stack: 'total' }
+					{ ...purchase,     stack: 'total', color: '#999' },
+					{ ...holding,      stack: 'total', color: '#3f7cac' },
+					{ ...appreciation, stack: 'total', color: '#f79727' }
 				]}
+				barLabel={(item, context) => {
+					if ((!isMobile || projects.length < 6) && item.value) {
+						return formatCurrencyShort(item.value)
+					}
+				}}
 			/> }
 		</>
 	)

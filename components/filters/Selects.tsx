@@ -6,9 +6,9 @@ import FormControl from '@mui/material/FormControl';
 import ListItemText from '@mui/material/ListItemText';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
-import { entry } from '../../pages/performance';
+import { entry } from '../projects/Projects.service';
 
-const ITEM_HEIGHT = 48;
+const ITEM_HEIGHT = 100;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
 	PaperProps: {
@@ -35,7 +35,7 @@ export function MultiSelect({props}: any) {
 
 	return (
 		<div>
-			<FormControl sx={{ m: 1, width: 300 }}>
+			<FormControl sx={{ m: 1, width: 340 }}>
 				<InputLabel id="demo-multiple-checkbox-label">{props.title}</InputLabel>
 				<Select
 					labelId="demo-multiple-checkbox-label"

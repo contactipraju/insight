@@ -21,6 +21,15 @@ const Project = ({project}) => {
 				<div className='data'>
 					<div className="name">{project.name}</div>
 
+					<div className="features">
+						<ul>
+							{project.features.map((item, index) => {
+								if (index <3)
+									return <li key={item}>{item}</li>;
+							})}
+						</ul>
+					</div>
+
 					<div className="financials">
 						<table>
 							{/* <thead>
@@ -49,15 +58,6 @@ const Project = ({project}) => {
 							)}
 							</tbody>
 						</table>
-					</div>
-
-					<div className="features">
-						<ul>
-							{project.features.map((item, index) => {
-								if (index <3)
-									return <li key={item}>{item}</li>;
-							})}
-						</ul>
 					</div>
 
 					<div className="success">
