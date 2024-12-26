@@ -35,7 +35,7 @@ export function MultiSelect({props}: any) {
 
 	return (
 		<div>
-			<FormControl sx={{ m: 1, width: 340 }}>
+			<FormControl sx={{ m: 1, width: 315 }}>
 				<InputLabel id="demo-multiple-checkbox-label">{props.title}</InputLabel>
 				<Select
 					labelId="demo-multiple-checkbox-label"

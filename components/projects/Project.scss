@@ -1,6 +1,6 @@
 .project {
-	width: 360px;
-	height: 540px;
+	width: 330px;
+	height: 510px;
 
 	text-align: left;
 	font-size: smaller;
@@ -35,7 +35,7 @@
 		// }
 
 		.images {
-			height: 320px;
+			height: 300px;
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position-x: center;
@@ -44,7 +44,7 @@
 
 		.data {
 			position: relative;
-			height: 218px;
+			height: 200px;
 			padding: 5px;
 
 			.name {
@@ -54,7 +54,7 @@
 			}
 	
 			.financials {
-				margin-top: 10px;
+				margin-top: 6px;
 				margin-left: 75px;
 				margin-bottom: 10px;
 	
@@ -76,7 +76,7 @@
 
 			.success {
 				position: absolute;
-				bottom: 8px;
+				bottom: 0px;
 
 				color: green;
 	
