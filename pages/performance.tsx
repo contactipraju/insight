@@ -7,6 +7,7 @@ import DefaultHeaderAndBody from "../components/defaultHeaderAndBody";
 import FooterBottom from "../components/footer/footer-bottom";
 
 import { MultiSelect } from "../components/filters/Selects";
+import { MySwitch } from '../components/filters/MySwitch';
 // import { BasicSelect } from "../components/filters/Selects";
 
 import BasicStacking from '../components/widgets/Charts';
@@ -26,6 +27,7 @@ export default function Performance({}: any) {
 	const [selectedRegion, setSelectedRegion] = useState<string[]>([]);
 	const [selectedPtype,  setSelectedPtype]  = useState<string[]>([]);
 	const [selectedMetric, setSelectedMetric] = useState('');
+	const [checked, setChecked] = React.useState(true);
 
 	useEffect(() => {
 		getProjectsLocal().then((data) => {
@@ -70,14 +72,26 @@ export default function Performance({}: any) {
 		});
 	};
 
+	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setChecked(event.target.checked);
+	};
+
 	useEffect(() => {
 		filterProperties(projects);
-	}, [selectedRegion, selectedPtype, selectedMetric, projects]);
+	}, [selectedRegion, selectedPtype, selectedMetric, checked, projects]);
 
 	const filterProperties = (data: IProjectData[]) => {
 		if (data!.length) {
 			const result: IProjectData[] = data.filter((project: IProjectData) => {
-				return selectedRegion.includes(project['region']) && selectedPtype.includes(project['ptype']);
+				if (
+					!selectedRegion.includes(project['region']) || 
+					!selectedPtype.includes(project['ptype']) ||
+					(checked && project['in_progress'])
+				) {
+					return false;
+				} else {
+					return true;
+				}
 			});
 	
 			setFiltered(result);
@@ -93,6 +107,7 @@ export default function Performance({}: any) {
 							{filters['region'] && <MultiSelect props={filters['region']} />}
 							{filters['ptype']  && <MultiSelect props={filters['ptype']}  />}
 							{/* {filters['metric'] && <BasicSelect props={filters['metric']} />} */}
+							<MySwitch props={{title: 'Exclude projects in-progress', handleChange: handleChange}}></MySwitch>
 						</div>
 
 						{ filtered.length && <div className="chart grow">

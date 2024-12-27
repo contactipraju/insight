@@ -43,7 +43,7 @@ export function MultiSelect({props}: any) {
 					multiple
 					value={val}
 					onChange={handleChange}
-					input={<OutlinedInput label="Tag" />}
+					input={<OutlinedInput label={props.title}/>}
 					renderValue={(selected) => selected.join(', ')}
 					MenuProps={MenuProps}
 				>

@@ -25,4 +25,5 @@ export interface IProjectData {
 	features: string[];
 	success: string[];
 	show_in_site: boolean;
+	in_progress: boolean;
 }
