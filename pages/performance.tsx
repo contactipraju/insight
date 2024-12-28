@@ -27,7 +27,7 @@ export default function Performance({}: any) {
 	const [selectedRegion, setSelectedRegion] = useState<string[]>([]);
 	const [selectedPtype,  setSelectedPtype]  = useState<string[]>([]);
 	const [selectedMetric, setSelectedMetric] = useState('');
-	const [checked, setChecked] = React.useState(true);
+	const [checked, setChecked] = React.useState(false);
 
 	useEffect(() => {
 		getProjectsLocal().then((data) => {
@@ -86,7 +86,7 @@ export default function Performance({}: any) {
 				if (
 					!selectedRegion.includes(project['region']) || 
 					!selectedPtype.includes(project['ptype']) ||
-					(checked && project['in_progress'])
+					(!checked && project['in_progress'])
 				) {
 					return false;
 				} else {
@@ -107,7 +107,7 @@ export default function Performance({}: any) {
 							{filters['region'] && <MultiSelect props={filters['region']} />}
 							{filters['ptype']  && <MultiSelect props={filters['ptype']}  />}
 							{/* {filters['metric'] && <BasicSelect props={filters['metric']} />} */}
-							<MySwitch props={{title: 'Exclude projects in-progress', handleChange: handleChange}}></MySwitch>
+							<MySwitch props={{title: 'Include projects in-progress', handleChange: handleChange, initialValue: false}}></MySwitch>
 						</div>
 
 						{ filtered.length && <div className="chart grow">

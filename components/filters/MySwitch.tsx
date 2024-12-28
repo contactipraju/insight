@@ -4,7 +4,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 
 export function MySwitch({props}: any) {
-	const [checked, setChecked] = React.useState(true);
+	const [checked, setChecked] = React.useState(props.initialValue);
 
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setChecked(event.target.checked);
