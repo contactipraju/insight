@@ -56,7 +56,7 @@
 			"ptype": "DEVELOPMENT",
 			"region": "VIC",
 			"address": "7-9 Powlett St, Maddingley, Victoria",
-			"images": ["images/portfolio/15.png"],
+			"images": ["images/portfolio/15.jpg"],
 			"purchase_date": "2019/07/01",
 			"sold_date":"2022/03/01",
 			"financials": {
@@ -74,7 +74,7 @@
 			"ptype": "DEVELOPMENT",
 			"region": "VIC",
 			"address": "6 Candeloro St, Victoria",
-			"images": ["images/portfolio/17.png"],
+			"images": ["images/portfolio/17.jpg"],
 			"purchase_date": "2022/03/24",
 			"valued_date": "2024/12/06",
 			"financials": {
@@ -124,7 +124,7 @@
 		{
 			"id": 16,
 			"name": "Positive Gearing from day one",
-			"show_in_site": true,
+			"show_in_site": false,
 			"ptype": "INVESTMENT",
 			"region": "NSW",
 			"address": "G05/91B Grima st, Schofields",
@@ -146,7 +146,7 @@
 			"ptype": "OWNER_OCCUPIER",
 			"region": "NSW",
 			"address": "17 Shipley St, The Ponds",
-			"images": ["images/portfolio/12.png"],
+			"images": ["images/portfolio/12.jpg"],
 			"purchase_date": "2020/03/21",
 			"valued_date":"2022/03/25",
 			"financials": {
@@ -163,7 +163,7 @@
 			"ptype": "OWNER_OCCUPIER",
 			"region": "NSW",
 			"address": "85 Railway St, Wenttworthville",
-			"images": ["images/portfolio/12.png"],
+			"images": ["images/portfolio/20.jpg"],
 			"purchase_date": "2023/07/23",
 			"valued_date":"2024/12/06",
 			"financials": {
@@ -180,7 +180,7 @@
 			"ptype": "OWNER_OCCUPIER",
 			"region": "NSW",
 			"address": "11 Casuarina Drive, Cherrybrook",
-			"images": ["images/portfolio/12.png"],
+			"images": ["images/portfolio/21.jpg"],
 			"purchase_date": "2024/02/16",
 			"valued_date":"2024/12/06",
 			"financials": {
@@ -198,7 +198,7 @@
 			"ptype": "INVESTMENT",
 			"region": "VIC",
 			"address": "18 Carson St, Shepparton",
-			"images": ["images/portfolio/12.png"],
+			"images": ["images/portfolio/22.jpg"],
 			"purchase_date": "2024/04/26",
 			"valued_date":"2024/12/06",
 			"financials": {
@@ -217,7 +217,7 @@
 			"ptype": "INVESTMENT",
 			"region": "VIC",
 			"address": "6 Clayton court, Shepparton",
-			"images": ["images/portfolio/12.png"],
+			"images": ["images/portfolio/23.jpg"],
 			"purchase_date": "2024/03/10",
 			"valued_date":"2024/12/06",
 			"financials": {
@@ -236,7 +236,7 @@
 			"ptype": "INVESTMENT",
 			"region": "VIC",
 			"address": "10 John, Shepparton",
-			"images": ["images/portfolio/12.png"],
+			"images": ["images/portfolio/24.jpg"],
 			"purchase_date": "2024/10/25",
 			"valued_date":"2024/12/06",
 			"financials": {
@@ -255,7 +255,7 @@
 			"ptype": "INVESTMENT",
 			"region": "VIC",
 			"address": "2 McCubbin Drive, Shepparton",
-			"images": ["images/portfolio/12.png"],
+			"images": ["images/portfolio/25.jpg"],
 			"purchase_date": "2024/10/23",
 			"valued_date":"2024/12/06",
 			"financials": {
@@ -274,7 +274,7 @@
 			"ptype": "INVESTMENT",
 			"region": "QLD",
 			"address": "717 Kent St, Maryborough",
-			"images": ["images/portfolio/12.png"],
+			"images": ["images/portfolio/26.jpg"],
 			"purchase_date": "2024/12/06",
 			"valued_date":"2024/12/06",
 			"financials": {

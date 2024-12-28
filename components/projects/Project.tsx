@@ -10,7 +10,7 @@ const Project = ({project}) => {
 					<div className='title'>
 						<div className="type">{project.type}</div>
 
-						<div className="location" style={{ backgroundImage: `url(images/portfolio/location.png)` }}>
+						<div className="location" style={{ backgroundImage: `url(images/location.png)` }}>
 							{project.location}
 						</div>
 					</div>
