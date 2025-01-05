@@ -21,6 +21,7 @@ export default function FooterContent({
 			</p>
 
 			<a
+				target="_blank"
 				href="https://forms.investorpro.com.au/investorproptyltd1/form/Contactus/formperma/JZOUEjtVIRr2TKPhlB5eORxbXXJSV4jeqOdxTLapclI"
 				className="mt-6 inline-block rounded-full bg-black px-5 py-2.5 font-medium text-white hover:bg-gray-900 sm:mt-10 w-32"
 			>
