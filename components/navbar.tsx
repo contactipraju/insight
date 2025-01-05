@@ -19,7 +19,13 @@ export default function Navbar() {
 
 						<div className="links hidden sm:flex ml-8">
 							{/* <Link href="/keystatic" className="rounded-full px-5 py-2.5 font-medium hidden gap-10 sm:inline"> Admin </Link> */}
-							<Link rel="noopener noreferrer" target="_blank" href="https://forms.investorpro.com.au/investorproptyltd1/form/Contactus/formperma/JZOUEjtVIRr2TKPhlB5eORxbXXJSV4jeqOdxTLapclI" className="rounded-full bg-black px-5 py-2 font-semibold text-white btn-orange whitespace-nowrap"> Contact us </Link>
+							<Link
+								rel="noopener noreferrer" target="_blank"
+								href="https://forms.investorpro.com.au/investorproptyltd1/form/Contactus/formperma/JZOUEjtVIRr2TKPhlB5eORxbXXJSV4jeqOdxTLapclI" 
+								className="rounded-full bg-black px-5 py-2 font-semibold text-white btn-orange whitespace-nowrap"
+								>
+									 Contact us
+							</Link>
 						</div>
 					</nav>
 				</div>
