@@ -5,7 +5,7 @@ export default function PrivacyContent({}: any) {
   return (
 	<>
 		<div className="privacy-content overflow-hidden">
-			<div className="prose mx-auto max-w-screen-md px-6 lg:prose-lg md:pb-24 body">
+			<div className="prose mx-auto max-w-screen-md px-6 lg:prose-lg md:pb-24 mt-8">
 				<h1>Privacy Policy</h1>
 				<p><strong>1. Introduction</strong></p>
 				<p>Welcome to InvestorPro Buyer's Agency (referred to as "we", "our", or "us"). We are committed to protecting your privacy and ensuring that your personal information is handled in a secure and transparent manner. This Privacy Policy outlines how we collect, use, disclose, and safeguard your personal information in compliance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).</p>

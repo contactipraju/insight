@@ -8,7 +8,7 @@ export default function DefaultHeaderAndBody({children}: any) {
 			<Head />
 			<div className="relative w-full">
 				<Navbar />
-				<main className="relative z-10 bg-gray-100 pt-12">
+				<main className="relative z-10 bg-gray-100 pt-16">
 					{children}
 				</main>
 			</div>

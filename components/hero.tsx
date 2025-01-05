@@ -18,7 +18,7 @@ export default function Hero({
 		<section className="relative overflow-hidden bg-gradient-to-br from-white/50 to-transparent">
 		{/* Blob 2 */}
 
-			<div className="relative z-10 mx-auto grid max-w-6xl md:grid-cols-2 py-8 md:py-16 px-6 md:pt-16 md:pb-8 lg:px-8">
+			<div className="relative z-10 mx-auto grid max-w-6xl md:grid-cols-2 py-8 md:py-16 px-6 md:py-8 md:pb-8 lg:px-8">
 				<Image
 					src={heroImage}
 					alt=""
