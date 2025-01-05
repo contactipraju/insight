@@ -33,7 +33,7 @@ export default function Testimonials({ testimonials }: ComponentProps) {
                 <div className="rounded-2xl bg-white/40 p-6 backdrop-blur sm:p-10">
                   <figure className="grid gap-8">
                     <blockquote className="text-l italic">
-                      {testimonial.testimonial}
+						<div dangerouslySetInnerHTML={{ __html: testimonial.testimonial}}></div>
                     </blockquote>
                     <figcaption className="flex items-center gap-3">
                       <img
