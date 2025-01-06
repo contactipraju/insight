@@ -1,4 +1,4 @@
-import Link from "next/link";
+// import Link from "next/link";
 
 import { IProjectData } from "./Projects.interfaces";
 
@@ -19,9 +19,9 @@ const ProjectsTiledView = ({ projects }: TiledViewProps) => {
 
 				<div className="projects flex flex-wrap justify-around">
 					{projects!.length > 0 ? projects!.map((project: IProjectData) => (
-						<Link key={project.id} href={`/project/${encodeURIComponent(project.id)}`}>
+						// <Link key={project.id} href={`/project/${encodeURIComponent(project.id)}`}>
 							<Project project={project} />
-						</Link>
+						// </Link>
 					)) : <div>{"No projects available"}</div> }
 				</div>
 			</div>

@@ -14,7 +14,7 @@ export default function Navbar() {
 							<a className="font-medium" href="/#features"> Process </a>
 							<a className="font-medium" href="/#projects"> Portfolio </a>
 							<a className="font-medium" href="/#reviews"> Reviews </a>
-							<a className="font-medium" href="/FAQ"> FAQ </a>
+							{/* <a className="font-medium" href="/FAQ"> FAQ </a> */}
 						</div>
 
 						<div className="links hidden sm:flex ml-8">
