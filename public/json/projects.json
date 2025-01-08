@@ -3,6 +3,7 @@
 		{
 			"id": 11,
 			"name": "A dream home for a First-timer",
+            "bought_by": "Sowj",
 			"show_in_site": false,
 			"ptype": "OWNER_OCCUPIER",
 			"address": {
@@ -24,6 +25,7 @@
 		{
 			"id": 14,
 			"name": "Buy-hold-Sell in an year",
+            "bought_by": "Sowj",
 			"show_in_site": false,
 			"ptype": "INVESTMENT",
 			"address": {
@@ -45,6 +47,7 @@
 		{
 			"id": 18,
 			"name": "A Resort-style Property",
+            "bought_by": "Sowj",
 			"show_in_site": false,
 			"ptype": "OWNER_OCCUPIER",
 			"address": {
@@ -66,7 +69,8 @@
 		},
 		{
 			"id": 15,
-			"name": "DA Approved and Sold",
+			"name": "Prime Development Opportunity",
+            "bought_by": "Sowj",
 			"show_in_site": true,
 			"ptype": "DEVELOPMENT",
 			"address": {
@@ -89,7 +93,8 @@
 		},
 		{
 			"id": 17,
-			"name": "DA Approved for 6+1 Townhouses",
+			"name": "Growth Opportunity in Historic Town",
+            "bought_by": "Sowj",
 			"show_in_site": true,
 			"ptype": "DEVELOPMENT",
 			"address": {
@@ -112,7 +117,8 @@
 		},
 		{
 			"id": 19,
-			"name": "DA approved for Subdivision" ,
+			"name": "Property with Subdivision Potential",
+            "bought_by": "Sowj",
 			"show_in_site": true,
 			"ptype": "DEVELOPMENT",
 			"address": {
@@ -134,8 +140,78 @@
 			"success": ["DA approved for Subdivision","Capital growth"]
 		},
 		{
+			"id": 12,
+			"name": "Modern Living in Family-Friendly Ponds",
+            "bought_by": "Sowj",
+			"show_in_site": true,
+			"ptype": "OWNER_OCCUPIER",
+			"address": {
+				"street": "17 Shipley St",
+				"suburb": "Ponds",
+				"city": "Sydney",
+				"state": "NSW",
+				"post_code": "2769"
+			},
+			"images": ["images/portfolio/12.jpg"],
+			"purchase_date": "2020/03/21",
+			"valued_date":"2022/03/25",
+			"financials": {
+				"purchase_cost": 1140000,
+				"current_value": 1650000
+			},
+			"features": ["Sought after suburb and schools","Seller market","High buyers competition","Due diligence done before the first open home","Negotiated and closed deal on first open home"],
+			"success": ["Owner Occupier"]
+		},
+		{
+			"id": 20,
+			"name": "Affordable, well-connected living in vibrant Wentworthville",
+            "bought_by": "Sowj",
+			"show_in_site": true,
+			"ptype": "OWNER_OCCUPIER",
+			"address": {
+				"street": "85 Railway St",
+				"suburb": "Wenttworthville",
+				"city": "Sydney",
+				"state": "NSW",
+				"post_code": "2145"
+			},
+			"images": ["images/portfolio/20.jpg"],
+			"purchase_date": "2023/07/23",
+			"valued_date":"2024/12/06",
+			"financials": {
+				"purchase_cost": 1625000,
+				"current_value": 1750000
+			},
+			"features": ["Secured property before auction","Seller market","64 prospective buyers","7 Contract holders","Negotiated to 90-day settlement time below the client's budget"],
+			"success": ["Owner Occupier"]
+		},
+		{
+			"id": 21,
+			"name": "Peaceful, Green Suburb Living in Cherrybrook",
+            "bought_by": "Sowj",
+			"show_in_site": true,
+			"ptype": "OWNER_OCCUPIER",
+			"address": {
+				"street": "11 Casuarina Drive",
+				"suburb": "Cherrybrook",
+				"city": "Sydney",
+				"state": "NSW",
+				"post_code": "2126"
+			},
+			"images": ["images/portfolio/21.jpg"],
+			"purchase_date": "2024/02/16",
+			"valued_date":"2024/12/06",
+			"financials": {
+				"purchase_cost": 2125000,
+				"current_value": 2400000
+			},
+			"features": ["Sought after suburb and schools","Competitive market","Negotiated below the client's budget"],
+			"success": ["Owner Occupier"]
+		},
+		{
 			"id": 13,
-			"name": "Property with great views",
+			"name": "New Property with great views",
+            "bought_by": "Sowj",
 			"show_in_site": true,
 			"ptype": "INVESTMENT",
 			"address": {
@@ -159,6 +235,7 @@
 		{
 			"id": 16,
 			"name": "Positive Gearing from day one",
+            "bought_by": "Sowj",
 			"show_in_site": true,
 			"ptype": "INVESTMENT",
 			"address": {
@@ -181,76 +258,11 @@
 			"success": ["Capital growth","Positive gearing"]
 		},
 		{
-			"id": 12,
-			"name": "In the most advantaged suburb",
-			"show_in_site": true,
-			"ptype": "OWNER_OCCUPIER",
-			"address": {
-				"street": "17 Shipley St",
-				"suburb": "Ponds",
-				"city": "Sydney",
-				"state": "NSW",
-				"post_code": "2769"
-			},
-			"images": ["images/portfolio/12.jpg"],
-			"purchase_date": "2020/03/21",
-			"valued_date":"2022/03/25",
-			"financials": {
-				"purchase_cost": 1140000,
-				"current_value": 1650000
-			},
-			"features": ["Sought after suburb and schools","Seller market","High buyers competition","Due diligence done before the first open home","Negotiated and closed deal on first open home"],
-			"success": ["Owner Occupier"]
-		},
-		{
-			"id": 20,
-			"name": "In the most advantaged suburb",
-			"show_in_site": true,
-			"ptype": "OWNER_OCCUPIER",
-			"address": {
-				"street": "85 Railway St",
-				"suburb": "Wenttworthville",
-				"city": "Sydney",
-				"state": "NSW",
-				"post_code": "2145"
-			},
-			"images": ["images/portfolio/20.jpg"],
-			"purchase_date": "2023/07/23",
-			"valued_date":"2024/12/06",
-			"financials": {
-				"purchase_cost": 1625000,
-				"current_value": 1750000
-			},
-			"features": ["Secured property before auction","Seller market","64 prospective buyers","7 Contract holders","Negotiated to 90-day settlement time below the client's budget"],
-			"success": ["Owner Occupier"]
-		},
-		{
-			"id": 21,
-			"name": "In the most advantaged suburb",
-			"show_in_site": true,
-			"ptype": "OWNER_OCCUPIER",
-			"address": {
-				"street": "11 Casuarina Drive",
-				"suburb": "Cherrybrook",
-				"city": "Sydney",
-				"state": "NSW",
-				"post_code": "2126"
-			},
-			"images": ["images/portfolio/21.jpg"],
-			"purchase_date": "2024/02/16",
-			"valued_date":"2024/12/06",
-			"financials": {
-				"purchase_cost": 2125000,
-				"current_value": 2400000
-			},
-			"features": ["Sought after suburb and schools","Competitive market","Negotiated below the client's budget"],
-			"success": ["Owner Occupier"]
-		},
-		{
 			"id": 22,
 			"name": "Investor's delight on SMSF",
+            "bought_by": "Sowj",
 			"show_in_site": true,
-			"in_progress": true,
+			"in_progress": false,
 			"ptype": "INVESTMENT",
 			"address": {
 				"street": "18 Carson St",
@@ -272,7 +284,8 @@
 		},
 		{
 			"id": 23,
-			"name": "Investor's delight",
+			"name": "Investor’s Opportunity with Granny Potential",
+            "bought_by": "Sowj",
 			"show_in_site": true,
 			"in_progress": true,
 			"ptype": "INVESTMENT",
@@ -297,6 +310,7 @@
 		{
 			"id": 24,
 			"name": "Investor's delight",
+            "bought_by": "Sowj",
 			"show_in_site": true,
 			"in_progress": true,
 			"ptype": "INVESTMENT",
@@ -320,7 +334,8 @@
 		},
 		{
 			"id": 25,
-			"name": "Investor's delight",
+			"name": "Perfect Investment Opportunity",
+            "bought_by": "Sowj",
 			"show_in_site": true,
 			"in_progress": true,
 			"ptype": "INVESTMENT",
@@ -344,7 +359,8 @@
 		},
 		{
 			"id": 26,
-			"name": "Investor's delight on SMSF",
+			"name": "Investor's Dream",
+            "bought_by": "Sowj",
 			"show_in_site": true,
 			"in_progress": true,
 			"ptype": "INVESTMENT",
@@ -368,8 +384,9 @@
 		},
         {
             "id": 27,
-            "name": "Granny Potential investment for an SMSF client",
+            "name": "SMSF Investment with Development Potential",
             "description": "A spacious home on a large block with wide street frontage, a 5.5% rental yield, and potential for an additional dwelling—an ideal investment opportunity!",
+            "bought_by": "Sowj",
             "show_in_site": true,
             "in_progress": true,
             "ptype": "INVESTMENT",
@@ -380,8 +397,6 @@
                 "state": "QLD",
                 "post_code": "4650"
             },
-            "state": "Qld",
-            "bought_by": "Sowj",
             "images": ["images/portfolio/27.jpg"],
             "purchase_date": "2025/01/06",
             "valued_date":"2025/01/06",
@@ -395,19 +410,19 @@
         },
         {
             "id": 28,
-            "name": "",
+            "name": "Affordable Investment with Future Potential",
             "description": "",
+            "bought_by": "Sowj",
             "show_in_site": true,
             "in_progress": true,
             "ptype": "INVESTMENT",
             "address": {
                 "street": "17 Ash Street",
-                "suburb": "",
+                "suburb": "Shepparton",
                 "city": "",
                 "state": "VIC",
                 "post_code": "3630"
             },
-            "bought_by": "Sowj",
             "images": ["images/portfolio/28.jpg"],
             "purchase_date": "2025/01/16",
             "valued_date":"2025/01/16",

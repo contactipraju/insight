@@ -34,3 +34,7 @@ export interface IProjectData {
 	show_in_site: boolean;
 	in_progress: boolean;
 }
+
+export type ProjectProps = {
+	project: IProjectData;
+};

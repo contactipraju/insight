@@ -1,0 +1,100 @@
+.project {
+	width: 330px;
+	height: 510px;
+
+	text-align: left;
+	font-size: smaller;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+
+	border: 1px solid #999;
+
+	.details {
+		position: relative;
+
+		// .title {
+		// 	display: flex;
+		// 	flex-direction: row;
+		// 	justify-content: space-between;
+
+		// 	.type {
+		// 		font-style: normal;
+		// 		text-transform: uppercase;
+		// 	}
+
+		// 	.location {
+		// 		padding-left: 26px;
+
+		// 		margin-left: -10px;
+
+		// 		background-size: contain;
+		// 		background-repeat: no-repeat;
+		// 	}
+		// }
+
+		.images {
+			height: 300px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position-x: center;
+			background-position-y: center;
+		}
+
+		.data {
+			position: relative;
+			height: 200px;
+			padding: 5px;
+
+			.name {
+				font-size: large;
+				font-weight: bold;
+				padding: 4px;
+			}
+	
+			.financials {
+				margin-top: 6px;
+				margin-left: 75px;
+				margin-bottom: 10px;
+	
+				th.text, td.text {
+					text-transform: capitalize;
+				}
+				th.amount, td.amount {
+					padding-left: 10px;
+					text-align: right;
+				}
+			}
+	
+			.features {
+				margin-left: 35px;
+				ul {
+					list-style: circle;
+				}
+			}
+
+			.success {
+				position: absolute;
+				bottom: 0px;
+
+				color: green;
+	
+				ul {
+					list-style: none;
+					list-style-type: none;
+	
+					li {
+						float: left;
+						margin-right: 10px;
+					}
+				}
+					
+				ul li:before {
+					content: '✓';
+					margin-right: 3px;
+				}
+			}
+		}
+	}
+}
