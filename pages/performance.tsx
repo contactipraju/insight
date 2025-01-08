@@ -104,20 +104,20 @@ export default function Performance({}: any) {
 				{<div className="content px-2 md:px-8 py-8 md:py-8">
 					{ projects.length && <div className="inputs flex-col flex md:flex-row">
 						<div className="filters">
-							{filters['region'] && <MultiSelect props={filters['region']} />}
-							{filters['ptype']  && <MultiSelect props={filters['ptype']}  />}
+							{filters['region'] ? <MultiSelect props={filters['region']} /> : null}
+							{filters['ptype']  ? <MultiSelect props={filters['ptype']}  /> : null}
 							{/* {filters['metric'] && <BasicSelect props={filters['metric']} />} */}
-							<MySwitch props={{title: 'Include projects in-progress', handleChange: handleChange, initialValue: false}}></MySwitch>
+							{ filtered.length ? <MySwitch props={{title: 'Include projects in-progress', handleChange: handleChange, initialValue: false}}></MySwitch> : null}
 						</div>
 
-						{ filtered.length && <div className="chart grow">
+						{ filtered.length ? <div className="chart grow">
 							<BasicStacking projects={filtered}/>
-						</div>}
+						</div> : null}
 
-						{ filtered.length && <Stats projects={filtered}/> }
+						{ filtered.length ? <Stats projects={filtered}/> : null}
 					</div>}
 
-					{filtered.length && <ProjectsTiledView projects={filtered}/>}
+					{filtered.length ? <ProjectsTiledView projects={filtered}/> : null}
 				</div>}
 			</DefaultHeaderAndBody>
 
