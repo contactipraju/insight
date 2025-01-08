@@ -5,8 +5,13 @@
 			"name": "A dream home for a First-timer",
 			"show_in_site": false,
 			"ptype": "OWNER_OCCUPIER",
-			"region": "NSW",
-			"address": "6 Speargrass St, Denham Court NSW",
+			"address": {
+				"street": "6 Speargrass St",
+				"suburb": "Denham Court",
+				"city": "Sydney",
+				"state": "NSW",
+				"post_code": "2565"
+			},
 			"images": ["images/portfolio/11.png"],
 			"financials": {
 				"purchase_cost": 720000,
@@ -21,8 +26,13 @@
 			"name": "Buy-hold-Sell in an year",
 			"show_in_site": false,
 			"ptype": "INVESTMENT",
-			"region": "VIC",
-			"address": "Melton South",
+			"address": {
+				"street": "",
+				"suburb": "Melton South",
+				"city": "Melbourne",
+				"state": "VIC",
+				"post_code": ""
+			},
 			"images": ["images/portfolio/14.png"],
 			"financials": {
 				"purchase_cost": 130000,
@@ -37,8 +47,13 @@
 			"name": "A Resort-style Property",
 			"show_in_site": false,
 			"ptype": "OWNER_OCCUPIER",
-			"region": "NSW",
-			"address": "66 Hancock Dr, NSW",
+			"address": {
+				"street": "66 Hancock Dr",
+				"suburb": "Cherrybrook",
+				"city": "Sydney",
+				"state": "NSW",
+				"post_code": "2126"
+			},
 			"images": ["images/portfolio/18.png"],
 			"purchased_in": "March, 2022",
 			"financials": {
@@ -54,8 +69,13 @@
 			"name": "DA Approved and Sold",
 			"show_in_site": true,
 			"ptype": "DEVELOPMENT",
-			"region": "VIC",
-			"address": "7-9 Powlett St, Maddingley, Victoria",
+			"address": {
+				"street": "7-9 Powlett St",
+				"suburb": "Maddingley",
+				"city": "",
+				"state": "VIC",
+				"post_code": "3340"
+			},
 			"images": ["images/portfolio/15.jpg"],
 			"purchase_date": "2019/07/01",
 			"sold_date":"2022/03/01",
@@ -72,8 +92,13 @@
 			"name": "DA Approved for 6+1 Townhouses",
 			"show_in_site": true,
 			"ptype": "DEVELOPMENT",
-			"region": "VIC",
-			"address": "6 Candeloro St, Victoria",
+			"address": {
+				"street": "6 Candeloro St",
+				"suburb": "Maddingley",
+				"city": "",
+				"state": "VIC",
+				"post_code": "3340"
+			},
 			"images": ["images/portfolio/17.jpg"],
 			"purchase_date": "2022/03/24",
 			"valued_date": "2024/12/06",
@@ -90,8 +115,13 @@
 			"name": "DA approved for Subdivision" ,
 			"show_in_site": true,
 			"ptype": "DEVELOPMENT",
-			"region": "WA",
-			"address": "1 Day place, Perth, WA",
+			"address": {
+				"street": "1 Day place",
+				"suburb": "Heathridge",
+				"city": "Perth",
+				"state": "WA",
+				"post_code": "6027"
+			},
 			"images": ["images/portfolio/19.png"],
 			"purchase_date": "2022/11/02",
 			"sold_date":"2024/07/12",
@@ -108,8 +138,13 @@
 			"name": "Property with great views",
 			"show_in_site": true,
 			"ptype": "INVESTMENT",
-			"region": "VIC",
-			"address": "47 McLachlan St, Victoria",
+			"address": {
+				"street": "47 McLachlan St",
+				"suburb": "Bacchus Marsh",
+				"city": "",
+				"state": "VIC",
+				"post_code": "3340"
+			},
 			"images": ["images/portfolio/13.png"],
 			"purchase_date": "2016/11/02",
 			"valued_date":"2018/10/12",
@@ -126,8 +161,13 @@
 			"name": "Positive Gearing from day one",
 			"show_in_site": false,
 			"ptype": "INVESTMENT",
-			"region": "NSW",
-			"address": "G05/91B Grima st, Schofields",
+			"address": {
+				"street": "G05/91B Grima st",
+				"suburb": "Schofields",
+				"city": "Sydney",
+				"state": "NSW",
+				"post_code": "2762"
+			},
 			"images": ["images/portfolio/16.png"],
 			"purchase_date": "2021/02/25",
 			"valued_date":"2022/02/25",
@@ -144,8 +184,13 @@
 			"name": "In the most advantaged suburb",
 			"show_in_site": true,
 			"ptype": "OWNER_OCCUPIER",
-			"region": "NSW",
-			"address": "17 Shipley St, The Ponds",
+			"address": {
+				"street": "17 Shipley St",
+				"suburb": "Ponds",
+				"city": "Sydney",
+				"state": "NSW",
+				"post_code": "2769"
+			},
 			"images": ["images/portfolio/12.jpg"],
 			"purchase_date": "2020/03/21",
 			"valued_date":"2022/03/25",
@@ -161,8 +206,13 @@
 			"name": "In the most advantaged suburb",
 			"show_in_site": true,
 			"ptype": "OWNER_OCCUPIER",
-			"region": "NSW",
-			"address": "85 Railway St, Wenttworthville",
+			"address": {
+				"street": "85 Railway St",
+				"suburb": "Wenttworthville",
+				"city": "Sydney",
+				"state": "NSW",
+				"post_code": "2145"
+			},
 			"images": ["images/portfolio/20.jpg"],
 			"purchase_date": "2023/07/23",
 			"valued_date":"2024/12/06",
@@ -178,8 +228,13 @@
 			"name": "In the most advantaged suburb",
 			"show_in_site": true,
 			"ptype": "OWNER_OCCUPIER",
-			"region": "NSW",
-			"address": "11 Casuarina Drive, Cherrybrook",
+			"address": {
+				"street": "11 Casuarina Drive",
+				"suburb": "Cherrybrook",
+				"city": "Sydney",
+				"state": "NSW",
+				"post_code": "2126"
+			},
 			"images": ["images/portfolio/21.jpg"],
 			"purchase_date": "2024/02/16",
 			"valued_date":"2024/12/06",
@@ -196,8 +251,13 @@
 			"show_in_site": true,
 			"in_progress": true,
 			"ptype": "INVESTMENT",
-			"region": "VIC",
-			"address": "18 Carson St, Shepparton",
+			"address": {
+				"street": "18 Carson St",
+				"suburb": "Shepparton",
+				"city": "",
+				"state": "VIC",
+				"post_code": "3630"
+			},
 			"images": ["images/portfolio/22.jpg"],
 			"purchase_date": "2024/04/26",
 			"valued_date":"2024/12/06",
@@ -215,8 +275,13 @@
 			"show_in_site": true,
 			"in_progress": true,
 			"ptype": "INVESTMENT",
-			"region": "VIC",
-			"address": "6 Clayton court, Shepparton",
+			"address": {
+				"street": "6 Clayton court",
+				"suburb": "Shepparton",
+				"city": "",
+				"state": "VIC",
+				"post_code": "3630"
+			},
 			"images": ["images/portfolio/23.jpg"],
 			"purchase_date": "2024/03/10",
 			"valued_date":"2024/12/06",
@@ -234,8 +299,13 @@
 			"show_in_site": true,
 			"in_progress": true,
 			"ptype": "INVESTMENT",
-			"region": "VIC",
-			"address": "10 John, Shepparton",
+			"address": {
+				"street": "10 John",
+				"suburb": "Shepparton",
+				"city": "",
+				"state": "VIC",
+				"post_code": "3630"
+			},
 			"images": ["images/portfolio/24.jpg"],
 			"purchase_date": "2024/10/25",
 			"valued_date":"2024/12/06",
@@ -253,8 +323,13 @@
 			"show_in_site": true,
 			"in_progress": true,
 			"ptype": "INVESTMENT",
-			"region": "VIC",
-			"address": "2 McCubbin Drive, Shepparton",
+			"address": {
+				"street": "2 McCubbin Drive",
+				"suburb": "Shepparton",
+				"city": "",
+				"state": "VIC",
+				"post_code": "3630"
+			},
 			"images": ["images/portfolio/25.jpg"],
 			"purchase_date": "2024/10/23",
 			"valued_date":"2024/12/06",
@@ -272,8 +347,13 @@
 			"show_in_site": true,
 			"in_progress": true,
 			"ptype": "INVESTMENT",
-			"region": "QLD",
-			"address": "717 Kent St, Maryborough",
+			"address": {
+				"street": "717 Kent St",
+				"suburb": "Maryborough",
+				"city": "",
+				"state": "QLD",
+				"post_code": "4650"
+			},
 			"images": ["images/portfolio/26.jpg"],
 			"purchase_date": "2024/12/06",
 			"valued_date":"2024/12/06",

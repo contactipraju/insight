@@ -1,3 +1,11 @@
+export interface Address {
+	street: string;
+	suburb: string;
+	city: string;
+	state: string;
+	post_code: string;
+}
+
 export interface IProjectFinancial {
 	purchase_cost: number;
 	current_value?: number;
@@ -15,8 +23,7 @@ export interface IProjectData {
 	id: number;
 	name: string;
 	ptype: string;
-	region: string;
-	address?: string;
+	address: Address;
 	images?: string[];
 	purchase_date: string | number | Date;
 	sold_date?: string | number | Date;

@@ -144,3 +144,7 @@ export function fetchFilterData() {
 export function fetchUniqueProperties(projects: IProjectData[], property: string) {
 	return [...new Set(projects.map(project => project[property]))];
 };
+
+export function fetchUniqueStates(projects: IProjectData[]) {
+	return [...new Set(projects.map(project => project.address.state))];
+};

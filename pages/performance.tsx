@@ -14,7 +14,7 @@ import BasicStacking from '../components/widgets/Charts';
 import ProjectsTiledView from "../components/projects/ProjectsTiledView";
 
 import { IProjectData } from '../components/projects/Projects.interfaces';
-import { getProjectsLocal, fetchFilterData, fetchUniqueProperties } from "../components/projects/Projects.service";
+import { getProjectsLocal, fetchFilterData, fetchUniqueProperties, fetchUniqueStates } from "../components/projects/Projects.service";
 
 import Stats from "../components/projects/Stats";
 
@@ -56,7 +56,7 @@ export default function Performance({}: any) {
 
 	const initializeFilters = (query: any, projects: IProjectData[]) => {
 		// Read Params (or Defaults): Filters (Region, Type, Metric), Sort field, View mode
-		let initialRegion = stripParam(query.region, fetchUniqueProperties(projects, 'region'));
+		let initialRegion = stripParam(query.region, fetchUniqueStates(projects));
 		setSelectedRegion(initialRegion);
 
 		let initialPtype  = stripParam(query.ptype,  fetchUniqueProperties(projects, 'ptype'));
@@ -84,7 +84,7 @@ export default function Performance({}: any) {
 		if (data!.length) {
 			const result: IProjectData[] = data.filter((project: IProjectData) => {
 				if (
-					!selectedRegion.includes(project['region']) || 
+					!selectedRegion.includes(project['address']['state']) || 
 					!selectedPtype.includes(project['ptype']) ||
 					(!checked && project['in_progress'])
 				) {
