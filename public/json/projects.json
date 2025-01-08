@@ -159,7 +159,7 @@
 		{
 			"id": 16,
 			"name": "Positive Gearing from day one",
-			"show_in_site": false,
+			"show_in_site": true,
 			"ptype": "INVESTMENT",
 			"address": {
 				"street": "G05/91B Grima st",
@@ -172,11 +172,12 @@
 			"purchase_date": "2021/02/25",
 			"valued_date":"2022/02/25",
 			"financials": {
+				"cash_deposit": 20000,
 				"purchase_cost": 300000,
 				"current_value": 450000,
 				"weekly_rent": 400
 			},
-			"features": ["Almost zero deposit","Developing area", "Close to Public Transport","Low vacancy rate", "High rental yield (7%)"],
+			"features": ["Low deposit","Developing area","High rental yield (7%)","Close to Public Transport","Low vacancy rate"],
 			"success": ["Capital growth","Positive gearing"]
 		},
 		{
@@ -364,6 +365,59 @@
 			},
 			"features": ["Capital growth area","Low stock on market","Low vacancy rate of 1.07%","High demand","Rental Yield of 5.82%"],
 			"success": ["Granny potential","Capital growth"]
-		}
+		},
+        {
+            "id": 27,
+            "name": "Granny Potential investment for an SMSF client",
+            "description": "A spacious home on a large block with wide street frontage, a 5.5% rental yield, and potential for an additional dwelling—an ideal investment opportunity!",
+            "show_in_site": true,
+            "in_progress": true,
+            "ptype": "INVESTMENT",
+            "address": {
+                "street": "37 Bryant Street",
+                "suburb": "Maryborough",
+                "city": "",
+                "state": "QLD",
+                "post_code": "4650"
+            },
+            "state": "Qld",
+            "bought_by": "Sowj",
+            "images": ["images/portfolio/27.jpg"],
+            "purchase_date": "2025/01/06",
+            "valued_date":"2025/01/06",
+            "financials": {
+                "purchase_cost": 532470,
+                "current_value": 532470,
+                "weekly_rent": 570
+            },
+            "features": ["Low vacancy rate of .19%","High demand","Rental Yield of 5.5%","Capital growth area","Low stock on market"],
+            "success": ["Granny potential","Capital growth"]
+        },
+        {
+            "id": 28,
+            "name": "",
+            "description": "",
+            "show_in_site": true,
+            "in_progress": true,
+            "ptype": "INVESTMENT",
+            "address": {
+                "street": "17 Ash Street",
+                "suburb": "",
+                "city": "",
+                "state": "VIC",
+                "post_code": "3630"
+            },
+            "bought_by": "Sowj",
+            "images": ["images/portfolio/28.jpg"],
+            "purchase_date": "2025/01/16",
+            "valued_date":"2025/01/16",
+            "financials": {
+                "purchase_cost": 430000,
+                "current_value": 430000,
+                "weekly_rent": 475
+            },
+            "features": ["Capital growth area","High demand","Rental Yield of 5.74%"],
+            "success": ["Granny potential","Capital growth"]
+        }
 	]
 }
