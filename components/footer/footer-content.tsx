@@ -23,9 +23,16 @@ export default function FooterContent({
 			<a
 				target="_blank"
 				href="https://forms.investorpro.com.au/investorproptyltd1/form/Contactus/formperma/JZOUEjtVIRr2TKPhlB5eORxbXXJSV4jeqOdxTLapclI"
-				className="mt-6 inline-block rounded-full bg-black px-6 py-2.5 font-medium text-white sm:mt-10 w-32 btn-orange"
+				className="mt-6 inline-block rounded-full bg-black px-6 py-2.5 font-semibold text-white sm:mt-10 w-48 btn-orange"
 			>
-				Contact us
+				Book a discovery call
+			</a>
+
+			<a
+				href="tel: +61410776776"
+				className="mt-6 inline-block rounded-full bg-black px-4 py-2.5 font-semibold text-white sm:mt-10 w-40 btn-orange"
+			>
+				Call: +61410776776
 			</a>
 		</>
 	);

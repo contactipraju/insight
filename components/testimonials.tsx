@@ -21,7 +21,7 @@ export default function Testimonials({ testimonials }: ComponentProps) {
   return (
     <section id="reviews" className="isolate py-4 sm:py-8">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <h2 className="mt-2 text-2xl font-bold sm:mt-2 sm:text-4xl md:mt-4">
+        <h2 className="mt-2 text-xl font-bold sm:mt-2 sm:text-2xl md:mt-4">
           Our clients speak for the quality of our service
         </h2>
         <h3 className="mt-4 text-xl sm:mt-6">Here are a few..</h3>

@@ -65,7 +65,7 @@ export default function Features() {
               value={feature.id.toString()}
               className="relative rounded-2xl p-6 backdrop-blur-sm data-[state=open]:bg-white/60 data-[state=closed]:bg-white/30"
             >
-              <Accordion.Header className="text-2xl font-bold leading-7">
+              <Accordion.Header className="text-xl font-bold leading-7">
                 <span dangerouslySetInnerHTML={{ __html: feature.title }} />
               </Accordion.Header>
               <Accordion.Trigger className="absolute inset-0 rounded-2xl focus-visible:outline-none focus-visible:ring focus-visible:ring-inset focus-visible:ring-blob-2"></Accordion.Trigger>
