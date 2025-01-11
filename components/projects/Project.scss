@@ -60,10 +60,20 @@
 	
 			.title {
 				top: 0px;
+				text-shadow: 1px 1px #333;
 			}
 			.footer {
 				width: 100%;
-				bottom: 4px;
+				bottom: 0px;
+				left: -6px;
+
+				.ptype {
+					color: black;
+					background-color: orange;
+				}
+				.state {
+					text-shadow: 1px 1px orange;
+				}
 			}
 		}
 

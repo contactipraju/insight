@@ -58,7 +58,7 @@ const Project = ({project}:ProjectProps) => {
 					<div className='title'>{project.name}</div>
 					<div className="images" style={{ backgroundImage: `url(${project.images![0]})` }}></div>
 					<div className="footer flex flex-column justify-between">
-						<div className='ptype'>{prepType(project)}</div>
+						<div className='ptype px-1'>{prepType(project)}</div>
 						<div className='state content-end'>{project.address.state}</div>
 					</div>
 				</div>

@@ -41,11 +41,11 @@ const Projects = (props: any) => {
 					breakpoints={{
 						800: {
 							slidesPerView: 2,
-							spaceBetween: 40,
+							spaceBetween: 30,
 						},
 						1400: {
 							slidesPerView: 3,
-							spaceBetween: 50,
+							spaceBetween: 30,
 						},
 					}}
 				>
