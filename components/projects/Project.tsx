@@ -1,59 +1,81 @@
 import './Project.scss';
-import { ProjectProps } from './Projects.interfaces';
+import { IProjectData, ProjectProps } from './Projects.interfaces';
 import { formatCurrencyShort } from './Projects.service';
 
 const Project = ({project}:ProjectProps) => {
+	const prepFinancials = (project: IProjectData) => {
+		const result = Object.keys(project.financials).map((key: any, i: any) => {
+			if (key === 'appreciation') {
+				return <div className='col'>
+					<div className="text">{key.replace(/_/g,' ')}</div>
+					<div className="amount">{formatCurrencyShort(project.financials[key])} ({(project.financials['percent_appreciated']).toFixed(2) + '%'})</div>
+				</div>
+			} else if(key === 'percent_appreciated' || key === 'weekly_rent') {
+				return null;
+			} else {
+				return <div className='col'>
+					<div className="text">{key.replace(/_/g,' ')}</div>
+					<div className="amount">{formatCurrencyShort(project.financials[key])}</div>
+				</div>
+			}
+		});
+
+		return result;
+	}
+
+	const recentPurchase = (project: IProjectData): boolean => {
+		if (((project.purchase_date < "2024/01/01" || project.in_progress) && project.financials.percent_appreciated < 8)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	const prepType = (project: IProjectData) => {
+		let result;
+
+		switch(project.ptype) {
+			case 'OWNER_OCCUPIER':
+				result = 'Owner Occupier';
+				break;
+
+			case 'DEVELOPMENT':
+				result = 'Development';
+				break;
+
+			case 'INVESTMENT':
+				result = 'Investment';
+				break;
+			}
+
+		return result;
+	}
 
 	return (
 		<div className="project">
 			<div className="details">
-				<div className="images" style={{ backgroundImage: `url(${project.images![0]})` }}></div>
+				<div className='image-container'>
+					<div className='title'>{project.name}</div>
+					<div className="images" style={{ backgroundImage: `url(${project.images![0]})` }}></div>
+					<div className="footer flex flex-column justify-between">
+						<div className='ptype'>{prepType(project)}</div>
+						<div className='state content-end'>{project.address.state}</div>
+					</div>
+				</div>
 
 				<div className='data'>
-					<div className="name">{project.name}</div>
-
-					<div className="features">
+					{(project.ptype === 'OWNER_OCCUPIER' || recentPurchase(project)) ? <div className="features">
 						<ul>
 							{project.features.map((item, index) => {
 								if (index <3)
 									return <li key={item}>{item}</li>;
 							})}
 						</ul>
-					</div>
+					</div> : null}
 
-					<div className="financials">
-						<table>
-							<tbody>
-							{
-								project.ptype !== 'OWNER_OCCUPIER' &&
-								!((project.purchase_date < "2024/01/01" || project.in_progress) && project.financials.percent_appreciated < 8) &&
-								Object.keys(project.financials).map((key: any, i: any) => {
-									if (key === 'appreciation') {
-										return <tr key={i}>
-											<td className="text">{key.replace(/_/g,' ')}</td>
-											<td className="amount">{formatCurrencyShort(project.financials[key])} ({(project.financials['percent_appreciated']).toFixed(2) + '%'})</td>
-										</tr>
-									} else if(key === 'percent_appreciated' || key === 'weekly_rent') {
-										return null;
-									} else {
-										return <tr key={i}>
-											<td className="text">{key.replace(/_/g,' ')}</td>
-											<td className="amount">{formatCurrencyShort(project.financials[key])}</td>
-										</tr>
-									}
-								}
-							)}
-							</tbody>
-						</table>
-					</div>
-
-					<div className="success">
-						<ul>
-							{project.success.map(item => {
-								return <li key={item}>{item}</li>;
-							})}
-						</ul>
-					</div>
+					{project.ptype !== 'OWNER_OCCUPIER' ? <div className="financials">
+						{!recentPurchase(project) ? prepFinancials(project) : ''}
+					</div> : null}
 				</div>
 			</div>
 		</div>

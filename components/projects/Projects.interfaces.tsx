@@ -7,7 +7,7 @@ export interface Address {
 }
 
 export interface IProjectFinancial {
-	purchase_cost: number;
+	purchased: number;
 	current_value?: number;
 	weekly_rent?: number;
 	sold_price?: number;
@@ -22,7 +22,7 @@ export interface IProjectFinancial {
 export interface IProjectData {
 	id: number;
 	name: string;
-	ptype: string;
+	ptype: string; // DEVELOPMENT | OWNER_OCCUPIER | VALUE_ADDITION | SIMPLE_INVESTMENT     (FIX_AND_FLIP/FIXER_UPPER)
 	address: Address;
 	images?: string[];
 	purchase_date: string | number | Date;
@@ -31,7 +31,7 @@ export interface IProjectData {
 	financials: IProjectFinancial;
 	features: string[];
 	success: string[];
-	show_in_site: boolean;
+	public: boolean;
 	in_progress: boolean;
 }
 

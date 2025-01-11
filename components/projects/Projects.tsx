@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { IProjectData } from "./Projects.interfaces";
-import { getProjectsLocal } from "./Projects.service";
+import { getPublicProjects } from "./Projects.service";
 
 import Project from "./Project";
 
@@ -20,7 +20,7 @@ const Projects = (props: any) => {
 	const [projects, setProjects] = useState<IProjectData[]>([]);
 
 	useEffect(() => {
-		getProjectsLocal().then((data: IProjectData[]) => {
+		getPublicProjects().then((data: IProjectData[]) => {
 			setProjects(data);
 		});
 	}, []);

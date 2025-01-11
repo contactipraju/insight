@@ -14,7 +14,7 @@ import BasicStacking from '../components/widgets/Charts';
 import ProjectsTiledView from "../components/projects/ProjectsTiledView";
 
 import { IProjectData } from '../components/projects/Projects.interfaces';
-import { getProjectsLocal, fetchFilterData, fetchUniqueProperties, fetchUniqueStates } from "../components/projects/Projects.service";
+import { getAllProjects, fetchFilterData, fetchUniqueProperties, fetchUniqueStates } from "../components/projects/Projects.service";
 
 import Stats from "../components/projects/Stats";
 
@@ -30,7 +30,7 @@ export default function Performance({}: any) {
 	const [checked, setChecked] = React.useState(false);
 
 	useEffect(() => {
-		getProjectsLocal().then((data) => {
+		getAllProjects().then((data) => {
 			setProjects(data);
 		});
 	}, []);

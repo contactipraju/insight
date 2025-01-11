@@ -1,11 +1,17 @@
 import axios from 'axios';
 import { IProjectData } from './Projects.interfaces';
 
-export async function getProjectsLocal() {
+export async function getPublicProjects() {
 	const resp = await axios.get('json/projects.json');
-	const result = resp.data.data.filter((project: IProjectData) => project['show_in_site']);
+	const result = resp.data.data.filter((project: IProjectData) => project['public']);
 
 	return processProjects(result);
+}
+
+export async function getAllProjects() {
+	const resp = await axios.get('json/projects.json');
+
+	return processProjects(resp.data.data);
 }
 
 export function processProjects(projects: IProjectData[]) {
@@ -15,7 +21,7 @@ export function processProjects(projects: IProjectData[]) {
 		let dat = data[i];
 		let fin = dat['financials'];
 
-		let total_cost = fin['purchase_cost'];
+		let total_cost = fin['purchased'];
 		if (fin['holding_costs']) {
 			total_cost += fin['holding_costs'];
 		}
@@ -51,8 +57,8 @@ export function prepareStats(data: IProjectData[]) {
 		let dat = data[i];
 		let fin = data[i]['financials'];
 
-		total_purchase += fin['purchase_cost'];
-		let total_cost = fin['purchase_cost'];
+		total_purchase += fin['purchased'];
+		let total_cost = fin['purchased'];
 		total_cost += fin['holding_costs']?fin['holding_costs']:0;
 
 		total_value_added += data[i].financials['appreciation'];
@@ -76,7 +82,7 @@ export function calculateAggregates(projects: IProjectData[]) {
 	for (let i=0; i<projects.length; i++) {
 		let costs = projects[i].financials;
 
-		_purchase += costs.purchase_cost;
+		_purchase += costs.purchased;
 		_holding += costs.holding_costs;
 		_appreciation += costs.appreciation;
 	}
