@@ -22,25 +22,25 @@ export function processProjects(projects: IProjectData[]) {
 		let fin = dat['financials'];
 
 		let total_cost = fin['purchased'];
-		if (fin['holding_costs']) {
-			total_cost += fin['holding_costs'];
+		if (fin['holding']) {
+			total_cost += fin['holding'];
 		}
 
-		let appreciation = 0;
+		let growth = 0;
 		let months;
 
-		if (fin['sold_price'] && dat['sold_date']) {
-			appreciation = fin['sold_price'] - total_cost;
+		if (fin['sold_at'] && dat['sold_date']) {
+			growth = fin['sold_at'] - total_cost;
 			months = monthDiff(new Date(dat['purchase_date']), new Date(dat['sold_date']));
-		} else if (fin['current_value'] && dat['valued_date']) {
-			appreciation = fin['current_value'] - total_cost;
+		} else if (fin['valued'] && dat['valued_date']) {
+			growth = fin['valued'] - total_cost;
 			months = monthDiff(new Date(dat['purchase_date']), new Date(dat['valued_date']));
 		} else {
 			months = 12;
 		}
 
-		fin['appreciation'] = appreciation;
-		fin['percent_appreciated'] = (total_cost + appreciation) / (total_cost / 100) - 100;
+		fin['growth'] = growth;
+		fin['percent_appreciated'] = (total_cost + growth) / (total_cost / 100) - 100;
 	}
 
 	return data;
@@ -59,10 +59,10 @@ export function prepareStats(data: IProjectData[]) {
 
 		total_purchase += fin['purchased'];
 		let total_cost = fin['purchased'];
-		total_cost += fin['holding_costs']?fin['holding_costs']:0;
+		total_cost += fin['holding']?fin['holding']:0;
 
-		total_value_added += data[i].financials['appreciation'];
-		let percent_growth = (total_cost + data[i].financials['appreciation']) / (total_cost / 100) - 100;
+		total_value_added += data[i].financials['growth'];
+		let percent_growth = (total_cost + data[i].financials['growth']) / (total_cost / 100) - 100;
 		total_percent_growth += percent_growth;
 	}
 
@@ -77,17 +77,17 @@ export function prepareStats(data: IProjectData[]) {
 export function calculateAggregates(projects: IProjectData[]) {
 	let _purchase = 0;
 	let _holding = 0;
-	let _appreciation = 0;
+	let _growth = 0;
 
 	for (let i=0; i<projects.length; i++) {
 		let costs = projects[i].financials;
 
 		_purchase += costs.purchased;
-		_holding += costs.holding_costs;
-		_appreciation += costs.appreciation;
+		_holding += costs.holding;
+		_growth += costs.growth;
 	}
 
-	return { _purchase, _holding, _appreciation };
+	return { _purchase, _holding, _growth };
 }
 
 function monthDiff(d1: Date, d2: Date) {
@@ -139,7 +139,7 @@ export function fetchFilterData() {
 	];
 
 	const metrics: entry[] = [
-		{ label: '1 year appreciation', value: 'ONE_YEAR_APPRECIATION' },
+		{ label: '1 year growth', value: 'ONE_YEAR_GROWTH' },
 		{ label: 'Cash-on-cash', value: 'CASH_ON_CASH' },
 		{ label: 'Yield', value: 'YIELD' }
 	];

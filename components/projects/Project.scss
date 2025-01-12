@@ -90,18 +90,21 @@
 				height: -webkit-fill-available;
 
 				.col {
-					padding: 8px;
+					width: 80px;
 					margin: 2px;
+					padding: 8px;
 					background-color: lightgray;
+
+					.amount {
+						text-align: center;
+						font-size: larger;
+						// font-weight: bold;
+						color: darkgreen;
+					}
 
 					.text {
 						text-align:center;
 						text-transform: capitalize;
-					}
-					.amount {
-						text-align:center;
-						font-weight: bold;
-						color: darkgreen;
 					}
 				}
 			}

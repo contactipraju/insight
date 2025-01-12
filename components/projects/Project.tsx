@@ -5,17 +5,18 @@ import { formatCurrencyShort } from './Projects.service';
 const Project = ({project}:ProjectProps) => {
 	const prepFinancials = (project: IProjectData) => {
 		const result = Object.keys(project.financials).map((key: any, i: any) => {
-			if (key === 'appreciation') {
+			if (key === 'growth') {
 				return <div className='col'>
+					{/* <div className="amount">{formatCurrencyShort(project.financials[key])} ({(project.financials['percent_appreciated']).toFixed(2) + '%'})</div> */}
+					<div className="amount font-extrabold">{(project.financials['percent_appreciated']).toFixed(2) + '%'}</div>
 					<div className="text">{key.replace(/_/g,' ')}</div>
-					<div className="amount">{formatCurrencyShort(project.financials[key])} ({(project.financials['percent_appreciated']).toFixed(2) + '%'})</div>
 				</div>
 			} else if(key === 'percent_appreciated' || key === 'weekly_rent') {
 				return null;
 			} else {
 				return <div className='col'>
+					<div className="amount font-medium">{formatCurrencyShort(project.financials[key])}</div>
 					<div className="text">{key.replace(/_/g,' ')}</div>
-					<div className="amount">{formatCurrencyShort(project.financials[key])}</div>
 				</div>
 			}
 		});

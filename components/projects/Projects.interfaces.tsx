@@ -8,14 +8,14 @@ export interface Address {
 
 export interface IProjectFinancial {
 	purchased: number;
-	current_value?: number;
+	valued?: number;
 	weekly_rent?: number;
-	sold_price?: number;
-	holding_costs: number;
+	sold_at?: number;
+	holding: number;
 	development_costs?: number;
 	estimated_sale_price?: number;
 	gross_realization?: number;
-	appreciation: number;
+	growth: number;
 	percent_appreciated: number;
 }
 

@@ -20,7 +20,7 @@ export default function BasicStacking({ projects }:BasicStackingProps) {
 
 	const [purchase, setPurchase] = useState({});
 	const [holding, setHolding] = useState({});
-	const [appreciation, setAppreciation] = useState({});
+	const [growth, setGrowth] = useState({});
 
 	const prepChartData = () => {
 		const purchase: series = {
@@ -31,20 +31,20 @@ export default function BasicStacking({ projects }:BasicStackingProps) {
 			label: 'Holding',
 			data: []
 		};
-		const appreciation: series = {
-			label: 'Appreciation',
+		const growth: series = {
+			label: 'Growth',
 			data: []
 		};
 
 		for (let i=0; i<projects.length; i++) {
 			purchase.data.push(projects[i].financials.purchased);
-			holding.data.push(projects[i].financials.holding_costs?projects[i].financials.holding_costs:0);
-			appreciation.data.push(projects[i].financials.appreciation);
+			holding.data.push(projects[i].financials.holding?projects[i].financials.holding:0);
+			growth.data.push(projects[i].financials.growth);
 		}
 
 		setPurchase(purchase);
 		setHolding(holding);
-		setAppreciation(appreciation);
+		setGrowth(growth);
 	}
 
 	useEffect(() => {
@@ -66,7 +66,7 @@ export default function BasicStacking({ projects }:BasicStackingProps) {
 				series={[
 					{ ...purchase,     stack: 'total', color: '#999' },
 					{ ...holding,      stack: 'total', color: '#3f7cac' },
-					{ ...appreciation, stack: 'total', color: '#f79727' }
+					{ ...growth, stack: 'total', color: '#f79727' }
 				]}
 				barLabel={(item, context) => {
 					if ((!isMobile || projects.length < 6) && item.value) {

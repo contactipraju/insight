@@ -42,7 +42,7 @@ const ProjectDetailed = ({project}:ProjectProps) => {
 							<tbody>
 							{
 								Object.keys(project.financials).map((key: any, i: any) => {
-									if (key === 'appreciation') {
+									if (key === 'growth') {
 										return <tr key={i}>
 											<td className="text">{key.replace(/_/g,' ')}</td>
 											<td className="amount">{formatCurrencyShort(project.financials[key])} ({(project.financials['percent_appreciated']).toFixed(2) + '%'})</td>
