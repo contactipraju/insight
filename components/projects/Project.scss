@@ -98,7 +98,6 @@
 					.amount {
 						text-align: center;
 						font-size: larger;
-						// font-weight: bold;
 						color: darkgreen;
 					}
 
@@ -106,13 +105,18 @@
 						text-align: center;
 						text-transform: uppercase;
 					}
+
+					.tenure {
+						font-size: smaller;
+						text-align: center;
+					}
 				}
 			}
 	
 			.features {
 				margin-top: 4px;
 				margin-left: 20px;
-				font-size: larger;
+				font-size: small;
 
 				ul {
 					list-style: none;

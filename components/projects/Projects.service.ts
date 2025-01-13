@@ -39,6 +39,7 @@ export function processProjects(projects: IProjectData[]) {
 			months = 12;
 		}
 
+		dat['tenure_months'] = months;
 		fin['growth'] = growth;
 		fin['percent_appreciated'] = (total_cost + growth) / (total_cost / 100) - 100;
 	}

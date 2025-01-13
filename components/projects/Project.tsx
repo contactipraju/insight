@@ -10,6 +10,7 @@ const Project = ({project}:ProjectProps) => {
 					{/* <div className="amount">{formatCurrencyShort(project.financials[key])} ({(project.financials['percent_appreciated']).toFixed(2) + '%'})</div> */}
 					<div className="amount font-extrabold">{(project.financials['percent_appreciated']).toFixed(2) + '%'}</div>
 					<div className="text">{key.replace(/_/g,' ')}</div>
+					<div className="tenure">({project['tenure_months']} months)</div>
 				</div>
 			} else if(key === 'percent_appreciated' || key === 'weekly_rent') {
 				return null;

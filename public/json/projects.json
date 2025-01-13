@@ -65,11 +65,11 @@
 				"post_code": "3340"
 			},
 			"images": ["images/portfolio/15.png"],
-			"purchase_date": "2019/07/01",
+			"purchase_date": "2019/11/01",
 			"sold_date": "2022/03/01",
 			"financials": {
 				"purchased": 720000,
-				"holding": 125000,
+				"holding": 120000,
 				"sold_at": 1450000
 			},
 			"features": ["Retain existing house and additional 7 townhouses", "Close to transport", "Low vacancy rate", "Low holding costs", "Gross realisation of 55% in 2.8 years"],

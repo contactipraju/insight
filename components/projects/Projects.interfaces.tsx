@@ -28,6 +28,7 @@ export interface IProjectData {
 	purchase_date: string | number | Date;
 	sold_date?: string | number | Date;
 	valued_date?: string | number | Date;
+	tenure_months?: number;
 	financials: IProjectFinancial;
 	features: string[];
 	success: string[];
