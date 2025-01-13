@@ -103,15 +103,16 @@
 					}
 
 					.text {
-						text-align:center;
-						text-transform: capitalize;
+						text-align: center;
+						text-transform: uppercase;
 					}
 				}
 			}
 	
 			.features {
-				margin-left: 35px;
-				margin-top: 8px;
+				margin-top: 4px;
+				margin-left: 20px;
+				font-size: larger;
 
 				ul {
 					list-style: none;

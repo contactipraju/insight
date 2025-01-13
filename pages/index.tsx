@@ -26,9 +26,9 @@ export default function Index({ testimonials, landingPage }: HomepageProps) {
 						heroIntroText: landingPage.heroIntroText,
 					}}
 				/>
-				<Features />
 				<Projects />
 				<Testimonials testimonials={testimonials} />
+				<Features />
 			</DefaultHeaderAndBody>
 
 			<Footer

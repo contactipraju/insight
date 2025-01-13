@@ -11,9 +11,9 @@ export default function Navbar() {
 
 					<nav className="flex items-center justify-between sm:ml-16 sm:w-full">
 						<div className="hidden gap-10 sm:flex">
-							<a className="font-medium" href="/#features"> Process </a>
 							<a className="font-medium" href="/#projects"> Portfolio </a>
 							<a className="font-medium" href="/#reviews"> Reviews </a>
+							<a className="font-medium" href="/#process"> Process </a>
 							{/* <a className="font-medium" href="/FAQ"> FAQ </a> */}
 						</div>
 

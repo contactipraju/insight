@@ -22,9 +22,9 @@ export default function Testimonials({ testimonials }: ComponentProps) {
     <section id="reviews" className="isolate py-4 sm:py-8">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <h2 className="mt-2 text-xl font-bold sm:mt-2 sm:text-2xl md:mt-4">
-          Our clients speak for the quality of our service
+			Reviews
         </h2>
-        <h3 className="mt-4 text-xl sm:mt-6">Here are a few..</h3>
+        <h3 className="mt-4 text-xl sm:mt-6">Our clients speak for the quality of our service, Here are a few..</h3>
 
         <div className="mt-4">
           <ul className="columns-xs space-y-4">
@@ -33,7 +33,7 @@ export default function Testimonials({ testimonials }: ComponentProps) {
                 <div className="rounded-2xl bg-white/40 p-6 backdrop-blur sm:p-10">
                   <figure className="grid gap-8">
                     <blockquote className="text-l italic">
-						<div dangerouslySetInnerHTML={{ __html: testimonial.testimonial}}></div>
+						<div dangerouslySetInnerHTML={{ __html: '"' + testimonial.testimonial + '"'}}></div>
                     </blockquote>
                     <figcaption className="flex items-center gap-3">
                       <img
