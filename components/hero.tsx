@@ -37,7 +37,7 @@ export default function Hero({
 						{heroHeadline}
 					</h1>
 
-					<p className="mt-6 sm:mt-10 sm:text-base sm:leading-6 whitespace-pre-line">
+					<p className="mt-6 sm:mt-10 sm:text-small sm:leading-6 whitespace-pre-line">
 						{heroIntroText}
 					</p>
 				</div>

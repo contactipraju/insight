@@ -1,0 +1,42 @@
+.image-container {
+	position: relative;
+
+	.title, .footer {
+		z-index: 1000;
+		position: absolute;
+		padding: 5px;
+
+		color: white;
+		font-size: small;
+
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	.images {
+		height: 254px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position-x: center;
+		background-position-y: center;
+	}
+
+	.title {
+		top: 0px;
+		text-shadow: 1px 1px #333;
+	}
+	.footer {
+		width: 100%;
+		bottom: 0px;
+		left: -6px;
+
+		.ptype {
+			color: black;
+			background-color: orange;
+		}
+		.state {
+			text-shadow: 1px 1px orange;
+		}
+	}
+}

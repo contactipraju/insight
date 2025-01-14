@@ -155,3 +155,15 @@ export function fetchUniqueProperties(projects: IProjectData[], property: string
 export function fetchUniqueStates(projects: IProjectData[]) {
 	return [...new Set(projects.map(project => project.address.state))];
 };
+
+export function capitilise(name: string): string {
+	return name.replace(/_/g,' ');
+}
+
+export function recentPurchase(project: IProjectData): boolean {
+	if (((project.purchase_date < "2024/01/01" || project.in_progress) && project.financials.percent_appreciated < 8)) {
+		return true;
+	} else {
+		return false;
+	}
+}

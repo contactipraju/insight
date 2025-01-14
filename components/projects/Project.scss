@@ -1,6 +1,5 @@
 .project {
 	width: 340px;
-	height: 340px;
 
 	text-align: left;
 	font-size: smaller;
@@ -14,109 +13,14 @@
 	.details {
 		position: relative;
 
-		// .title {
-		// 	display: flex;
-		// 	flex-direction: row;
-		// 	justify-content: space-between;
-
-		// 	.type {
-		// 		font-style: normal;
-		// 		text-transform: uppercase;
-		// 	}
-
-		// 	.location {
-		// 		padding-left: 26px;
-
-		// 		margin-left: -10px;
-
-		// 		background-size: contain;
-		// 		background-repeat: no-repeat;
-		// 	}
-		// }
-
-		.image-container {
-			position: relative;
-
-			.title, .footer {
-				z-index: 1000;
-				position: absolute;
-				padding: 5px;
-
-				color: white;
-				font-size: small;
-
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				overflow: hidden;
-			}
-	
-			.images {
-				height: 254px;
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-position-x: center;
-				background-position-y: center;
-			}
-	
-			.title {
-				top: 0px;
-				text-shadow: 1px 1px #333;
-			}
-			.footer {
-				width: 100%;
-				bottom: 0px;
-				left: -6px;
-
-				.ptype {
-					color: black;
-					background-color: orange;
-				}
-				.state {
-					text-shadow: 1px 1px orange;
-				}
-			}
-		}
-
 		.data {
 			position: relative;
-			height: 84px;
 			padding: 5px;
 
-			.financials {
-				display: flex;
-				flex-direction: row;
-				justify-content: space-evenly;
-
-				height: -webkit-fill-available;
-
-				.col {
-					width: 80px;
-					margin: 2px;
-					padding: 8px;
-					background-color: lightgray;
-
-					.amount {
-						text-align: center;
-						font-size: larger;
-						color: darkgreen;
-					}
-
-					.text {
-						text-align: center;
-						text-transform: uppercase;
-					}
-
-					.tenure {
-						font-size: smaller;
-						text-align: center;
-					}
-				}
-			}
-	
 			.features {
-				margin-top: 4px;
+				height: 75px;
+				margin-top: 5px;
 				margin-left: 20px;
-				font-size: small;
 
 				ul {
 					list-style: none;
