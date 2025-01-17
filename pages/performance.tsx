@@ -18,6 +18,8 @@ import { getAllProjects, fetchFilterData, fetchUniqueProperties, fetchUniqueStat
 
 import Stats from "../components/projects/Stats";
 
+export const ParamsContext = React.createContext({role: ''});
+
 export default function Performance({}: any) {
 	const [projects, setProjects] = useState<IProjectData[]>([]);
 	const [filtered, setFiltered] = useState<IProjectData[]>([]);
@@ -27,6 +29,7 @@ export default function Performance({}: any) {
 	const [selectedRegion, setSelectedRegion] = useState<string[]>([]);
 	const [selectedPtype,  setSelectedPtype]  = useState<string[]>([]);
 	const [selectedMetric, setSelectedMetric] = useState('');
+	const [params, setParams] = useState({role:''});
 	const [checked, setChecked] = React.useState(false);
 
 	useEffect(() => {
@@ -43,7 +46,7 @@ export default function Performance({}: any) {
 		if (router.query && projects.length) {
 			// Delaying so that router.query is loaded
 			const timer = setTimeout(() => {
-				console.log('router.query ready: ', router);
+				// console.log('router.query ready: ', router);
 				initializeFilters(router.query, projects);
 			}, 2000);
 			return () => clearTimeout(timer);
@@ -70,6 +73,10 @@ export default function Performance({}: any) {
 			ptype:  { title: 'Property type', entries: ptypes,  handleChange: (e: any) => setSelectedPtype(e.target.value),  preset: initialPtype },
 			metric: { title: 'Metric',        entries: metrics, handleChange: (e: any) => setSelectedMetric(e.target.value), preset: initialMetric }
 		});
+
+		if (query) {
+			setParams(query);
+		}
 	};
 
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -99,7 +106,7 @@ export default function Performance({}: any) {
 	};
 
 	return (
-		<>
+		<ParamsContext.Provider value={params}>
 			<DefaultHeaderAndBody>
 				{<div className="content px-2 md:px-8 py-8 md:py-8">
 					{ projects.length && <div className="inputs flex-col flex md:flex-row">
@@ -122,6 +129,6 @@ export default function Performance({}: any) {
 			</DefaultHeaderAndBody>
 
 			<FooterBottom />
-		</>
+		</ParamsContext.Provider>
 	);
 }
