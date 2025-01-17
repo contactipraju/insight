@@ -20,7 +20,7 @@ const ProjectsTiledView = ({ projects }: TiledViewProps) => {
 				<div className="projects flex flex-wrap justify-around">
 					{projects!.length > 0 ? projects!.map((project: IProjectData) => (
 						// <Link key={project.id} href={`/project/${encodeURIComponent(project.id)}`}>
-							<ProjectDetailed project={project} />
+							<ProjectDetailed key={project.id} project={project} />
 						// </Link>
 					)) : <div>{"No projects available"}</div> }
 				</div>
