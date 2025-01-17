@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { IProjectData } from "./Projects.interfaces";
-import { getProjectsLocal } from "./Projects.service";
+import { getPublicProjects } from "./Projects.service";
 
 import Project from "./Project";
 
@@ -20,15 +20,15 @@ const Projects = (props: any) => {
 	const [projects, setProjects] = useState<IProjectData[]>([]);
 
 	useEffect(() => {
-		getProjectsLocal().then((data: IProjectData[]) => {
+		getPublicProjects().then((data: IProjectData[]) => {
 			setProjects(data);
 		});
 	}, []);
 
 	return (
 		<section id="projects" className='isolate py-4 sm:py-8'>
-			<div className="mx-auto max-w-6xl md:px-6 lg:px-8">
-				<h2 className="my-2 max-w-2xl text-2xl font-bold sm:my-2 sm:text-4xl md:my-4 mx-8">
+			<div className="mx-auto max-w-6xl px-6 lg:px-8">
+				<h2 className="mt-2 text-xl font-bold sm:my-2 sm:text-2xl md:mt-4">
 					Projects
 				</h2>
 				<Swiper
@@ -41,19 +41,19 @@ const Projects = (props: any) => {
 					breakpoints={{
 						800: {
 							slidesPerView: 2,
-							spaceBetween: 40,
+							spaceBetween: 30,
 						},
 						1400: {
 							slidesPerView: 3,
-							spaceBetween: 50,
+							spaceBetween: 30,
 						},
 					}}
 				>
 					{projects!.length > 0 ? projects!.map((project: IProjectData) => (
 						<SwiperSlide key={project.id}>
-							<Link href={`/projects/${encodeURIComponent(project.id)}`}>
+							{/* <Link href={`/projects/${encodeURIComponent(project.id)}`}> */}
 								<Project project={project} />
-							</Link>
+							{/* </Link> */}
 						</SwiperSlide>
 					)) : <div>{"No projects available"}</div> }
 				</Swiper>

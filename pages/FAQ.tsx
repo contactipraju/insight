@@ -84,13 +84,17 @@ export default function FAQ({}: any) {
 	return (
 		<>
 			<DefaultHeaderAndBody>
-				<div className="content">
-					{faqs?.map((faq: faq) => (
-						<div className="faq" key={faq.slug}>
-							<div>{faq.question}</div>
-							<div>{faq.answer}</div>
-						</div>
-					))}
+				<div className="content px-2 md:px-8 py-8 md:py-8">
+					<div className="prose mx-auto max-w-screen-md px-6 lg:prose-lg md:pb-24 mt-8">
+						<h1>Frequently Asked Questions</h1>
+
+						{faqs?.map((faq: faq) => (
+							<div className="faq" key={faq.slug}>
+								<div>{faq.question}</div>
+								<div>{faq.answer}</div>
+							</div>
+						))}
+					</div>
 				</div>
 			</DefaultHeaderAndBody>
 

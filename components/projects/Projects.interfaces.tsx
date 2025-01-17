@@ -1,28 +1,41 @@
+export interface Address {
+	street: string;
+	suburb: string;
+	city: string;
+	state: string;
+	post_code: string;
+}
+
 export interface IProjectFinancial {
-	purchase_cost: number;
-	current_value?: number;
+	purchased: number;
+	valued?: number;
 	weekly_rent?: number;
-	sold_price?: number;
-	holding_costs: number;
+	sold_at?: number;
+	holding: number;
 	development_costs?: number;
 	estimated_sale_price?: number;
 	gross_realization?: number;
-	appreciation: number;
+	growth: number;
 	percent_appreciated: number;
 }
 
 export interface IProjectData {
 	id: number;
-	type: string;
 	name: string;
-	location?: string;
-	address?: string;
+	ptype: string; // DEVELOPMENT | OWNER_OCCUPIER | VALUE_ADDITION | SIMPLE_INVESTMENT     (FIX_AND_FLIP/FIXER_UPPER)
+	address: Address;
 	images?: string[];
 	purchase_date: string | number | Date;
 	sold_date?: string | number | Date;
 	valued_date?: string | number | Date;
+	tenure_months?: number;
 	financials: IProjectFinancial;
 	features: string[];
 	success: string[];
-	hide_in_site: boolean;
+	public: boolean;
+	in_progress: boolean;
 }
+
+export type ProjectProps = {
+	project: IProjectData;
+};

@@ -1,0 +1,29 @@
+.financials {
+	height: 80px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+
+	.col {
+		width: 80px;
+		margin: 2px;
+		padding: 8px;
+		background-color: lightgray;
+
+		.amount {
+			text-align: center;
+			font-size: larger;
+			color: darkgreen;
+		}
+
+		.text {
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.tenure {
+			font-size: smaller;
+			text-align: center;
+		}
+	}
+}

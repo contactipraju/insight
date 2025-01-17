@@ -11,8 +11,10 @@ export async function fetchToken() {
 	const accounts_url = 'https://accounts.zoho.com.au';
 	const refresh_token = '1000.662d87d167192b1f1af2befef70b5d62.a5896c8c6af9f307e3f27eb3bacdfecc';
 
-	const client_id = '1000.NFJ6BJ864TDI4TTH6SVU29CZZ2SB8Y';
-	const client_secret = '48b37a72890b7c606ee3fb4652ab842e23bb8bd35d';
+	// const client_id = '1000.NFJ6BJ864TDI4TTH6SVU29CZZ2SB8Y';
+	const client_id = '1000.R8ZKT8L3FPS48OU74D11HKYJ1HC0RP';
+	// const client_secret = '48b37a72890b7c606ee3fb4652ab842e23bb8bd35d';
+	const client_secret = '5f46c4ed5de6d8e04be05da167a935ba838eae5413';
 
 	let url = `${accounts_url}/oauth/v2/token?refresh_token=${refresh_token}&client_id=${client_id}&client_secret=${client_secret}&grant_type=refresh_token`;
 

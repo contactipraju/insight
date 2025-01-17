@@ -6,9 +6,9 @@ import FormControl from '@mui/material/FormControl';
 import ListItemText from '@mui/material/ListItemText';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
-import { entry } from '../../pages/performance';
+import { entry } from '../projects/Projects.service';
 
-const ITEM_HEIGHT = 48;
+const ITEM_HEIGHT = 100;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
 	PaperProps: {
@@ -20,8 +20,6 @@ const MenuProps = {
 };
 
 export function MultiSelect({props}: any) {
-	console.log('props: ', props);
-
 	const [val, setVal] = React.useState<string[]>(props.preset);
 	const handleChange = (event: SelectChangeEvent<typeof val>) => {
 		const {
@@ -32,11 +30,12 @@ export function MultiSelect({props}: any) {
 			// On autofill we get a stringified value.
 			typeof value === 'string' ? value.split(',') : value,
 		);
+		props.handleChange(event);
 	};
 
 	return (
 		<div>
-			<FormControl sx={{ m: 1, width: 300 }}>
+			<FormControl sx={{ m: 1, width: 315 }}>
 				<InputLabel id="demo-multiple-checkbox-label">{props.title}</InputLabel>
 				<Select
 					labelId="demo-multiple-checkbox-label"
@@ -44,7 +43,7 @@ export function MultiSelect({props}: any) {
 					multiple
 					value={val}
 					onChange={handleChange}
-					input={<OutlinedInput label="Tag" />}
+					input={<OutlinedInput label={props.title}/>}
 					renderValue={(selected) => selected.join(', ')}
 					MenuProps={MenuProps}
 				>
@@ -66,6 +65,7 @@ export function BasicSelect({props}: any) {
 
 	const handleChange = (event: SelectChangeEvent) => {
 		setVal(event.target.value as string);
+		props.handleChange(event);
 	};
 
 	return (

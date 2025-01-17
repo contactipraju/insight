@@ -1,61 +1,31 @@
 import './Project.scss';
 
-const Project = ({project}) => {
+import { recentPurchase } from './Projects.service';
 
+import { ProjectProps } from './Projects.interfaces';
+
+import ProjectImage from './ProjectImage';
+import ProjectFinancials from './ProjectFinancials';
+
+const Project = ({project}: ProjectProps) => {
 	return (
 		<div className="project">
 			<div className="details">
-				{/*
-					<div className='title'>
-						<div className="type">{project.type}</div>
-
-						<div className="location" style={{ backgroundImage: `url(images/portfolio/location.png)` }}>
-							{project.location}
-						</div>
-					</div>
-				*/}
-
-				<div className="images" style={{ backgroundImage: `url(${project.images![0]})` }}></div>
+				<ProjectImage project={project}></ProjectImage>
 
 				<div className='data'>
-					<div className="name">{project.name}</div>
+					{project.ptype !== 'OWNER_OCCUPIER' && !recentPurchase(project) ? <div className="financials">
+						<ProjectFinancials project={project}></ProjectFinancials>
+					</div> : null}
 
-					<div className="financials">
-						<table>
-							{/* <thead>
-								<tr>
-									<th className="text">Financials</th>
-									<th className="amount">(AUD)</th>
-								</tr>
-							</thead> */}
-							<tbody>
-							{
-								Object.keys(project.financials).map((key: any, i: any) => (
-									<tr key={i}>
-										<td className="text">{key.replace(/_/g,' ')}</td>
-										<td className="amount">${project.financials[key]}</td>
-									</tr>
-								))}
-							</tbody>
-						</table>
-					</div>
-
-					<div className="features">
+					{(project.ptype === 'OWNER_OCCUPIER' || recentPurchase(project)) ? <div className="features">
 						<ul>
 							{project.features.map((item, index) => {
 								if (index <3)
 									return <li key={item}>{item}</li>;
 							})}
 						</ul>
-					</div>
-
-					<div className="success">
-						<ul>
-							{project.success.map(item => {
-								return <li key={item}>{item}</li>;
-							})}
-						</ul>
-					</div>
+					</div> : null}
 				</div>
 			</div>
 		</div>
