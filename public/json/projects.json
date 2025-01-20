@@ -18,7 +18,7 @@
 			"purchase_date": "2023/07/23",
 			"valued_date": "2025/01/01",
 			"financials": {
-				"purchased": 1625000,
+				"purchase": 1625000,
 				"valued": 1750000
 			},
 			"features": ["Secured property before auction", "Seller market", "64 prospective buyers", "7 Contract holders", "Negotiated to 90-day settlement time below the client's budget"],
@@ -43,7 +43,7 @@
             "purchase_date": "2025/01/01",
             "valued_date": "2025/01/01",
             "financials": {
-                "purchased": 430000,
+                "purchase": 430000,
                 "valued": 430000,
                 "weekly_rent": 475
             },
@@ -68,9 +68,9 @@
 			"purchase_date": "2019/11/01",
 			"sold_date": "2022/03/01",
 			"financials": {
-				"purchased": 720000,
+				"purchase": 720000,
 				"holding": 120000,
-				"sold_at": 1450000
+				"sold": 1450000
 			},
 			"features": ["Retain existing house and additional 7 townhouses", "Close to transport", "Low vacancy rate", "Low holding costs", "Gross realisation of 55% in 2.8 years"],
 			"success": ["DA approved for 7 Additional Townhouses"]
@@ -93,7 +93,7 @@
 			"purchase_date": "2020/03/21",
 			"valued_date": "2022/03/25",
 			"financials": {
-				"purchased": 1140000,
+				"purchase": 1140000,
 				"valued": 1650000
 			},
 			"features": ["Sought after suburb and schools", "Seller market", "High buyers competition", "Due diligence done before the first open home", "Negotiated and closed deal on first open home"],
@@ -117,7 +117,7 @@
 			"purchase_date": "2024/02/16",
 			"valued_date": "2024/12/06",
 			"financials": {
-				"purchased": 2125000,
+				"purchase": 2125000,
 				"valued": 2400000
 			},
 			"features": ["Sought after suburb and schools", "Competitive market", "Negotiated below the client's budget"],
@@ -141,7 +141,7 @@
 			"purchase_date": "2022/03/24",
 			"valued_date": "2024/12/06",
 			"financials": {
-				"purchased": 1200000,
+				"purchase": 1200000,
 				"holding": 200000,
 				"valued": 1700000
 			},
@@ -166,9 +166,9 @@
 			"purchase_date": "2022/11/02",
 			"sold_date": "2024/07/12",
 			"financials": {
-				"purchased": 582200,
+				"purchase": 582200,
 				"holding": 45000,
-				"sold_at": 880000
+				"sold": 880000
 			},
 			"features": ["Sought after suburb","High rental yield (4.5%)", "Low vacancy rate", "Close to transport", "Multiple development options"],
 			"success": ["DA approved for Subdivision","Capital growth"]
@@ -191,7 +191,7 @@
 			"purchase_date": "2024/04/26",
 			"valued_date": "2024/12/06",
 			"financials": {
-				"purchased": 446000,
+				"purchase": 446000,
 				"valued": 500000,
 				"weekly_rent": 450
 			},
@@ -217,7 +217,7 @@
 			"purchase_date": "2024/03/10",
 			"valued_date": "2024/12/06",
 			"financials": {
-				"purchased": 399000,
+				"purchase": 399000,
 				"valued": 500000,
 				"weekly_rent": 480
 			},
@@ -243,7 +243,7 @@
 			"purchase_date": "2024/10/25",
 			"valued_date": "2024/12/06",
 			"financials": {
-				"purchased": 450000,
+				"purchase": 450000,
 				"valued": 460000,
 				"weekly_rent": 450
 			},
@@ -269,7 +269,7 @@
 			"purchase_date": "2024/10/23",
 			"valued_date": "2025/01/01",
 			"financials": {
-				"purchased": 437000,
+				"purchase": 437000,
 				"valued": 460000,
 				"weekly_rent": 475
 			},
@@ -295,7 +295,7 @@
 			"purchase_date": "2024/12/06",
 			"valued_date": "2024/12/06",
 			"financials": {
-				"purchased": 536000,
+				"purchase": 536000,
 				"valued": 549000,
 				"weekly_rent": 600
 			},
@@ -321,7 +321,7 @@
             "purchase_date": "2025/01/01",
             "valued_date": "2025/01/01",
             "financials": {
-                "purchased": 532470,
+                "purchase": 532470,
                 "valued": 532470,
                 "weekly_rent": 570
             },
@@ -346,7 +346,7 @@
 			"purchase_date": "2016/11/02",
 			"valued_date": "2018/10/12",
 			"financials": {
-				"purchased": 370000,
+				"purchase": 370000,
 				"valued": 600000,
 				"weekly_rent": 540
 			},
@@ -371,7 +371,7 @@
 			"purchase_date": "2021/02/25",
 			"valued_date": "2022/02/25",
 			"financials": {
-				"purchased": 300000,
+				"purchase": 300000,
 				"valued": 450000,
 				"weekly_rent": 400
 			},
@@ -396,7 +396,7 @@
 			"purchase_date": "2018/02/01",
 			"valued_date": "2021/09/01",
 			"financials": {
-				"purchased": 720000,
+				"purchase": 720000,
 				"valued": 1250000,
 				"weekly_rent": 950
 			},
@@ -421,7 +421,7 @@
 			"purchase_date": "2022/07/14",
 			"valued_date": "2024/07/01",
 			"financials": {
-				"purchased": 2650000,
+				"purchase": 2650000,
 				"valued": 3000000,
 				"weekly_rent": 500
 			},
@@ -446,9 +446,9 @@
 			"purchase_date": "2018/12/01",
 			"sold_date": "2020/02/25",
 			"financials": {
-				"purchased": 130000,
+				"purchase": 130000,
 				"valued": 250000,
-				"sold_at": 230000
+				"sold": 230000
 			},
 			"features": ["30 min to Melbourne CBD"],
 			"success": []

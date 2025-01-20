@@ -37,7 +37,7 @@ export default function BasicStacking({ projects }:BasicStackingProps) {
 		};
 
 		for (let i=0; i<projects.length; i++) {
-			purchase.data.push(projects[i].financials.purchased);
+			purchase.data.push(projects[i].financials.purchase);
 			holding.data.push(projects[i].financials.holding?projects[i].financials.holding:0);
 			growth.data.push(projects[i].financials.growth);
 		}

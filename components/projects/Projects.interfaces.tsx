@@ -7,10 +7,10 @@ export interface Address {
 }
 
 export interface IProjectFinancial {
-	purchased: number;
+	purchase: number;
 	valued?: number;
 	weekly_rent?: number;
-	sold_at?: number;
+	sold?: number;
 	holding: number;
 	development_costs?: number;
 	estimated_sale_price?: number;

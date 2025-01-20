@@ -21,7 +21,7 @@ export function processProjects(projects: IProjectData[]) {
 		let dat = data[i];
 		let fin = dat['financials'];
 
-		let total_cost = fin['purchased'];
+		let total_cost = fin['purchase'];
 		if (fin['holding']) {
 			total_cost += fin['holding'];
 		}
@@ -29,8 +29,8 @@ export function processProjects(projects: IProjectData[]) {
 		let growth = 0;
 		let months;
 
-		if (fin['sold_at'] && dat['sold_date']) {
-			growth = fin['sold_at'] - total_cost;
+		if (fin['sold'] && dat['sold_date']) {
+			growth = fin['sold'] - total_cost;
 			months = monthDiff(new Date(dat['purchase_date']), new Date(dat['sold_date']));
 		} else if (fin['valued'] && dat['valued_date']) {
 			growth = fin['valued'] - total_cost;
@@ -58,8 +58,8 @@ export function prepareStats(data: IProjectData[]) {
 		let dat = data[i];
 		let fin = data[i]['financials'];
 
-		total_purchase += fin['purchased'];
-		let total_cost = fin['purchased'];
+		total_purchase += fin['purchase'] + fin['growth'];
+		let total_cost = fin['purchase'];
 		total_cost += fin['holding']?fin['holding']:0;
 
 		total_value_added += data[i].financials['growth'];
@@ -83,7 +83,7 @@ export function calculateAggregates(projects: IProjectData[]) {
 	for (let i=0; i<projects.length; i++) {
 		let costs = projects[i].financials;
 
-		_purchase += costs.purchased;
+		_purchase += costs.purchase;
 		_holding += costs.holding;
 		_growth += costs.growth;
 	}
