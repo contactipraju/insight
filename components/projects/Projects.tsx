@@ -27,7 +27,7 @@ const Projects = (props: any) => {
 
 	return (
 		<section id="projects" className='isolate py-4 sm:py-8'>
-			<div className="mx-auto max-w-6xl px-6 lg:px-8">
+			<div className="mx-auto desktop-page-width px-6 lg:px-8">
 				<h2 className="mt-2 text-xl font-bold sm:my-2 sm:text-2xl md:mt-4">
 					Projects
 				</h2>

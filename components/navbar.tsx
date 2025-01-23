@@ -6,7 +6,7 @@ export default function Navbar() {
 	return (
 		<div className="relative">
 			<header className="absolute inset-x-0 z-20 sm:fixed sm:h-16 bg-black text-white py-5 sm:py-8 sm:backdrop-blur">
-				<div className="mx-auto flex h-full max-w-6xl items-center justify-between px-6 lg:px-8">
+				<div className="mx-auto flex h-full desktop-page-width items-center justify-between px-6 lg:px-8">
 					<LogoLink />
 
 					<nav className="flex items-center justify-between sm:ml-16 sm:w-full">

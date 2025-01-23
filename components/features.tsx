@@ -29,11 +29,12 @@ const features = [
 export default function Features() {
 	return (
 		<section id="process" className="isolate py-4 sm:py-8">
-			<div className="mx-auto max-w-6xl px-6 lg:px-8">
+			<div className="mx-auto desktop-page-width px-6 lg:px-8">
 				<h2 className="mt-2 text-xl font-bold sm:mt-2 sm:text-2xl md:mt-4">
 					Process
 				</h2>
-				<div className="mx-auto max-w-6xl flex flex-col md:flex-row">
+
+				<div className="mx-auto flex flex-col md:flex-row">
 					{features.map((feature) => (
 						<div key={feature.id} className="relative rounded-2xl p-4 border m-4">
 							<div className="text-xl font-bold leading-7">
