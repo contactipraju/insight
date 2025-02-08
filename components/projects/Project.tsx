@@ -9,7 +9,7 @@ import ProjectFinancials from './ProjectFinancials';
 
 const Project = ({project}: ProjectProps) => {
 	return (
-		<div className="project">
+		<div className="project rounded-lg">
 			<div className="details">
 				<ProjectImage project={project}></ProjectImage>
 

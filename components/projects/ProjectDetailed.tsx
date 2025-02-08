@@ -12,7 +12,7 @@ const ProjectDetailed = ({project}: ProjectProps) => {
 	const params = useContext(ParamsContext);
 
 	return (
-		<div className="project">
+		<div className="project rounded-lg">
 			<div className="details">
 				<ProjectImage project={project}></ProjectImage>
 
