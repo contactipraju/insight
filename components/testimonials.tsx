@@ -29,9 +29,9 @@ export default function Testimonials({ testimonials }: ComponentProps) {
         <div className="mt-4">
           <ul className="columns-xs space-y-4">
             {allTestimonials!.map((testimonial: TestimonialProps) => (
-              <li key={testimonial.slug} className="break-inside-avoid">
-                <div className="rounded-2xl bg-white/40 p-6 backdrop-blur sm:p-10">
-                  <figure className="grid gap-8">
+              <li key={testimonial.slug} className="break-inside-avoid h-[300px]">
+                <div className="rounded-xl bg-white p-6 backdrop-blur sm:p-6 h-full">
+                  <figure className="grid gap-6">
                     <figcaption className="flex items-center gap-3">
                       <img
                         width={40}

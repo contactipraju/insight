@@ -34,9 +34,9 @@ export default function Features() {
 					Process
 				</h2>
 
-				<div className="mx-auto flex flex-col md:flex-row">
+				<div className="mx-auto flex flex-col md:flex-row -ml-[16px] -mr-[16px]">
 					{features.map((feature) => (
-						<div key={feature.id} className="relative rounded-2xl p-4 border m-4">
+						<div key={feature.id} className="relative rounded-2xl p-4 border m-4 bg-white">
 							<div className="text-xl font-bold leading-7">
 								<span dangerouslySetInnerHTML={{ __html: feature.title }} />
 							</div>

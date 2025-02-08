@@ -31,32 +31,35 @@ const Projects = (props: any) => {
 				<h2 className="mt-2 text-xl font-bold sm:my-2 sm:text-2xl md:mt-4">
 					Projects
 				</h2>
-				<Swiper
-					modules={[Autoplay, Pagination, Navigation]}
-					slidesPerView={1}
-					navigation
-					pagination={true}
-					loop={true}
-					autoplay={true}
-					breakpoints={{
-						800: {
-							slidesPerView: 2,
-							spaceBetween: 30,
-						},
-						1400: {
-							slidesPerView: 3,
-							spaceBetween: 30,
-						},
-					}}
-				>
-					{projects!.length > 0 ? projects!.map((project: IProjectData) => (
-						<SwiperSlide key={project.id}>
-							{/* <Link href={`/projects/${encodeURIComponent(project.id)}`}> */}
-								<Project project={project} />
-							{/* </Link> */}
-						</SwiperSlide>
-					)) : <div>{"No projects available"}</div> }
-				</Swiper>
+
+				<div className="swiper-container -ml-[32px] -mr-[32px]">
+					<Swiper
+						modules={[Autoplay, Pagination, Navigation]}
+						slidesPerView={1}
+						// navigation
+						pagination={true}
+						loop={true}
+						autoplay={true}
+						breakpoints={{
+							800: {
+								slidesPerView: 2,
+								spaceBetween: 30,
+							},
+							1400: {
+								slidesPerView: 3,
+								spaceBetween: 30,
+							},
+						}}
+					>
+						{projects!.length > 0 ? projects!.map((project: IProjectData) => (
+							<SwiperSlide key={project.id}>
+								{/* <Link href={`/projects/${encodeURIComponent(project.id)}`}> */}
+									<Project project={project} />
+								{/* </Link> */}
+							</SwiperSlide>
+						)) : <div>{"No projects available"}</div> }
+					</Swiper>
+				</div>
 			</div>
 		</section>
 	)
