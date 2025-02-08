@@ -32,9 +32,6 @@ export default function Testimonials({ testimonials }: ComponentProps) {
               <li key={testimonial.slug} className="break-inside-avoid">
                 <div className="rounded-2xl bg-white/40 p-6 backdrop-blur sm:p-10">
                   <figure className="grid gap-8">
-                    <blockquote className="text-l italic">
-						<div dangerouslySetInnerHTML={{ __html: '"' + testimonial.testimonial + '"'}}></div>
-                    </blockquote>
                     <figcaption className="flex items-center gap-3">
                       <img
                         width={40}
@@ -49,6 +46,9 @@ export default function Testimonials({ testimonials }: ComponentProps) {
                         </p>
                       </div>
                     </figcaption>
+                    <blockquote className="text-l italic">
+						<div dangerouslySetInnerHTML={{ __html: '"' + testimonial.testimonial + '"'}}></div>
+                    </blockquote>
                   </figure>
                 </div>
               </li>
