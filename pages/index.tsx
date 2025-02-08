@@ -6,9 +6,11 @@ import keystaticConfig from "../keystatic.config";
 import Features from "../components/features";
 import Footer, { FooterProps } from "../components/footer/footer";
 import Hero, { HeroProps } from "../components/hero";
+// import Brochure from "../components/brochure";
 import DefaultHeaderAndBody from "../components/defaultHeaderAndBody";
 import Testimonials, { TestimonialProps } from "../components/testimonials";
 import Projects from "../components/projects/Projects";
+import FooterBottom from "../components/footer/footer-bottom";
 
 type HomepageProps = {
 	testimonials: TestimonialProps[];
@@ -26,17 +28,20 @@ export default function Index({ testimonials, landingPage }: HomepageProps) {
 						heroIntroText: landingPage.heroIntroText,
 					}}
 				/>
+				{/* <Brochure /> */}
 				<Projects />
 				<Testimonials testimonials={testimonials} />
 				<Features />
 			</DefaultHeaderAndBody>
 
-			<Footer
+			<FooterBottom />
+
+			{/* <Footer
 				data={{
 					footerHeadline: landingPage.footerHeadline,
 					footerText: landingPage.footerText,
 				}}
-			/>
+			/> */}
 	    </>
 	);
 }

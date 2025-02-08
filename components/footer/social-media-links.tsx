@@ -1,7 +1,7 @@
 
 export default function SocialMediaLinks({}: any) {
 	return (
-		<div className="flex gap-2">
+		<div className="flex gap-2 p-6">
 			<a className="shrink-0 rounded-lg p-1 hover:bg-slate-3 active:bg-slate-5 transition-colors w-12" href="https://www.facebook.com/profile.php?id=61564307046162" target="_blank">
 				<span className="sr-only">Facebook</span>
 				<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="33" height="33" viewBox="0 0 24 24">

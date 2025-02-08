@@ -29,7 +29,7 @@ const Projects = (props: any) => {
 		<section id="projects" className='isolate py-4 sm:py-8'>
 			<div className="mx-auto desktop-page-width px-6 lg:px-8">
 				<h2 className="mt-2 text-xl font-bold sm:my-2 sm:text-2xl md:mt-4">
-					Projects
+					Portfolio
 				</h2>
 
 				<div className="swiper-container -ml-[32px] -mr-[32px]">

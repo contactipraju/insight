@@ -11,7 +11,7 @@ export default function FooterContent({
 	data: { footerHeadline, footerText }
 }: ComponentProps) {
 	return (
-		<>
+		<div className='footer-content'>
 			<p className="mt-4 text-2xl font-bold sm:mt-10 sm:text-5xl md:text-3xl whitespace-pre-line">
 				{footerHeadline}
 			</p>
@@ -28,12 +28,12 @@ export default function FooterContent({
 				Book a discovery call
 			</a>
 
-			<a
+			{/* <a
 				href="tel: +61410776776"
 				className="mt-6 inline-block rounded-full bg-black px-4 py-2.5 font-semibold text-white sm:mt-10 w-40 btn-orange"
 			>
 				Call: +61410776776
-			</a>
-		</>
+			</a> */}
+		</div>
 	);
 }
