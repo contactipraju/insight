@@ -1,7 +1,7 @@
 // Keystatic
 import { createReader } from "@keystatic/core/reader";
 import keystaticConfig from "../keystatic.config";
-import { Analytics } from '@vercel/analytics/next';
+// import { Analytics } from '@vercel/analytics/next';
 
 // import BackgroundBlobs from "../components/background-blobs";
 import Features from "../components/features";
@@ -36,7 +36,7 @@ export default function Index({ testimonials, landingPage }: HomepageProps) {
 			</DefaultHeaderAndBody>
 
 			<FooterBottom />
-			<Analytics />
+			{/* <Analytics /> */}
 
 			{/* <Footer
 				data={{
