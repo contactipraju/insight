@@ -25,8 +25,8 @@ export default function ContactDetails({}: any) {
 			<a href="https://maps.app.goo.gl/4gxvVs9E6dAU8yVUA" className="contact-list-item w-inline-block">
 				<div className="footer-icon w-embed">
 					<svg width="100%" height="100%" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M9.55978 18.82C9.39635 18.9366 9.20057 18.9993 8.99978 18.9993C8.79899 18.9993 8.60321 18.9366 8.43978 18.82C3.61078 15.378 -1.51422 8.298 3.66678 3.182C5.08864 1.78212 7.00445 0.998265 8.99978 1C10.9998 1 12.9188 1.785 14.3328 3.181C19.5138 8.297 14.3888 15.376 9.55978 18.82Z" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-						<path d="M9 10C9.53043 10 10.0391 9.78929 10.4142 9.41421C10.7893 9.03914 11 8.53043 11 8C11 7.46957 10.7893 6.96086 10.4142 6.58579C10.0391 6.21071 9.53043 6 9 6C8.46957 6 7.96086 6.21071 7.58579 6.58579C7.21071 6.96086 7 7.46957 7 8C7 8.53043 7.21071 9.03914 7.58579 9.41421C7.96086 9.78929 8.46957 10 9 10Z" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+						<path d="M9.55978 18.82C9.39635 18.9366 9.20057 18.9993 8.99978 18.9993C8.79899 18.9993 8.60321 18.9366 8.43978 18.82C3.61078 15.378 -1.51422 8.298 3.66678 3.182C5.08864 1.78212 7.00445 0.998265 8.99978 1C10.9998 1 12.9188 1.785 14.3328 3.181C19.5138 8.297 14.3888 15.376 9.55978 18.82Z" stroke="currentcolor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+						<path d="M9 10C9.53043 10 10.0391 9.78929 10.4142 9.41421C10.7893 9.03914 11 8.53043 11 8C11 7.46957 10.7893 6.96086 10.4142 6.58579C10.0391 6.21071 9.53043 6 9 6C8.46957 6 7.96086 6.21071 7.58579 6.58579C7.21071 6.96086 7 7.46957 7 8C7 8.53043 7.21071 9.03914 7.58579 9.41421C7.96086 9.78929 8.46957 10 9 10Z" stroke="currentcolor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
 					</svg>
 				</div>
 				<div>31A/7 Salisbury Rd, Castle Hill, NSW 2154</div>
