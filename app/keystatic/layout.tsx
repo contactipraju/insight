@@ -1,7 +1,5 @@
 import KeystaticApp from "./keystatic";
 
-import { Analytics } from '@vercel/analytics/next';
-
 import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata = {
@@ -15,7 +13,6 @@ export default function RootLayout() {
 
 			<body>
 				<KeystaticApp />
-				<Analytics />
 				<GoogleAnalytics gaId="G-T0XZY5BLB0" />
 			</body>
 		</html>
